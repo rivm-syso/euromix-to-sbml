@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model metaid="euromix" id="euromix">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="conc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> vol </ci>
+            </bvar>
+            <piecewise>
+              <piece>
+                <apply>
+                  <divide/>
+                  <ci> q </ci>
+                  <ci> vol </ci>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci> vol </ci>
+                  <cn type="e-notation"> 1 <sep/> -5 </cn>
+                </apply>
+              </piece>
+              <otherwise>
+                <cn type="integer"> 0 </cn>
+              </otherwise>
+            </piecewise>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfCompartments>
+      <compartment sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
+      <compartment id="Fat" spatialDimensions="3" size="14.63" constant="true"/>
+      <compartment id="Rich" spatialDimensions="3" size="7.35" constant="true"/>
+      <compartment id="pp" spatialDimensions="3" size="32.243" constant="true"/>
+      <compartment id="liver" spatialDimensions="3" size="1.68" constant="true"/>
+      <compartment id="gut" spatialDimensions="3" size="1" constant="true"/>
+      <compartment id="su" spatialDimensions="3" size="0" constant="true"/>
+      <compartment id="se" spatialDimensions="3" size="2.318" constant="true"/>
+      <compartment id="scu" spatialDimensions="3" size="0" constant="true"/>
+      <compartment id="sce" spatialDimensions="3" size="0.019" constant="true"/>
+      <compartment id="Art" spatialDimensions="3" size="1.58666666666667" constant="true"/>
+      <compartment id="Ven" spatialDimensions="3" size="3.17333333333333" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="QFat" compartment="Fat" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QRich" compartment="Rich" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QPoor" compartment="pp" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QLiver" compartment="liver" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QMetab" compartment="liver" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QGut" compartment="gut" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QSkin_u" compartment="su" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QSkin_e" compartment="se" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QSkin_sc_u" compartment="scu" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QSkin_sc_e" compartment="sce" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QArt" compartment="Art" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QVen" compartment="Ven" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QExcret" compartment="default_compartment" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="QAir" compartment="default_compartment" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="BM" value="70" constant="true"/>
+      <parameter id="BSA" value="190" constant="true"/>
+      <parameter id="Height_sc" value="0.0001" constant="true"/>
+      <parameter id="Height_vs" value="0.0122" constant="true"/>
+      <parameter id="scVFat" value="0.209" constant="true"/>
+      <parameter id="scVRich" value="0.105" constant="true"/>
+      <parameter id="scVLiver" value="0.024" constant="true"/>
+      <parameter id="scVBlood" value="0.068" constant="true"/>
+      <parameter id="VFat" value="14.63" constant="true"/>
+      <parameter id="VRich" value="7.35" constant="true"/>
+      <parameter id="VLiver" value="1.68" constant="true"/>
+      <parameter id="VBlood" value="4.76" constant="true"/>
+      <parameter id="VArt" value="1.58666666666667" constant="true"/>
+      <parameter id="VVen" value="3.17333333333333" constant="true"/>
+      <parameter id="VSkin_e" value="2.318" constant="true"/>
+      <parameter id="fSA_exposed" value="1" constant="true"/>
+      <parameter id="VSkin_u" value="0" constant="true"/>
+      <parameter id="VSkin_sc_e" value="0.019" constant="true"/>
+      <parameter id="VSkin_sc_u" value="0" constant="true"/>
+      <parameter id="VPoor" value="32.243" constant="true"/>
+      <parameter id="scFBlood" value="4.8" constant="true"/>
+      <parameter id="scFFat" value="0.085" constant="true"/>
+      <parameter id="scFPoor" value="0.12" constant="true"/>
+      <parameter id="scFLiver" value="0.27" constant="true"/>
+      <parameter id="scFSkin" value="0.05" constant="true"/>
+      <parameter id="FBlood" value="336" constant="true"/>
+      <parameter id="FFat" value="28.56" constant="true"/>
+      <parameter id="FPoor" value="40.32" constant="true"/>
+      <parameter id="FLiver" value="90.72" constant="true"/>
+      <parameter id="FSkin" value="16.8" constant="true"/>
+      <parameter id="FRich" value="159.6" constant="true"/>
+      <parameter id="FSkin_e" value="16.8" constant="true"/>
+      <parameter id="FSkin_u" value="0" constant="true"/>
+      <parameter id="Falv" value="2220" constant="true"/>
+      <parameter id="PCFat" value="2.53" constant="true"/>
+      <parameter id="PCLiver" value="0.923" constant="true"/>
+      <parameter id="PCRich" value="0.875" constant="true"/>
+      <parameter id="PCPoor" value="0.647" constant="true"/>
+      <parameter id="PCSkin_sc" value="0.889" constant="true"/>
+      <parameter id="PCSkin" value="0.889" constant="true"/>
+      <parameter id="PCAir" value="1e+99" constant="true"/>
+      <parameter id="Km" value="0" constant="true"/>
+      <parameter id="Michaelis" value="0" constant="true"/>
+      <parameter id="Vmax" value="0" constant="true"/>
+      <parameter id="fub" value="0.51" constant="true"/>
+      <parameter id="Kp_sc_vs" value="0.01" constant="true"/>
+      <parameter id="kGut" value="1" constant="true"/>
+      <parameter id="CLH" value="132" constant="true"/>
+      <parameter id="Ke" value="7.5" constant="true"/>
+      <parameter id="Frac" value="1" constant="true"/>
+      <parameter id="Cinh" value="0" constant="true"/>
+      <parameter id="Tinh" value="0" constant="true"/>
+      <parameter id="OralDose" value="0" constant="true"/>
+      <parameter id="DermalDose" value="0" constant="true"/>
+      <parameter id="oral_dose" value="0" constant="true"/>
+      <parameter id="t_oral_dose_1" value="0" constant="true"/>
+      <parameter id="t_oral_dose_2" value="1" constant="true"/>
+      <parameter id="f_su" value="0" constant="true"/>
+      <parameter id="f_se" value="1.9" constant="true"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment symbol="Fat">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VFat </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Rich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VRich </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="pp">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VPoor </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="liver">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VLiver </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="su">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_u </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="se">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_e </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="scu">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_sc_u </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="sce">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_sc_e </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Art">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VArt </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Ven">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VVen </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VFat">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BM </ci>
+            <ci> scVFat </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VRich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BM </ci>
+            <ci> scVRich </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VLiver">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BM </ci>
+            <ci> scVLiver </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VBlood">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BM </ci>
+            <ci> scVBlood </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VArt">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> VBlood </ci>
+            <cn type="integer"> 3 </cn>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VVen">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> VBlood </ci>
+            <ci> VArt </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VSkin_e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BSA </ci>
+            <ci> Height_vs </ci>
+            <ci> fSA_exposed </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VSkin_u">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BSA </ci>
+            <ci> Height_vs </ci>
+            <apply>
+              <minus/>
+              <cn type="integer"> 1 </cn>
+              <ci> fSA_exposed </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VSkin_sc_e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BSA </ci>
+            <ci> Height_sc </ci>
+            <ci> fSA_exposed </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VSkin_sc_u">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BSA </ci>
+            <ci> Height_sc </ci>
+            <apply>
+              <minus/>
+              <cn type="integer"> 1 </cn>
+              <ci> fSA_exposed </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="VPoor">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <minus/>
+                      <apply>
+                        <minus/>
+                        <apply>
+                          <minus/>
+                          <apply>
+                            <minus/>
+                            <ci> BM </ci>
+                            <ci> VFat </ci>
+                          </apply>
+                          <ci> VRich </ci>
+                        </apply>
+                        <ci> VLiver </ci>
+                      </apply>
+                      <ci> VSkin_e </ci>
+                    </apply>
+                    <ci> VSkin_u </ci>
+                  </apply>
+                  <ci> VSkin_sc_e </ci>
+                </apply>
+                <ci> VSkin_sc_u </ci>
+              </apply>
+              <ci> VBlood </ci>
+            </apply>
+            <apply>
+              <times/>
+              <cn> 0.1 </cn>
+              <ci> BM </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FBlood">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> scFBlood </ci>
+            <ci> BM </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FFat">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FBlood </ci>
+            <ci> scFFat </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FPoor">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FBlood </ci>
+            <ci> scFPoor </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FLiver">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FBlood </ci>
+            <ci> scFLiver </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FSkin">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FBlood </ci>
+            <ci> scFSkin </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FRich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <ci> FBlood </ci>
+                  <ci> FFat </ci>
+                </apply>
+                <ci> FPoor </ci>
+              </apply>
+              <ci> FLiver </ci>
+            </apply>
+            <ci> FSkin </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FSkin_e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FSkin </ci>
+            <ci> fSA_exposed </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FSkin_u">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> FSkin </ci>
+            <ci> FSkin_e </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="f_su">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> Kp_sc_vs </ci>
+            <ci> BSA </ci>
+            <apply>
+              <minus/>
+              <cn type="integer"> 1 </cn>
+              <ci> fSA_exposed </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="f_se">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> Kp_sc_vs </ci>
+            <ci> BSA </ci>
+            <ci> fSA_exposed </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfReactions>
+      <reaction id="_J0" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QFat" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FFat </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J1" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QFat" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> FFat </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QFat </ci>
+                  <ci> Fat </ci>
+                </apply>
+              </apply>
+              <ci> PCFat </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J2" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QRich" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FRich </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J3" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QRich" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> FRich </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QRich </ci>
+                  <ci> Rich </ci>
+                </apply>
+              </apply>
+              <ci> PCRich </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J4" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QPoor" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FPoor </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J5" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QPoor" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> FPoor </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QPoor </ci>
+                  <ci> pp </ci>
+                </apply>
+              </apply>
+              <ci> PCPoor </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J6" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FLiver </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J7" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> FLiver </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QLiver </ci>
+                  <ci> liver </ci>
+                </apply>
+              </apply>
+              <ci> PCLiver </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J8" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QGut" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kGut </ci>
+              <ci> QGut </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J9" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FSkin_u </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J10" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> FSkin_u </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QSkin_u </ci>
+                  <ci> su </ci>
+                </apply>
+              </apply>
+              <ci> PCSkin </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J11" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QSkin_sc_u" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> f_su </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QSkin_u </ci>
+                  <ci> su </ci>
+                </apply>
+              </apply>
+              <ci> PCSkin_sc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J12" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QSkin_sc_u" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> f_su </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QSkin_sc_u </ci>
+                <ci> scu </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J13" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FSkin_e </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J14" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> FSkin_e </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QSkin_e </ci>
+                  <ci> se </ci>
+                </apply>
+              </apply>
+              <ci> PCSkin </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J15" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QSkin_sc_e" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> f_se </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QSkin_e </ci>
+                  <ci> se </ci>
+                </apply>
+              </apply>
+              <ci> PCSkin_sc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J16" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QSkin_sc_e" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> f_se </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QSkin_sc_e </ci>
+                <ci> sce </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J17" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FBlood </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QVen </ci>
+                <ci> Ven </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J18" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FBlood </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J19" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QMetab" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <piecewise>
+              <piece>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> fub </ci>
+                    <ci> liver </ci>
+                    <ci> Vmax </ci>
+                    <apply>
+                      <ci> conc </ci>
+                      <ci> QLiver </ci>
+                      <ci> liver </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> PCLiver </ci>
+                      <ci> Km </ci>
+                    </apply>
+                    <apply>
+                      <ci> conc </ci>
+                      <ci> QLiver </ci>
+                      <ci> liver </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <gt/>
+                  <ci> Michaelis </ci>
+                  <cn> 0.5 </cn>
+                </apply>
+              </piece>
+              <otherwise>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> fub </ci>
+                    <ci> CLH </ci>
+                    <apply>
+                      <ci> conc </ci>
+                      <ci> QLiver </ci>
+                      <ci> liver </ci>
+                    </apply>
+                  </apply>
+                  <ci> PCLiver </ci>
+                </apply>
+              </otherwise>
+            </piecewise>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J20" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QAir" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Falv </ci>
+                <apply>
+                  <ci> conc </ci>
+                  <ci> QArt </ci>
+                  <ci> Art </ci>
+                </apply>
+              </apply>
+              <ci> PCAir </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J21" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QExcret" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> Ke </ci>
+              <ci> fub </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event id="_E0" useValuesFromTriggerTime="true">
+        <trigger initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <ci> t_oral_dose_2 </ci>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="QGut">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci> QGut </ci>
+                <apply>
+                  <times/>
+                  <ci> oral_dose </ci>
+                  <ci> Frac </ci>
+                </apply>
+              </apply>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
