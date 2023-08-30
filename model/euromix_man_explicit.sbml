@@ -5,7 +5,7 @@
       <compartment sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
       <compartment id="Fat" spatialDimensions="3" size="14.63" constant="true"/>
       <compartment id="Rich" spatialDimensions="3" size="7.35" constant="true"/>
-      <compartment id="pp" spatialDimensions="3" size="30.243" constant="true"/>
+      <compartment id="pp" spatialDimensions="3" size="32.243" constant="true"/>
       <compartment id="liver" spatialDimensions="3" size="1.68" constant="true"/>
       <compartment id="gut" spatialDimensions="3" size="1" constant="true"/>
       <compartment id="su" spatialDimensions="3" size="1" constant="true"/>
@@ -49,9 +49,9 @@
       <parameter id="VSkin_e" value="2.318" constant="true"/>
       <parameter id="fSA_exposed" value="1" constant="true"/>
       <parameter id="VSkin_u" value="1" constant="true"/>
-      <parameter id="VSkin_sc_u" value="1" constant="true"/>
       <parameter id="VSkin_sc_e" value="0.019" constant="true"/>
-      <parameter id="VPoor" value="30.243" constant="true"/>
+      <parameter id="VSkin_sc_u" value="1" constant="true"/>
+      <parameter id="VPoor" value="32.243" constant="true"/>
       <parameter id="scFBlood" value="4.8" constant="true"/>
       <parameter id="scFFat" value="0.085" constant="true"/>
       <parameter id="scFPoor" value="0.12" constant="true"/>
@@ -231,24 +231,16 @@
                       <minus/>
                       <apply>
                         <minus/>
-                        <apply>
-                          <minus/>
-                          <apply>
-                            <minus/>
-                            <ci> BM </ci>
-                            <ci> VFat </ci>
-                          </apply>
-                          <ci> VRich </ci>
-                        </apply>
-                        <ci> VLiver </ci>
+                        <ci> BM </ci>
+                        <ci> VFat </ci>
                       </apply>
-                      <ci> VSkin_e </ci>
+                      <ci> VRich </ci>
                     </apply>
-                    <ci> VSkin_u </ci>
+                    <ci> VLiver </ci>
                   </apply>
-                  <ci> VSkin_sc_e </ci>
+                  <ci> VSkin_e </ci>
                 </apply>
-                <ci> VSkin_sc_u </ci>
+                <ci> VSkin_sc_e </ci>
               </apply>
               <ci> VBlood </ci>
             </apply>

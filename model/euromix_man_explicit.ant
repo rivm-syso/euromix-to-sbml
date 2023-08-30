@@ -27,7 +27,7 @@ model euromix()
   #VSkin_sc_u = BSA * Height_sc * ( 1 - fSA_exposed ) 
   # Set volume to 1 to prevent nan (QSkin_sc_u = 0, so this has no effect)
   VSkin_sc_u = 1
-  VPoor = BM - VFat - VRich - VLiver - VSkin_e - VSkin_u - VSkin_sc_e - VSkin_sc_u - VBlood - 0.1 * BM 
+  VPoor = BM - VFat - VRich - VLiver - VSkin_e - VSkin_sc_e - VBlood - 0.1 * BM 
 
   ### Flow rates
   scFBlood = 4.8

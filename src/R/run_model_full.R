@@ -97,7 +97,6 @@ Outputs <- c("CTotal","CVen","CArt","CFat","CPoor","CRich","CLiver","CSkin_u","C
 resolution <- 60
 times  <- seq(from=0, to= days*steps*60, by=resolution)/60
 
-write.csv(Inputs, "../../tmp/r_inputs_raw.csv")
 
 #collect inputs for call to ode
 Inputs <- .C("getParms",  as.double(Inputs), out= double(length(Inputs)), as.integer(length(Inputs)), PACKAGE = dllName)$out
@@ -113,12 +112,12 @@ outnew <- ode(y=Y, times=times, func="derivs", parms=Inputs, dllname = dllName,
               nout = length(Outputs), outnames = Outputs )
 #again
 names(Inputs) <- nominal
-write.csv(Inputs, "../../tmp/r_inputs.csv")
+write.csv(Inputs, "../../tmp/r_inputs_full.csv")
 
 VLiver <- outnew[,"CLiver"] * Inputs["BM"] * Inputs["scVLiver"] * molweight
 
 plot(VLiver, type="l")
 mean(VLiver)
 
-write.csv(outnew, "../../tmp/r_out.csv")
+write.csv(outnew, "../../tmp/r_out_full.csv")
 
