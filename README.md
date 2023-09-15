@@ -9,10 +9,7 @@ Model describing the efforts to convert euromix model to SBML
 
 ## Status
 
-Two variants of the full model have been created:
-* `model/euromix_man.sbml`: full model that uses a function to compute the concentrations and the `piecewise` operator to replace the ternary operator from the c code.
-* `model/euromix_man_explicit.sbml`: full model with functions and `piecewise` operator replaced by explicit code.
+The results of the R simulation and the SBML simulation (using libroadrunner in Python) match.
 
-Next to thee two, there is also a variant that only includes the liver, blood compartments and external compartements (`model/euromix_man_only_liver`).
+Note that Libroadrunner returns concentrations, also if a species is declared to be `substanceOnly`. Therefore it is necessary to convert the output to amounts by multiplying the concentration with volume of the compartment the species is placed in.
 
-Unfortunately, the simulations using the sbml model do not match the simulation results obtained with R. See the notebooks in `notebooks` for the comparisson.
