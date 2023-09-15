@@ -1,3 +1,5 @@
+rm(list=ls()) 
+
 R.version
 #this r program is used as a standalone program to test the PBPK dll
 #setwd("D:/Data/EuroMix/PBPK/QUASAR")
@@ -94,30 +96,26 @@ Outputs <- c("CTotal","CVen","CArt","CFat","CPoor","CRich","CLiver","CSkin_u","C
 
 
 #set resolution and times
-resolution <- 60
+resolution <- 3
 times  <- seq(from=0, to= days*steps*60, by=resolution)/60
 
 
-#collect inputs for call to ode
+# #Run for MM
+# Inputs$Michaelis <- 1
+# Inputs$Km <- 1
+# Inputs <- .C("getParms",  as.double(Inputs), out= double(length(Inputs)), as.integer(length(Inputs)), PACKAGE = dllName)$out
+# outnew <- ode(y=Y, times=times, func="derivs", parms=Inputs, dllname = dllName, 
+#               initfunc = "initmod", initforc = "initforc", forcings = allDoses, events = list(func="event", time=eventLevels), 
+#               nout = length(Outputs), outnames = Outputs )
+# 
+# write.csv(outnew, "../../results/euromix_r_results_MM.csv")
+
+#Run for MA
+Inputs$Michaelis <- 0
+Inputs$Km <- 1
 Inputs <- .C("getParms",  as.double(Inputs), out= double(length(Inputs)), as.integer(length(Inputs)), PACKAGE = dllName)$out
-
-
-for (ii in 1:length(nominal)){
-  print(paste(ii, ': ', nominal[ii],'=', Inputs[ii]))
-}
-
-
-outnew <- ode(y=Y, times=times, func="derivs", parms=Inputs, dllname = dllName, 
-              initfunc = "initmod", initforc = "initforc", forcings = allDoses, events = list(func="event", time=eventLevels), 
+outnew <- ode(y=Y, times=times, func="derivs", parms=Inputs, dllname = dllName,
+              initfunc = "initmod", initforc = "initforc", forcings = allDoses, events = list(func="event", time=eventLevels),
               nout = length(Outputs), outnames = Outputs )
-#again
-names(Inputs) <- nominal
-write.csv(Inputs, "../../tmp/r_inputs_full.csv")
 
-VLiver <- outnew[,"CLiver"] * Inputs["BM"] * Inputs["scVLiver"] * molweight
-
-plot(VLiver, type="l")
-mean(VLiver)
-
-write.csv(outnew, "../../tmp/r_out_full.csv")
-
+write.csv(outnew, "../../results/euromix_r_results_MA.csv")

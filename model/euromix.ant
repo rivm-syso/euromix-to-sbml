@@ -2,6 +2,14 @@ function conc(q,vol)
   piecewise(q/vol, vol > 1e-5, 0)
 end
 
+function metab_MM(Vmax, Km, PC, q, vol)
+  vol*Vmax*conc(q, vol) / (PC*Km+conc(q, vol))
+end
+
+function metab_MA(CLH, PC, q, vol)
+  CLH*conc(q, vol)/PC
+end
+
 model euromix()
 
   # Parameters
@@ -160,7 +168,7 @@ model euromix()
 
   ## Metabolism
 
-  QLiver -> QMetab; piecewise(fub*liver*Vmax*conc(QLiver, liver)/(PCLiver*Km+conc(QLiver, liver)), Michaelis > 0.5, fub*CLH*conc(QLiver, liver)/PCLiver)
+  QLiver -> QMetab; fub*piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, liver), Michaelis > 0.5, metab_MA(CLH, PCLiver, QLiver, liver))
 
   ## Excretion
   QArt -> QAir; Falv*conc(QArt, Art)/PCAir
