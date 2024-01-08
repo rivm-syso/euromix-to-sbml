@@ -27,3 +27,19 @@ A first version of an annotations file is available, demonstrating how to annota
 Annotation of units remains to be done altogether. Also, it remains unclear how to distinguish different substances from species (in case of multiple-substance models).
 
 Notebook [test_full_model.ipynb](notebooks/test_model_annotation.ipynb) shows how to annotate the model using an annotations file.
+
+## Running the python code
+
+To run the python code and notebooks, install Jupyter notebook and the the required python packages.
+
+Install notebook, using the command:
+
+```
+pip install notebook
+```
+
+Install the required python packages using the command:
+
+```
+pip install -r requirements.txt
+```
