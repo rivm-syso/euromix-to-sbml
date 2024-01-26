@@ -2,6 +2,10 @@
 
 This repository contains a re-implementation of the EuroMix PBK model in antimony and demonstrates how this antimony model can be converted to SBML (using tellurium) and annotated (using sbmlUtils). The purpose of this repository is to test/demonstrate how to create and publish interoperable PBK models using the EuroMix PBK model as example.
 
+## Model diagram
+
+![Model diagram of the EuroMix PBK model](euromix-pbk-model.png)
+
 ## Status
 
 ### Reimplementation in antimony
