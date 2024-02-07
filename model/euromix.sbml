@@ -193,58 +193,6 @@
       <parameter id="FSkin_e" value="1.68" constant="false"/>
       <parameter id="FSkin_u" value="15.12" constant="false"/>
     </listOfParameters>
-    <listOfInitialAssignments>
-      <initialAssignment symbol="Fat">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VFat </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Rich">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VRich </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="pp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VPoor </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="liver">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VLiver </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="su">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VSkin_u </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="se">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VSkin_e </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="scu">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VSkin_sc_u </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="sce">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VSkin_sc_e </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Art">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VArt </ci>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="Ven">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <ci> VVen </ci>
-        </math>
-      </initialAssignment>
-    </listOfInitialAssignments>
     <listOfRules>
       <assignmentRule variable="VFat">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
