@@ -149,31 +149,11 @@
       <parameter id="scVRich" value="0.105" constant="true"/>
       <parameter id="scVLiver" value="0.024" constant="true"/>
       <parameter id="scVBlood" value="0.068" constant="true"/>
-      <parameter id="VFat" value="14.63" constant="true"/>
-      <parameter id="VRich" value="7.35" constant="true"/>
-      <parameter id="VLiver" value="1.68" constant="true"/>
-      <parameter id="VBlood" value="4.76" constant="true"/>
-      <parameter id="VArt" value="1.58666666666667" constant="true"/>
-      <parameter id="VVen" value="3.17333333333333" constant="true"/>
-      <parameter id="VSkin_e" value="0.2318" constant="true"/>
-      <parameter id="fSA_exposed" value="0.1" constant="true"/>
-      <parameter id="VSkin_u" value="2.0862" constant="true"/>
-      <parameter id="VSkin_sc_e" value="0.0019" constant="true"/>
-      <parameter id="VSkin_sc_u" value="0.0171" constant="true"/>
-      <parameter id="VPoor" value="32.243" constant="true"/>
       <parameter id="scFBlood" value="4.8" constant="true"/>
       <parameter id="scFFat" value="0.085" constant="true"/>
       <parameter id="scFPoor" value="0.12" constant="true"/>
       <parameter id="scFLiver" value="0.27" constant="true"/>
       <parameter id="scFSkin" value="0.05" constant="true"/>
-      <parameter id="FBlood" value="336" constant="true"/>
-      <parameter id="FFat" value="28.56" constant="true"/>
-      <parameter id="FPoor" value="40.32" constant="true"/>
-      <parameter id="FLiver" value="90.72" constant="true"/>
-      <parameter id="FSkin" value="16.8" constant="true"/>
-      <parameter id="FRich" value="159.6" constant="true"/>
-      <parameter id="FSkin_e" value="1.68" constant="true"/>
-      <parameter id="FSkin_u" value="15.12" constant="true"/>
       <parameter id="Falv" value="2220" constant="true"/>
       <parameter id="PCFat" value="2.53" constant="true"/>
       <parameter id="PCLiver" value="0.923" constant="true"/>
@@ -186,21 +166,342 @@
       <parameter id="Michaelis" value="0" constant="true"/>
       <parameter id="Vmax" value="0" constant="true"/>
       <parameter id="fub" value="0.51" constant="true"/>
+      <parameter id="fSA_exposed" value="0.1" constant="true"/>
       <parameter id="Kp_sc_vs" value="0.01" constant="true"/>
       <parameter id="kGut" value="1" constant="true"/>
       <parameter id="CLH" value="132" constant="true"/>
       <parameter id="Ke" value="7.5" constant="true"/>
-      <parameter id="Frac" value="1" constant="true"/>
-      <parameter id="Cinh" value="0" constant="true"/>
-      <parameter id="Tinh" value="0" constant="true"/>
-      <parameter id="OralDose" value="0" constant="true"/>
-      <parameter id="DermalDose" value="0" constant="true"/>
-      <parameter id="oral_dose" value="0" constant="true"/>
-      <parameter id="t_oral_dose_1" value="0" constant="true"/>
-      <parameter id="t_oral_dose_2" value="1" constant="true"/>
-      <parameter id="f_su" value="1.71" constant="true"/>
-      <parameter id="f_se" value="0.19" constant="true"/>
+      <parameter id="VFat" value="14.63" constant="false"/>
+      <parameter id="VRich" value="7.35" constant="false"/>
+      <parameter id="VLiver" value="1.68" constant="false"/>
+      <parameter id="VBlood" value="4.76" constant="false"/>
+      <parameter id="VArt" value="1.58666666666667" constant="false"/>
+      <parameter id="VVen" value="3.17333333333333" constant="false"/>
+      <parameter id="VSkin_e" value="0.2318" constant="false"/>
+      <parameter id="VSkin_u" value="2.0862" constant="false"/>
+      <parameter id="VSkin_sc_e" value="0.0019" constant="false"/>
+      <parameter id="VSkin_sc_u" value="0.0171" constant="false"/>
+      <parameter id="VPoor" value="32.243" constant="false"/>
+      <parameter id="f_su" value="1.71" constant="false"/>
+      <parameter id="f_se" value="0.19" constant="false"/>
+      <parameter id="FBlood" value="336" constant="false"/>
+      <parameter id="FFat" value="28.56" constant="false"/>
+      <parameter id="FPoor" value="40.32" constant="false"/>
+      <parameter id="FLiver" value="90.72" constant="false"/>
+      <parameter id="FSkin" value="16.8" constant="false"/>
+      <parameter id="FRich" value="159.6" constant="false"/>
+      <parameter id="FSkin_e" value="1.68" constant="false"/>
+      <parameter id="FSkin_u" value="15.12" constant="false"/>
     </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment symbol="Fat">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VFat </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Rich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VRich </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="pp">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VPoor </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="liver">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VLiver </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="su">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_u </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="se">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_e </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="scu">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_sc_u </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="sce">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_sc_e </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Art">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VArt </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Ven">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VVen </ci>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfRules>
+      <assignmentRule variable="VFat">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BM </ci>
+            <ci> scVFat </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VRich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BM </ci>
+            <ci> scVRich </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VLiver">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BM </ci>
+            <ci> scVLiver </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VBlood">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BM </ci>
+            <ci> scVBlood </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VArt">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> VBlood </ci>
+            <cn type="integer"> 3 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VVen">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> VBlood </ci>
+            <ci> VArt </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VSkin_e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BSA </ci>
+            <ci> Height_vs </ci>
+            <ci> fSA_exposed </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VSkin_u">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BSA </ci>
+            <ci> Height_vs </ci>
+            <apply>
+              <minus/>
+              <cn type="integer"> 1 </cn>
+              <ci> fSA_exposed </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VSkin_sc_e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BSA </ci>
+            <ci> Height_sc </ci>
+            <ci> fSA_exposed </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VSkin_sc_u">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> BSA </ci>
+            <ci> Height_sc </ci>
+            <apply>
+              <minus/>
+              <cn type="integer"> 1 </cn>
+              <ci> fSA_exposed </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="VPoor">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <minus/>
+                      <apply>
+                        <minus/>
+                        <apply>
+                          <minus/>
+                          <apply>
+                            <minus/>
+                            <ci> BM </ci>
+                            <ci> VFat </ci>
+                          </apply>
+                          <ci> VRich </ci>
+                        </apply>
+                        <ci> VLiver </ci>
+                      </apply>
+                      <ci> VSkin_e </ci>
+                    </apply>
+                    <ci> VSkin_u </ci>
+                  </apply>
+                  <ci> VSkin_sc_e </ci>
+                </apply>
+                <ci> VSkin_sc_u </ci>
+              </apply>
+              <ci> VBlood </ci>
+            </apply>
+            <apply>
+              <times/>
+              <cn> 0.1 </cn>
+              <ci> BM </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="f_su">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> Kp_sc_vs </ci>
+            <ci> BSA </ci>
+            <apply>
+              <minus/>
+              <cn type="integer"> 1 </cn>
+              <ci> fSA_exposed </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="f_se">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> Kp_sc_vs </ci>
+            <ci> BSA </ci>
+            <ci> fSA_exposed </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="FBlood">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> scFBlood </ci>
+            <ci> BM </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="FFat">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FBlood </ci>
+            <ci> scFFat </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="FPoor">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FBlood </ci>
+            <ci> scFPoor </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="FLiver">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FBlood </ci>
+            <ci> scFLiver </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="FSkin">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FBlood </ci>
+            <ci> scFSkin </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="FRich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <ci> FBlood </ci>
+                  <ci> FFat </ci>
+                </apply>
+                <ci> FPoor </ci>
+              </apply>
+              <ci> FLiver </ci>
+            </apply>
+            <ci> FSkin </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="FSkin_e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> FSkin </ci>
+            <ci> fSA_exposed </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="FSkin_u">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> FSkin </ci>
+            <ci> FSkin_e </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
     <listOfReactions>
       <reaction id="_J0" reversible="true" fast="false">
         <listOfReactants>
@@ -698,33 +999,5 @@
         </kineticLaw>
       </reaction>
     </listOfReactions>
-    <listOfEvents>
-      <event id="_E0" useValuesFromTriggerTime="true">
-        <trigger initialValue="true" persistent="true">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-              <geq/>
-              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
-              <ci> t_oral_dose_2 </ci>
-            </apply>
-          </math>
-        </trigger>
-        <listOfEventAssignments>
-          <eventAssignment variable="QGut">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">
-              <apply>
-                <plus/>
-                <ci> QGut </ci>
-                <apply>
-                  <times/>
-                  <ci> oral_dose </ci>
-                  <ci> Frac </ci>
-                </apply>
-              </apply>
-            </math>
-          </eventAssignment>
-        </listOfEventAssignments>
-      </event>
-    </listOfEvents>
   </model>
 </sbml>

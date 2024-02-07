@@ -16,26 +16,15 @@ model euromix()
   
   ## Physiology
 
-  ### Body size  
+  ### Body size
   BM = 70
   BSA = 190
   Height_sc = 0.0001
-  Height_vs = 0.0122  
+  Height_vs = 0.0122
   scVFat = 0.209
   scVRich = 0.105
   scVLiver = 0.024
-  scVBlood = 0.068  
-  VFat = BM * scVFat
-  VRich = BM * scVRich
-  VLiver = BM * scVLiver
-  VBlood = BM * scVBlood 
-  VArt = VBlood / 3.0 
-  VVen = VBlood - VArt 
-  VSkin_e = BSA * Height_vs * fSA_exposed 
-  VSkin_u = BSA * Height_vs * ( 1 - fSA_exposed ) 
-  VSkin_sc_e = BSA * Height_sc * fSA_exposed 
-  VSkin_sc_u = BSA * Height_sc * ( 1 - fSA_exposed ) 
-  VPoor = BM - VFat - VRich - VLiver - VSkin_e - VSkin_u - VSkin_sc_e - VSkin_sc_u - VBlood - 0.1 * BM 
+  scVBlood = 0.068
 
   ### Flow rates
   scFBlood = 4.8
@@ -43,19 +32,11 @@ model euromix()
   scFPoor = 0.12
   scFLiver = 0.27
   scFSkin = 0.05
-  FBlood = scFBlood * BM 
-  FFat = FBlood * scFFat 
-  FPoor = FBlood * scFPoor 
-  FLiver = FBlood * scFLiver 
-  FSkin = FBlood * scFSkin 
-  FRich = FBlood - FFat - FPoor - FLiver - FSkin 
-  FSkin_e = FSkin * fSA_exposed 
-  FSkin_u = FSkin - FSkin_e 
   Falv = 2220
 
   ## Biochemical parameters
 
-  ### Psrtition coefficients
+  ### Partition coefficients
   PCFat = 2.53
   PCLiver = 0.923
   PCRich = 0.875
@@ -80,17 +61,37 @@ model euromix()
   CLH = 132
   Ke = 7.5
 
-  ## Intake
-  Frac = 1
-  Cinh = 0
-  Tinh = 0
-  OralDose = 0
-  DermalDose = 0
-  oral_dose = 0
-  t_oral_dose_1 = 0
-  t_oral_dose_2 = 1
+  # Assignments
+  
+  ## Physiology
 
-  # CompArtments and Species;
+  ### Body size
+  const VFat := BM * scVFat
+  const VRich := BM * scVRich
+  const VLiver := BM * scVLiver
+  const VBlood := BM * scVBlood
+  const VArt := VBlood / 3.0
+  const VVen := VBlood - VArt
+  const VSkin_e := BSA * Height_vs * fSA_exposed
+  const VSkin_u := BSA * Height_vs * (1 - fSA_exposed)
+  const VSkin_sc_e := BSA * Height_sc * fSA_exposed
+  const VSkin_sc_u := BSA * Height_sc * (1 - fSA_exposed)
+  const VPoor := BM - VFat - VRich - VLiver - VSkin_e - VSkin_u - VSkin_sc_e - VSkin_sc_u - VBlood - 0.1 * BM
+
+  const f_su := Kp_sc_vs * BSA * (1 - fSA_exposed)
+  const f_se := Kp_sc_vs * BSA * fSA_exposed
+
+  ### Flow rates
+  const FBlood := scFBlood * BM
+  const FFat := FBlood * scFFat
+  const FPoor := FBlood * scFPoor
+  const FLiver := FBlood * scFLiver
+  const FSkin := FBlood * scFSkin
+  const FRich := FBlood - FFat - FPoor - FLiver - FSkin
+  const FSkin_e := FSkin * fSA_exposed
+  const FSkin_u := FSkin - FSkin_e
+
+  # Compartments and Species
   compartment Fat = VFat
   compartment Rich = VRich
   compartment pp = VPoor
@@ -133,48 +134,42 @@ model euromix()
 
   # Model
 
-  ## AbsoRichtion
-  # Not implemented in c code
-  # Should either be done by eVents
-  # Or by adding boundary species
+  ## Absorption
+  # Should either be done by events
+  # or by adding boundary species
 
   ## Distribution
-  QArt -> QFat; FFat*conc(QArt, Art)
-  QFat -> QVen; FFat*conc(QFat, Fat)/PCFat
+  QArt -> QFat; FFat * conc(QArt, Art)
+  QFat -> QVen; FFat * conc(QFat, Fat) / PCFat
 
-  QArt -> QRich; FRich*conc(QArt, Art)
-  QRich -> QVen; FRich*conc(QRich, Rich)/PCRich
+  QArt -> QRich; FRich * conc(QArt, Art)
+  QRich -> QVen; FRich * conc(QRich, Rich) / PCRich
 
-  QArt -> QPoor; FPoor*conc(QArt, Art)
-  QPoor -> QVen; FPoor*conc(QPoor, pp)/PCPoor
+  QArt -> QPoor; FPoor * conc(QArt, Art)
+  QPoor -> QVen; FPoor * conc(QPoor, pp) / PCPoor
 
-  QArt -> QLiver; FLiver*conc(QArt, Art)
-  QLiver -> QVen; FLiver*conc(QLiver, liver)/PCLiver
-  QGut -> QLiver; kGut*QGut
-  
-  QArt -> QSkin_u; FSkin_u*conc(QArt, Art)
-  QSkin_u -> QVen; FSkin_u*conc(QSkin_u, su)/PCSkin
-  f_su = Kp_sc_vs*BSA*(1 - fSA_exposed)
-  QSkin_u -> QSkin_sc_u; f_su*conc(QSkin_u, su)/PCSkin_sc  
-  QSkin_sc_u -> QSkin_u; f_su*conc(QSkin_sc_u, scu)
+  QArt -> QLiver; FLiver * conc(QArt, Art)
+  QLiver -> QVen; FLiver * conc(QLiver, liver) / PCLiver
+  QGut -> QLiver; kGut * QGut
 
-  QArt -> QSkin_e; FSkin_e*conc(QArt, Art)
-  QSkin_e -> QVen; FSkin_e*conc(QSkin_e, se)/PCSkin
-  f_se = Kp_sc_vs*BSA*fSA_exposed
-  QSkin_e -> QSkin_sc_e; f_se*conc(QSkin_e, se)/PCSkin_sc
-  QSkin_sc_e -> QSkin_e; f_se*conc(QSkin_sc_e, sce)
+  QArt -> QSkin_u; FSkin_u * conc(QArt, Art)
+  QSkin_u -> QVen; FSkin_u * conc(QSkin_u, su) / PCSkin
+  QSkin_u -> QSkin_sc_u; f_su * conc(QSkin_u, su) / PCSkin_sc
+  QSkin_sc_u -> QSkin_u; f_su * conc(QSkin_sc_u, scu)
 
-  QVen -> QArt; FBlood*conc(QVen, Ven)
+  QArt -> QSkin_e; FSkin_e * conc(QArt, Art)
+  QSkin_e -> QVen; FSkin_e * conc(QSkin_e, se) / PCSkin
+  QSkin_e -> QSkin_sc_e; f_se * conc(QSkin_e, se) / PCSkin_sc
+  QSkin_sc_e -> QSkin_e; f_se * conc(QSkin_sc_e, sce)
+
+  QVen -> QArt; FBlood * conc(QVen, Ven)
 
   ## Metabolism
 
-  QLiver -> QMetab; fub*piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, liver), Michaelis > 0.5, metab_MA(CLH, PCLiver, QLiver, liver))
+  QLiver -> QMetab; fub * piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, liver), Michaelis > 0.5, metab_MA(CLH, PCLiver, QLiver, liver))
 
   ## Excretion
-  QArt -> QAir; Falv*conc(QArt, Art)/PCAir
-  QArt -> QExcret; Ke*fub*conc(QArt, Art)
-
-  # Dosing
-  at (time>=t_oral_dose_2): QGut = QGut + oral_dose*Frac
+  QArt -> QAir; Falv * conc(QArt, Art) / PCAir
+  QArt -> QExcret; Ke * fub * conc(QArt, Art)
 
 end
