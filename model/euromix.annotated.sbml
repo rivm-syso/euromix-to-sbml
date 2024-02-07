@@ -206,7 +206,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_su" id="su" spatialDimensions="3" size="0" constant="true">
+      <compartment metaid="meta_su" id="su" spatialDimensions="3" size="2.0862" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_su">
@@ -219,7 +219,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_se" id="se" spatialDimensions="3" size="2.318" constant="true">
+      <compartment metaid="meta_se" id="se" spatialDimensions="3" size="0.2318" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_se">
@@ -232,7 +232,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_scu" id="scu" spatialDimensions="3" size="0" constant="true">
+      <compartment metaid="meta_scu" id="scu" spatialDimensions="3" size="0.0171" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_scu">
@@ -245,7 +245,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_sce" id="sce" spatialDimensions="3" size="0.019" constant="true">
+      <compartment metaid="meta_sce" id="sce" spatialDimensions="3" size="0.0019" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_sce">
@@ -658,7 +658,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_VSkin_e" id="VSkin_e" value="2.318" constant="true">
+      <parameter metaid="meta_VSkin_e" id="VSkin_e" value="0.2318" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_VSkin_e">
@@ -671,7 +671,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_fSA_exposed" id="fSA_exposed" value="1" constant="true">
+      <parameter metaid="meta_fSA_exposed" id="fSA_exposed" value="0.1" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_fSA_exposed">
@@ -684,7 +684,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_VSkin_u" id="VSkin_u" value="0" constant="true">
+      <parameter metaid="meta_VSkin_u" id="VSkin_u" value="2.0862" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_VSkin_u">
@@ -697,7 +697,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_VSkin_sc_e" id="VSkin_sc_e" value="0.019" constant="true">
+      <parameter metaid="meta_VSkin_sc_e" id="VSkin_sc_e" value="0.0019" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_VSkin_sc_e">
@@ -710,7 +710,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_VSkin_sc_u" id="VSkin_sc_u" value="0" constant="true">
+      <parameter metaid="meta_VSkin_sc_u" id="VSkin_sc_u" value="0.0171" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_VSkin_sc_u">
@@ -879,7 +879,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FSkin_e" id="FSkin_e" value="16.8" constant="true">
+      <parameter metaid="meta_FSkin_e" id="FSkin_e" value="1.68" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FSkin_e">
@@ -892,7 +892,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FSkin_u" id="FSkin_u" value="0" constant="true">
+      <parameter metaid="meta_FSkin_u" id="FSkin_u" value="15.12" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FSkin_u">
@@ -1217,7 +1217,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_f_su" id="f_su" value="0" constant="true">
+      <parameter metaid="meta_f_su" id="f_su" value="1.71" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_f_su">
@@ -1230,7 +1230,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_f_se" id="f_se" value="1.9" constant="true">
+      <parameter metaid="meta_f_se" id="f_se" value="0.19" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_f_se">
