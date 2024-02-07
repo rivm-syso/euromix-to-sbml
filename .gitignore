@@ -1,6 +1,14 @@
-.ipynb_checkpoints
 ¨*.pdf:Zone.Identifier"
 *bak*
 *.o
 *.so
+
+# Visual studio code
+.vscode/*
+
+# R
 .Rproj.user
+
+# Python
+**/__pycache__
+.ipynb_checkpoints
