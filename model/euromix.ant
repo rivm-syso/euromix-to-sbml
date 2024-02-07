@@ -72,7 +72,7 @@ model euromix()
 
   ### Others
   fub = 0.51
-  fSA_exposed = 1
+  fSA_exposed = 0.1
   Kp_sc_vs = 0.01
 
   ### Excretion
