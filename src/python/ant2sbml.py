@@ -5,8 +5,8 @@ from pathlib import Path
 import traceback
 
 def main():
-    parser = argparse.ArgumentParser(description="Convert ant file to sbml")
-    parser.add_argument("ant_file", help="Full path to ant file")
+    parser = argparse.ArgumentParser(description="Convert Antimony file to SBML")
+    parser.add_argument("ant_file", help="Full path to Antimony file")
     parser.add_argument("-f", "--force", action="store_true", help="Overwrite existing")
     args = parser.parse_args()
     f_in = Path(args.ant_file)

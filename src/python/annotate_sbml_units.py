@@ -1,15 +1,15 @@
-import os
 import sys
 import argparse
-import traceback
 from pathlib import Path
-from sbmlutils.metadata.annotator import annotate_sbml
+import traceback
+import unit_annotation_helpers as uah
 
 def main():
-    parser = argparse.ArgumentParser(description="Annotate the SBML file")
+    parser = argparse.ArgumentParser(description="Annotate the units of the SBML file with the specifications of the annotations file")
     parser.add_argument("sbml_file", help="Full path to SBML file")
     parser.add_argument("annotations_file", help="Full path to SBML file")
     parser.add_argument("out_file", help="Output file")
+    parser.add_argument("-f", "--force", action="store_true", help="Overwrite existing")
     args = parser.parse_args()
     f_in = Path(args.sbml_file)
     f_ann = Path(args.annotations_file)
@@ -19,14 +19,15 @@ def main():
     if not f_ann.is_file():
         raise FileNotFoundError(f'Annotations file [{f_in}] does not exist.')
     try:
-        doc = annotate_sbml(
-            source= f_in, 
-            annotations_path= f_ann, 
-            filepath=f_out
-        )
-        print(doc.getModel())
+        if not f_out.exists() or args.force:
+            sbml_file = f_in
+            annotations_file = f_ann
+            out_file = f_out
+            uah.annotateUnits(sbml_file, annotations_file, str(out_file))
+        else:
+            print(f'[{f_out}] already exists, use -f to force conversion')
     except Exception as e:
-        print(f'Error annotating SBML file {f_in}.')
+        print(f'Unit annotation failed')
         traceback.print_exc()
         sys.exit(1)
 

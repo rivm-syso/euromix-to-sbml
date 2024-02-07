@@ -28,7 +28,12 @@ jobs:
 
       - name: Annotate SBML
         id: annotate-sbml
-        run: python src/python/annotate_sbml.py model/euromix.sbml
+        run: python src/python/annotate_sbml.py model/euromix.sbml model/euromix.annotations.csv model/euromix.sbml
+        shell: bash
+
+      - name: Annotate SBML units
+        id: annotate-sbml-units
+        run: python src/python/annotate_sbml_units.py model/euromix.sbml model/euromix.annotations.csv model/euromix.sbml -f
         shell: bash
 
       - name: "Push changes"
