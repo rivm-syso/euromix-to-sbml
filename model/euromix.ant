@@ -92,17 +92,17 @@ model euromix()
   const FSkin_u := FSkin - FSkin_e
 
   # Compartments and Species
-  compartment Fat = VFat
-  compartment Rich = VRich
-  compartment pp = VPoor
-  compartment liver = VLiver
+  compartment Fat := VFat
+  compartment Rich := VRich
+  compartment pp := VPoor
+  compartment liver := VLiver
   compartment gut
-  compartment su = VSkin_u
-  compartment se = VSkin_e
-  compartment scu = VSkin_sc_u
-  compartment sce = VSkin_sc_e
-  compartment Art = VArt
-  compartment Ven = VVen
+  compartment su := VSkin_u
+  compartment se := VSkin_e
+  compartment scu := VSkin_sc_u
+  compartment sce := VSkin_sc_e
+  compartment Art := VArt
+  compartment Ven := VVen
 
   # Species
   substanceOnly species QFat in Fat
