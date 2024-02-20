@@ -112,17 +112,17 @@
     </listOfFunctionDefinitions>
     <listOfCompartments>
       <compartment sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
-      <compartment id="Fat" spatialDimensions="3" size="14.63" constant="true"/>
-      <compartment id="Rich" spatialDimensions="3" size="7.35" constant="true"/>
-      <compartment id="pp" spatialDimensions="3" size="32.243" constant="true"/>
-      <compartment id="liver" spatialDimensions="3" size="1.68" constant="true"/>
+      <compartment id="Fat" spatialDimensions="3" size="14.63" constant="false"/>
+      <compartment id="Rich" spatialDimensions="3" size="7.35" constant="false"/>
+      <compartment id="pp" spatialDimensions="3" size="32.243" constant="false"/>
+      <compartment id="liver" spatialDimensions="3" size="1.68" constant="false"/>
       <compartment id="gut" spatialDimensions="3" size="1" constant="true"/>
-      <compartment id="su" spatialDimensions="3" size="2.0862" constant="true"/>
-      <compartment id="se" spatialDimensions="3" size="0.2318" constant="true"/>
-      <compartment id="scu" spatialDimensions="3" size="0.0171" constant="true"/>
-      <compartment id="sce" spatialDimensions="3" size="0.0019" constant="true"/>
-      <compartment id="Art" spatialDimensions="3" size="1.58666666666667" constant="true"/>
-      <compartment id="Ven" spatialDimensions="3" size="3.17333333333333" constant="true"/>
+      <compartment id="su" spatialDimensions="3" size="2.0862" constant="false"/>
+      <compartment id="se" spatialDimensions="3" size="0.2318" constant="false"/>
+      <compartment id="scu" spatialDimensions="3" size="0.0171" constant="false"/>
+      <compartment id="sce" spatialDimensions="3" size="0.0019" constant="false"/>
+      <compartment id="Art" spatialDimensions="3" size="1.58666666666667" constant="false"/>
+      <compartment id="Ven" spatialDimensions="3" size="3.17333333333333" constant="false"/>
     </listOfCompartments>
     <listOfSpecies>
       <species id="QFat" compartment="Fat" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
@@ -194,6 +194,56 @@
       <parameter id="FSkin_u" value="15.12" constant="false"/>
     </listOfParameters>
     <listOfRules>
+      <assignmentRule variable="Fat">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VFat </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Rich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VRich </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="pp">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VPoor </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="liver">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VLiver </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="su">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_u </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="se">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_e </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="scu">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_sc_u </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="sce">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_sc_e </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Art">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VArt </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Ven">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VVen </ci>
+        </math>
+      </assignmentRule>
       <assignmentRule variable="VFat">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>

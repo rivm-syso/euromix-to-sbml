@@ -141,7 +141,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Fat" id="Fat" spatialDimensions="3" size="14.63" constant="true">
+      <compartment metaid="meta_Fat" id="Fat" spatialDimensions="3" size="14.63" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Fat">
@@ -154,7 +154,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Rich" id="Rich" spatialDimensions="3" size="7.35" constant="true">
+      <compartment metaid="meta_Rich" id="Rich" spatialDimensions="3" size="7.35" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Rich">
@@ -167,7 +167,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_pp" id="pp" spatialDimensions="3" size="32.243" constant="true">
+      <compartment metaid="meta_pp" id="pp" spatialDimensions="3" size="32.243" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_pp">
@@ -180,7 +180,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_liver" id="liver" spatialDimensions="3" size="1.68" constant="true">
+      <compartment metaid="meta_liver" id="liver" spatialDimensions="3" size="1.68" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_liver">
@@ -206,7 +206,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_su" id="su" spatialDimensions="3" size="2.0862" constant="true">
+      <compartment metaid="meta_su" id="su" spatialDimensions="3" size="2.0862" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_su">
@@ -219,7 +219,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_se" id="se" spatialDimensions="3" size="0.2318" constant="true">
+      <compartment metaid="meta_se" id="se" spatialDimensions="3" size="0.2318" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_se">
@@ -232,7 +232,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_scu" id="scu" spatialDimensions="3" size="0.0171" constant="true">
+      <compartment metaid="meta_scu" id="scu" spatialDimensions="3" size="0.0171" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_scu">
@@ -245,7 +245,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_sce" id="sce" spatialDimensions="3" size="0.0019" constant="true">
+      <compartment metaid="meta_sce" id="sce" spatialDimensions="3" size="0.0019" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_sce">
@@ -258,7 +258,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Art" id="Art" spatialDimensions="3" size="1.58666666666667" constant="true">
+      <compartment metaid="meta_Art" id="Art" spatialDimensions="3" size="1.58666666666667" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Art">
@@ -271,7 +271,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Ven" id="Ven" spatialDimensions="3" size="3.17333333333333" constant="true">
+      <compartment metaid="meta_Ven" id="Ven" spatialDimensions="3" size="3.17333333333333" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Ven">
@@ -1141,6 +1141,56 @@
       </parameter>
     </listOfParameters>
     <listOfRules>
+      <assignmentRule variable="Fat">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VFat </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Rich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VRich </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="pp">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VPoor </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="liver">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VLiver </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="su">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_u </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="se">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_e </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="scu">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_sc_u </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="sce">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VSkin_sc_e </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Art">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VArt </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Ven">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> VVen </ci>
+        </math>
+      </assignmentRule>
       <assignmentRule variable="VFat">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
