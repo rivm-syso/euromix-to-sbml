@@ -79,13 +79,5 @@ Kp_sc_vs,parameter,dm/h,Kp_sc_vs,diffusion rate from stratum corneum to viable s
 kGut,parameter,1/h,kGut,oral 1st order absorption rate constant,rdf,BQB_IS,pbpko/PKPBO:00126,absorption rate constant gut,Both kGut and Frac refer to absorption. What to use?
 CLH,parameter,L/h,CLH,hepatic metabolic clearance,rdf,BQB_IS,pbpko/PKPBO:00215,heaptic clearance,Using PKPBO term heaptic clearance (typo?)
 Ke,parameter,L/h,Ke,renal excretion rate,rdf,BQB_IS,pbpko/PKPBO:00218,renal elimination rate constant,
-Frac,parameter,unitless,Frac,fraction absorbed by the gut,rdf,BQB_IS,pbpko/PKPBO:00126,absorption rate constant gut,Both kGut and Frac refer to absorption. What to use?
-Cinh,parameter,mmol/L,Cinh,concentration inhalation,rdf,BQB_IS,ncit/NCIT:C41185,concentration,Remove as parameter of the model
-Tinh,parameter,h,Tinh,inhalation duration,rdf,BQB_IS,pato/PATO:0001309,duration,Remove as parameter of the model
-OralDose,parameter,mmol,OralDose,oral dose,rdf,BQB_IS,obi/OBI:0000984,dose,Remove as parameter of the model
-DermalDose,parameter,mmol,DermalDose,dermal dose,rdf,BQB_IS,obi/OBI:0000984,dose,Remove as parameter of the model
-oral_dose,parameter,mmol/h,oral_dose,dose 1sdosing,rdf,BQB_IS,obi/OBI:0000984,dose,Remove as parameter of the model
-t_oral_dose_1,parameter,h,t_oral_dose_1,time 1st oral dosing,rdf,BQB_IS,pato/PATO:0000165,time,Remove as parameter of the model
-t_oral_dose_2,parameter,h,t_oral_dose_2,time 2nd oral dosing,rdf,BQB_IS,pato/PATO:0000165,time,Remove as parameter of the model
 f_su,parameter,,f_su,???,rdf,BQB_IS,pbpko/PKPBO:00003,physiological parameters,Using generic term for physiological parameter. Kp_sc_vs*BSA*(1-fSA_exposed)
 f_se,parameter,,f_se,???,rdf,BQB_IS,pbpko/PKPBO:00003,physiological parameters,Using generic term for physiological parameter. Kp_sc_vs*BSA*fSA_exposed
