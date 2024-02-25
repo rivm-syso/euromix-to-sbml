@@ -26,9 +26,9 @@ jobs:
         run: python src/python/ant2sbml.py -f model/euromix.ant
         shell: bash
 
-      - name: Annotate SBML
+      - name: Annotate SBML terms
         id: annotate-sbml
-        run: python src/python/annotate_sbml.py model/euromix.sbml model/euromix.annotations.csv model/euromix.sbml
+        run: python src/python/annotate_sbml_terms.py model/euromix.sbml model/euromix.annotations.csv model/euromix.sbml
         shell: bash
 
       - name: Annotate SBML units
