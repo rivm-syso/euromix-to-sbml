@@ -8,11 +8,17 @@ import pandas as pd
 def main():
     parser = argparse.ArgumentParser(description="Create a CSV file of the terms of an SBML model")
     parser.add_argument("sbml_file", help="Full path to the SBML file")
+    parser.add_argument("-o", "--out", required=False, help="Output file")
     parser.add_argument("-f", "--force", action="store_true", help="Overwrite existing")
     args = parser.parse_args()
     f_in = Path(args.sbml_file)
     if not f_in.is_file():
         raise FileNotFoundError(f'File {f_in} does not exist.')
+    if args.out:
+        f_out = Path(args.out)
+    else:
+        f_out = Path(args.sbml_file).with_suffix('.csv')
+
     try:
         # Load the document
         document = ls.readSBML(f_in)
@@ -27,9 +33,8 @@ def main():
     df = exportTerms(model)
 
     # Write data table to csv file
-    f_out = Path(args.sbml_file).with_suffix('.csv')
     if not f_out.exists() or args.force:
-        df.to_csv('out.csv', index=False)
+        df.to_csv(f_out, index=False)
         print(f'{f_in} converted to {f_out}')
     else:
         print(f'{f_out} exists, use -f to force conversion')
@@ -56,9 +61,9 @@ def exportTerms(model):
     dt = []
     dt_compartments = getCompartmentTerms(model)
     dt.extend(dt_compartments)
-    dt_species = getCompartmentTerms(model)
+    dt_species = getSpeciesTerms(model)
     dt.extend(dt_species)
-    dt_parameters = getCompartmentTerms(model)
+    dt_parameters = getParameterTerms(model)
     dt.extend(dt_parameters)
     terms = pd.DataFrame(
         dt,

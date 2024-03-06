@@ -17,7 +17,7 @@ def main():
     if not f_in.is_file():
         raise FileNotFoundError(f'SBML file [{f_in}] does not exist.')
     if not f_ann.is_file():
-        raise FileNotFoundError(f'Annotations file [{f_in}] does not exist.')
+        raise FileNotFoundError(f'Annotations file [{f_ann}] does not exist.')
     try:
         if not f_out.exists() or args.force:
             sbml_file = f_in
