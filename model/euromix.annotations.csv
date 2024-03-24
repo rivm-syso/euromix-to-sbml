@@ -2,7 +2,7 @@
 ,document,,,,rdf,BQM_IS,mamo/MAMO_0000203,physiologically based pharmacokinetic model,
 ,document,,,,rdf,BQM_IS,mamo/MAMO_0000046,ordinary differential equation model,
 ,document,,,,rdf,BQB_HAS_TAXON,taxonomy/40674,mammalia,
-default_compartment,compartment,,default_compartment,,rdf,BQB_IS,sbo/SBO:0000290,physical compartment,Seems to be used for QAir and QExcrete. Better to model these separately?
+default_compartment,compartment,L,default_compartment,,rdf,BQB_IS,sbo/SBO:0000290,physical compartment,Seems to be used for QAir and QExcrete. Better to model these separately?
 Fat,compartment,L,Fat,adipose tissue,rdf,BQB_IS,uberon/UBERON:0001013,adipose tissue,
 Rich,compartment,L,Rich,richly perfused tissue,rdf,BQB_IS,uberon/UBERON:0000479,richly perfused tissue,Using parent term tissue.
 pp,compartment,L,pp,poortly perfused tissue,rdf,BQB_IS,uberon/UBERON:0000479,poorly perfused tissue,Using parent term tissue.
@@ -29,7 +29,7 @@ QVen,species,mmol,QVen,quantity in venous blood,rdf,BQB_IS,sbo/SBO:0000247,simpl
 QExcret,species,mmol,QExcret,quantity excreted in urine (cumulated),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
 QAir,species,mmol,QAir,quantity in air,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
 BM,parameter,kg,BM,body mass,rdf,BQB_IS,obo/NCIT:C81328,body weight,
-BSA,parameter,dm^2,BSA,body surface area,rdf,BQB_IS,obo/NCIT:C25157,body surface area,
+BSA,parameter,dm2,BSA,body surface area,rdf,BQB_IS,obo/NCIT:C25157,body surface area,
 Height_sc,parameter,dm,Height_sc,skin thickness,rdf,BQB_IS,oba/OBA:VT0001200,skin thickness,
 Height_vs,parameter,dm,Height_vs,viable skin thickness,rdf,BQB_IS,oba/OBA:VT0001200,skin thickness,Using generic term for skin thickness.
 scVFat,parameter,unitless,scVFat,fat as fraction of total body volume,rdf,BQB_IS,uo/UO:0000191,fraction,
@@ -73,10 +73,10 @@ PCSkin,parameter,unitless,PCSkin,partition coefficient viable skin over blood,rd
 PCAir,parameter,unitless,PCAir,partition coefficient blood over air,rdf,BQB_IS,obo/NCIT:C20610,partition coefficient,Using generit term for partition coefficient.
 Km,parameter,mmol,Km,Michaelis constant,rdf,BQB_IS,sbo/SBO:0000027,Michaelis constant,
 Michaelis,parameter,unitless,Michaelis,flag for Michaelis-Menten or linear metabolism,rdf,BQB_IS,stato/STATO:0000034,model parameter,Using generic term for model parameter.
-Vmax,parameter,mM/h/L,Vmax,maximum rate of metabolism,rdf,BQB_IS,sbo/SBO:0000186,maximal velocity,Using generic term for maximal velocity.
+Vmax,parameter,mM.L-1.h-1,Vmax,maximum rate of metabolism,rdf,BQB_IS,sbo/SBO:0000186,maximal velocity,Using generic term for maximal velocity.
 fub,parameter,unitless,fub,Unbound fraction in blood,rdf,BQB_IS,pkpbo/PKPBO:00134,unbound fraction,Using generic term for unbound fraction.
 Kp_sc_vs,parameter,dm/h,Kp_sc_vs,diffusion rate from stratum corneum to viable skin,rdf,BQB_IS,sbo/SBO:0000491,diffusion coefficient,Using generic term for parameter type.
-kGut,parameter,1/h,kGut,oral 1st order absorption rate constant,rdf,BQB_IS,pbpko/PKPBO:00126,absorption rate constant gut,Both kGut and Frac refer to absorption. What to use?
+kGut,parameter,h-1,kGut,oral 1st order absorption rate constant,rdf,BQB_IS,pbpko/PKPBO:00126,absorption rate constant gut,Both kGut and Frac refer to absorption. What to use?
 CLH,parameter,L/h,CLH,hepatic metabolic clearance,rdf,BQB_IS,pbpko/PKPBO:00215,heaptic clearance,Using PKPBO term heaptic clearance (typo?)
 Ke,parameter,L/h,Ke,renal excretion rate,rdf,BQB_IS,pbpko/PKPBO:00218,renal elimination rate constant,
 f_su,parameter,,f_su,???,rdf,BQB_IS,pbpko/PKPBO:00003,physiological parameters,Using generic term for physiological parameter. Kp_sc_vs*BSA*(1-fSA_exposed)

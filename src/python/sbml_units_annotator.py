@@ -8,11 +8,12 @@ logger = get_logger(__name__)
 class sbmlUnitsAnnotator:
 
     # Unit definitions, translating a unit string to the elementary unit
-    # compositions following the SBML structure
+    # compositions following the SBML structure.
+    # Unit IDs should comply with vocabulary of QUDT: https://qudt.org/2.1/vocab/unit
     unitDefinitions = [
         {
-            "id" : "unitless",
-            "aliases" : [
+            "id" : "UNITLESS",
+            "synonyms" : [
                 "unitless",
                 "dimensionless"
             ],
@@ -22,8 +23,8 @@ class sbmlUnitsAnnotator:
         },
         # Amount/volume units
         {
-            "id" : "mol",
-            "aliases" : [
+            "id" : "MOL",
+            "synonyms" : [
                 "mol"
             ],
             "units": [
@@ -31,8 +32,8 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mmol",
-            "aliases" : [
+            "id" : "MilliMOL",
+            "synonyms" : [
                 "mmol"
             ],
             "units": [
@@ -40,8 +41,8 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "kg",
-            "aliases" : [
+            "id" : "KiloGM",
+            "synonyms" : [
                 "kg"
             ],
             "units": [
@@ -49,8 +50,8 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "g",
-            "aliases" : [
+            "id" : "GM",
+            "synonyms" : [
                 "g"
             ],
             "units": [
@@ -58,8 +59,8 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mg",
-            "aliases" : [
+            "id" : "MilliGM",
+            "synonyms" : [
                 "mg"
             ],
             "units": [
@@ -67,8 +68,17 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
+            "id" : "MicroGM",
+            "synonyms" : [
+                "ug"
+            ],
+            "units": [
+                { "kind": ls.UNIT_KIND_GRAM, "exponent": 1, "multiplier": 1, "scale": -6 }
+            ]
+        },
+        {
             "id" : "L",
-            "aliases" : [
+            "synonyms" : [
                 "L"
             ],
             "units": [
@@ -76,8 +86,8 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mL",
-            "aliases" : [
+            "id" : "MilliL",
+            "synonyms" : [
                 "mL"
             ],
             "units": [
@@ -86,9 +96,10 @@ class sbmlUnitsAnnotator:
         },
         # Concentration units
         {
-            "id" : "ug_per_kg",
-            "aliases" : [
-                "ug/kg"
+            "id" : "MicroGM-PER-KiloGM",
+            "synonyms" : [
+                "ug/kg",
+                "ug_per_kg"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_GRAM, "exponent": 1, "multiplier": 1, "scale": -6 },
@@ -96,9 +107,10 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mg_per_kg",
-            "aliases" : [
-                "mg/kg"
+            "id" : "MilliGM-PER-KiloGM",
+            "synonyms" : [
+                "mg/kg",
+                "mg_per_kg"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_GRAM, "exponent": 1, "multiplier": 1, "scale": -3 },
@@ -106,9 +118,10 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "g_per_kg",
-            "aliases" : [
-                "g/kg"
+            "id" : "GM-PER-KiloGM",
+            "synonyms" : [
+                "g/kg",
+                "g_per_kg"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_GRAM, "exponent": 1, "multiplier": 1, "scale": 0 },
@@ -116,9 +129,10 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "ug_per_g",
-            "aliases" : [
-                "ug/g"
+            "id" : "MicroGM-PER-GM",
+            "synonyms" : [
+                "ug/g",
+                "ug_per_g"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_GRAM, "exponent": 1, "multiplier": 1, "scale": -6 },
@@ -126,9 +140,10 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mg_per_g",
-            "aliases" : [
-                "mg/g"
+            "id" : "MilliGM-PER-GM",
+            "synonyms" : [
+                "mg/g",
+                "mg_per_g"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_GRAM, "exponent": 1, "multiplier": 1, "scale": -3 },
@@ -136,9 +151,10 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "g_per_g",
-            "aliases" : [
-                "g/g"
+            "id" : "GM-PER-GM",
+            "synonyms" : [
+                "g/g",
+                "g_per_g"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_GRAM, "exponent": 1, "multiplier": 1, "scale": 0 },
@@ -146,8 +162,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "ug_per_L",
-            "aliases" : [
+            "id" : "MicroGM-PER-L",
+            "synonyms" : [
+                "ug_per_L",
                 "ug/L"
             ],
             "units": [
@@ -156,8 +173,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mg_per_L",
-            "aliases" : [
+            "id" : "MilliGM-PER-L",
+            "synonyms" : [
+                "mg_per_L",
                 "mg/L"
             ],
             "units": [
@@ -166,8 +184,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "g_per_L",
-            "aliases" : [
+            "id" : "GM-PER-L",
+            "synonyms" : [
+                "g_per_L",
                 "g/L"
             ],
             "units": [
@@ -176,8 +195,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mol_per_L",
-            "aliases" : [
+            "id" : "MOL-PER-L",
+            "synonyms" : [
+                "mol_per_L",
                 "mol/L"
             ],
             "units": [
@@ -186,8 +206,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mmol_per_L",
-            "aliases" : [
+            "id" : "MilliMOL-PER-L",
+            "synonyms" : [
+                "mmol_per_L",
                 "mmol/L"
             ],
             "units": [
@@ -197,8 +218,9 @@ class sbmlUnitsAnnotator:
         },
         # Time units
         {
-            "id" : "seconds",
-            "aliases" : [
+            "id" : "SEC",
+            "synonyms" : [
+                "seconds",
                 "s"
             ],
             "units": [
@@ -206,8 +228,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "hours",
-            "aliases" : [
+            "id" : "HR",
+            "synonyms" : [
+                "hours",
                 "h"
             ],
             "units": [
@@ -215,8 +238,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "days",
-            "aliases" : [
+            "id" : "DAY",
+            "synonyms" : [
+                "days",
                 "d"
             ],
             "units": [
@@ -225,26 +249,44 @@ class sbmlUnitsAnnotator:
         },
         # Rate units
         {
-            "id" : "per_hour",
-            "aliases" : [
-                "1/h"
+            "id" : "PER-SEC",
+            "synonyms" : [
+                "per_second",
+                "1/sec",
+                "1/s",
+                "s-1"
+            ],
+            "units": [
+                { "kind": ls.UNIT_KIND_SECOND, "exponent": -1, "multiplier": 1, "scale": 1 }
+            ]
+        },
+        {
+            "id" : "PER-H",
+            "synonyms" : [
+                "per_hour",
+                "1/h",
+                "h-1"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_SECOND, "exponent": -1, "multiplier": 3600, "scale": 1 }
             ]
         },
         {
-            "id" : "per_day",
-            "aliases" : [
-                "1/day"
+            "id" : "PER-DAY",
+            "synonyms" : [
+                "per_day",
+                "1/day",
+                "1/d",
+                "d-1"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_SECOND, "exponent": -1, "multiplier": 24 * 3600, "scale": 1 }
             ]
         },
         {
-            "id" : "mmol_per_hour",
-            "aliases" : [
+            "id" : "MilliMOL-PER-HR",
+            "synonyms" : [
+                "mmol_per_hour",
                 "mmol/h"
             ],
             "units": [
@@ -253,9 +295,10 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mol_per_hour",
-            "aliases" : [
-                "mol/h"
+            "id" : "MOL-PER-HR",
+            "synonyms" : [
+                "mol/h",
+                "mol_per_hour"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_MOLE, "exponent": 1, "multiplier": 1, "scale": 0 },
@@ -263,8 +306,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "L_per_h",
-            "aliases" : [
+            "id" : "L-PER-HR",
+            "synonyms" : [
+                "L_per_h",
                 "L/h"
             ],
             "units": [
@@ -273,8 +317,9 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "dm_per_hour",
-            "aliases" : [
+            "id" : "DeciM-PER-HR",
+            "synonyms" : [
+                "dm_per_hour",
                 "dm/h"
             ],
             "units": [
@@ -284,9 +329,10 @@ class sbmlUnitsAnnotator:
         },
         # Rate per mass units
         {
-            "id" : "L_per_h_per_kg",
-            "aliases" : [
-                "L/h/kg"
+            "id" : "L-PER-KiloGM-HR",
+            "synonyms" : [
+                "L_per_kg_h",
+                "L.kg-1.h-1"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_LITRE, "exponent": 1, "multiplier": 1, "scale": 0 },
@@ -295,9 +341,10 @@ class sbmlUnitsAnnotator:
             ]
         },
         {
-            "id" : "mM_per_h_per_L",
-            "aliases" : [
-                "mM/h/L"
+            "id" : "MilliMOL-PER-L-HR",
+            "synonyms" : [
+                "mM_per_L_h",
+                "mM.L-1.h-1"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_MOLE, "exponent": 1, "multiplier": 1, "scale": -3 },
@@ -307,9 +354,11 @@ class sbmlUnitsAnnotator:
         },
         # Area units
         {
-            "id" : "dm_square",
-            "aliases" : [
-                "dm^2"
+            "id" : "DeciM2",
+            "synonyms" : [
+                "dm_square",
+                "dm^2",
+                "dm2"
             ],
             "units": [
                 { "kind": ls.UNIT_KIND_METRE, "exponent": 2, "multiplier": 1, "scale": -1 },
@@ -317,8 +366,8 @@ class sbmlUnitsAnnotator:
         },
         # Length units
         {
-            "id" : "dm",
-            "aliases" : [
+            "id" : "DeciM",
+            "synonyms" : [
                 "dm"
             ],
             "units": [
@@ -369,7 +418,7 @@ class sbmlUnitsAnnotator:
         """Find unit definition matching the provided string."""
         res = None
         for index, value in enumerate(self.unitDefinitions):
-            if any(val.lower() == str.lower() for val in value['aliases']):
+            if any(val.lower() == str.lower() for val in value['synonyms']):
                 res = value
                 break
         return res
