@@ -1,0 +1,83 @@
+﻿pattern,sbml_type,element_id,element_description,annotation_type,qualifier,resource,name,remark
+,document,,,rdf,BQM_IS,mamo/MAMO_0000203,physiologically based pharmacokinetic model,
+,document,,,rdf,BQM_IS,mamo/MAMO_0000046,ordinary differential equation model,
+,document,,,rdf,BQB_HAS_TAXON,taxonomy/40674,mammalia,
+default_compartment,compartment,default_compartment,,rdf,BQB_IS,sbo/SBO:0000290,physical compartment,Seems to be used for QAir and QExcrete. Better to model these separately?
+Fat,compartment,Fat,adipose tissue,rdf,BQB_IS,uberon/UBERON:0001013,adipose tissue,
+Rich,compartment,Rich,richly perfused tissue,rdf,BQB_IS,uberon/UBERON:0000479,richly perfused tissue,Using parent term tissue.
+pp,compartment,pp,poortly perfused tissue,rdf,BQB_IS,uberon/UBERON:0000479,poorly perfused tissue,Using parent term tissue.
+liver,compartment,liver,liver,rdf,BQB_IS,uberon/UBERON:0002107,liver,
+gut,compartment,gut,gut,rdf,BQB_IS,uberon/UBERON:0001555,digestive tract,
+su,compartment,su,viable unexposed skin,rdf,BQB_IS,uberon/UBERON:0002097,viable unexposed skin,Using parent term skin.
+se,compartment,se,viable exposed skin,rdf,BQB_IS,uberon/UBERON:0002097,viable exposed skin,Using parent term skin.
+scu,compartment,scu,skin unexposed stratum corneum,rdf,BQB_IS,uberon/UBERON:0002097,skin unexposed stratum corneum,Using parent term skin.
+sce,compartment,sce,skin exposed stratum corneum,rdf,BQB_IS,uberon/UBERON:0002097,skin exposed stratum corneum,Using parent term skin.
+Art,compartment,Art,arterial blood,rdf,BQB_IS,uberon/UBERON:0013755,arterial blood,
+Ven,compartment,Ven,venous blood,rdf,BQB_IS,uberon/UBERON:0013756,venous blood,
+QFat,species,QFat,quantity in fat tissues,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QRich,species,QRich,quantity in richly tissues (e.g.viscera),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QPoor,species,QPoor,quantity in poor tissues (e.g. muscles),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QLiver,species,QLiver,quantity in liver,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QMetab,species,QMetab,quantity metabolized (cumulated),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QGut,species,QGut,quantity in gut lumen,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QSkin_u,species,QSkin_u,quantity in viable skin (unexposed),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QSkin_e,species,QSkin_e,quantity in viable skin (exposed),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QSkin_sc_u,species,QSkin_sc_u,quantity in skin stratum corneum (unexposed),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QSkin_sc_e,species,QSkin_sc_e,quantity in skin stratum corneum (exposed),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QArt,species,QArt,quantity in arterial blood,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QVen,species,QVen,quantity in venous blood,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QExcret,species,QExcret,quantity excreted in urine (cumulated),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+QAir,species,QAir,quantity in air,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
+BM,parameter,BM,body mass,rdf,BQB_IS,obo/NCIT:C81328,body weight,
+BSA,parameter,BSA,body surface area,rdf,BQB_IS,obo/NCIT:C25157,body surface area,
+Height_sc,parameter,Height_sc,skin thickness,rdf,BQB_IS,oba/OBA:VT0001200,skin thickness,
+Height_vs,parameter,Height_vs,viable skin thickness,rdf,BQB_IS,oba/OBA:VT0001200,skin thickness,Using generic term for skin thickness.
+scVFat,parameter,scVFat,fat as fraction of total body volume,rdf,BQB_IS,uo/UO:0000191,fraction,
+scVRich,parameter,scVRich,richly perfused tissues (viscera) as fraction of total body volume,rdf,BQB_IS,uo/UO:0000192,fraction,
+scVLiver,parameter,scVLiver,liver as fraction of total body volume,rdf,BQB_IS,uo/UO:0000193,fraction,
+scVBlood,parameter,scVBlood,blood as fraction of total body volume,rdf,BQB_IS,uo/UO:0000194,fraction,
+VFat,parameter,VFat,volume of adipose tissue,rdf,BQB_IS,PKPBO:00077,Vfat,
+VFat,parameter,VFat,volume of adipose tissue,rdf,BQB_IS,pato/PATO:0000918,volume,Model fat volume as BQB_IS volume and BQB_IS_PROPERTY_OF adipose tissue?
+VFat,parameter,VFat,volume of adipose tissue,rdf,BQB_IS_PROPERTY_OF,uberon/UBERON:0001013,adipose tissue,Model fat volume as BQB_IS volume and BQB_IS_PROPERTY_OF adipose tissue?
+VRich,parameter,VRich,richly perfused tissue volume,rdf,BQB_IS,PKPBO:00093,Vrichly perfused,
+VLiver,parameter,VLiver,liver volume,rdf,BQB_IS,PKPBO:00069,Vliver,
+VBlood,parameter,VBlood,total blood volume,rdf,BQB_IS,pato/PATO:0000918,volume,
+VArt,parameter,VArt,arterial blood volume,rdf,BQB_IS,pato/PATO:0000918,volume,
+VVen,parameter,VVen,venous blood volume,rdf,BQB_IS,pato/PATO:0000918,volume,
+VSkin_e,parameter,VSkin_e,exposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
+fSA_exposed,parameter,fSA_exposed,fraction of skin surface area actually exposed,rdf,BQB_IS,uo/UO:0000194,fraction,
+VSkin_u,parameter,VSkin_u,unexposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
+VSkin_sc_e,parameter,VSkin_sc_e,stratum corneum exposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
+VSkin_sc_u,parameter,VSkin_sc_u,stratum corneum unexposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
+VPoor,parameter,VPoor,poorly perfused tissue volume,rdf,BQB_IS,PKPBO:00091,Vpoorly perfused,
+scFBlood,parameter,scFBlood,total blood flow per unit mass,rdf,BQB_IS,OBA:VT0000182,blood flow trait,
+scFFat,parameter,scFFat,fat fraction of total blood flow going to compartments,rdf,BQB_IS,uo/UO:0000194,fraction,
+scFPoor,parameter,scFPoor,poorly perfused tissues (muscles) fraction of total blood flow going to compartments,rdf,BQB_IS,uo/UO:0000194,fraction,
+scFLiver,parameter,scFLiver,liver fraction of total blood flow going to compartments,rdf,BQB_IS,uo/UO:0000194,fraction,
+scFSkin,parameter,scFSkin,skin fraction of total blood flow going to compartments,rdf,BQB_IS,uo/UO:0000194,fraction,
+FBlood,parameter,FBlood,blood flow,rdf,BQB_IS,obo/NCIT:C94866,blood flow rate,Using generic term for blood flow rate.
+FFat,parameter,FFat,blood flow to the fat,rdf,BQB_IS,obo/NCIT:C94866,blood flow rate,Using generic term for blood flow rate.
+FPoor,parameter,FPoor,blood flow to poorly perfused tissues,rdf,BQB_IS,obo/NCIT:C94866,blood flow rate,Using generic term for blood flow rate.
+FLiver,parameter,FLiver,blood flow to the liver,rdf,BQB_IS,obo/NCIT:C94866,blood flow rate,Using generic term for blood flow rate.
+FSkin,parameter,FSkin,blood flow to the skin,rdf,BQB_IS,obo/NCIT:C94866,blood flow rate,Using generic term for blood flow rate.
+FRich,parameter,FRich,blood flow to richly perfused tissues,rdf,BQB_IS,obo/NCIT:C94866,blood flow rate,Using generic term for blood flow rate.
+FSkin_e,parameter,FSkin_e,blood flow to exposed skin,rdf,BQB_IS,obo/NCIT:C94866,blood flow rate,Using generic term for blood flow rate.
+FSkin_u,parameter,FSkin_u,blood flow to unexposed skin,rdf,BQB_IS,obo/NCIT:C94866,blood flow rate,Using generic term for blood flow rate.
+Falv,parameter,Falv,alveolar ventilation rate,rdf,BQB_IS,obo/NCIT:C94967,rate constant,Using generic term for rate constant.
+PCFat,parameter,PCFat,partition coefficient fat over blood,rdf,BQB_IS,obo/NCIT:C20610,partition coefficient,Using generit term for partition coefficient.
+PCLiver,parameter,PCLiver,partition coefficient liver over blood,rdf,BQB_IS,obo/NCIT:C20610,partition coefficient,Using generit term for partition coefficient.
+PCRich,parameter,PCRich,partition coefficient muscle over blood (poorly perfused tissue),rdf,BQB_IS,obo/NCIT:C20610,partition coefficient,Using generit term for partition coefficient.
+PCPoor,parameter,PCPoor,partition coefficient viscera over blood (richly perfused tissue),rdf,BQB_IS,obo/NCIT:C20610,partition coefficient,Using generit term for partition coefficient.
+PCSkin_sc,parameter,PCSkin_sc,partition coefficient viable skin over stratum corneum,rdf,BQB_IS,obo/NCIT:C20610,partition coefficient,Using generit term for partition coefficient.
+PCSkin,parameter,PCSkin,partition coefficient viable skin over blood,rdf,BQB_IS,obo/NCIT:C20610,partition coefficient,Using generit term for partition coefficient.
+PCAir,parameter,PCAir,partition coefficient blood over air,rdf,BQB_IS,obo/NCIT:C20610,partition coefficient,Using generit term for partition coefficient.
+Km,parameter,Km,Michaelis constant,rdf,BQB_IS,sbo/SBO:0000027,Michaelis constant,
+Michaelis,parameter,Michaelis,flag for Michaelis-Menten or linear metabolism,rdf,BQB_IS,stato/STATO:0000034,model parameter,Using generic term for model parameter.
+Vmax,parameter,Vmax,maximum rate of metabolism,rdf,BQB_IS,sbo/SBO:0000186,maximal velocity,Using generic term for maximal velocity.
+fub,parameter,fub,Unbound fraction in blood,rdf,BQB_IS,pkpbo/PKPBO:00134,unbound fraction,Using generic term for unbound fraction.
+Kp_sc_vs,parameter,Kp_sc_vs,diffusion rate from stratum corneum to viable skin,rdf,BQB_IS,sbo/SBO:0000491,diffusion coefficient,Using generic term for parameter type.
+kGut,parameter,kGut,oral 1st order absorption rate constant,rdf,BQB_IS,pbpko/PKPBO:00126,absorption rate constant gut,Both kGut and Frac refer to absorption. What to use?
+CLH,parameter,CLH,hepatic metabolic clearance,rdf,BQB_IS,pbpko/PKPBO:00215,heaptic clearance,Using PKPBO term heaptic clearance (typo?)
+Ke,parameter,Ke,renal excretion rate,rdf,BQB_IS,pbpko/PKPBO:00218,renal elimination rate constant,
+f_su,parameter,f_su,???,rdf,BQB_IS,pbpko/PKPBO:00003,physiological parameters,Using generic term for physiological parameter. Kp_sc_vs*BSA*(1-fSA_exposed)
+f_se,parameter,f_se,???,rdf,BQB_IS,pbpko/PKPBO:00003,physiological parameters,Using generic term for physiological parameter. Kp_sc_vs*BSA*fSA_exposed

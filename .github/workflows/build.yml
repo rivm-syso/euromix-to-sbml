@@ -1,48 +1,12 @@
 # .github/workflows/test_action.yaml
 name: Create and annotate SBML
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   create-and-annotate-sbml:
-    name: Create and annotate SBML
-    runs-on: ubuntu-latest
-
+    uses: jwkruisselbrink/sbml-pbk-workflow/.github/workflows/build.yml@main
+    with:
+      model-name: euromix
     permissions:
       contents: write
-
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-        shell: bash
-
-      - name: Create SBML
-        id: create-sbml
-        run: python src/python/ant2sbml.py -f model/euromix.ant
-        shell: bash
-
-      - name: Annotate SBML terms
-        id: annotate-sbml
-        run: python src/python/annotate_sbml_terms.py model/euromix.sbml model/euromix.annotations.csv model/euromix.sbml
-        shell: bash
-
-      - name: Annotate SBML units
-        id: annotate-sbml-units
-        run: python src/python/annotate_sbml_units.py model/euromix.sbml model/euromix.annotations.csv model/euromix.sbml -f
-        shell: bash
-
-      - name: Validate SBML
-        id: validate-sbml
-        run: python src/python/validate_sbml.py model/euromix.sbml
-        shell: bash
-
-      - name: "Push changes"
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Rebuild SBML and annotate model
-          file_pattern: '*.sbml'
+    secrets: inherit
