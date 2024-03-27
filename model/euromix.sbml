@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" metaid="meta_4f0e259a4972c25060b4be8dfe13e9b3" level="3" version="1">
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" metaid="meta_4f0e259a4972c25060b4be8dfe13e9b3" level="3" version="2">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
       <rdf:Description rdf:about="#meta_4f0e259a4972c25060b4be8dfe13e9b3">
@@ -17,7 +17,7 @@
       </rdf:Description>
     </rdf:RDF>
   </annotation>
-  <model metaid="euromix" id="euromix">
+  <model metaid="euromix" id="euromix" substanceUnits="MilliMOL" timeUnits="SEC" volumeUnits="L">
     <listOfFunctionDefinitions>
       <functionDefinition id="conc">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -128,14 +128,19 @@
       </functionDefinition>
     </listOfFunctionDefinitions>
     <listOfUnitDefinitions>
-      <unitDefinition id="L">
+      <unitDefinition id="SEC">
         <listOfUnits>
-          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
       <unitDefinition id="MilliMOL">
         <listOfUnits>
           <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="L">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
       <unitDefinition id="KiloGM">
@@ -158,26 +163,33 @@
           <unit kind="dimensionless" exponent="1" scale="0" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition>
+      <unitDefinition id="L_PER_KiloGM_HR">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="1" multiplier="3600"/>
+          <unit kind="gram" exponent="-1" scale="3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="L_PER_HR">
         <listOfUnits>
           <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
           <unit kind="second" exponent="-1" scale="1" multiplier="3600"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition>
+      <unitDefinition id="MilliMOL_PER_L_HR">
         <listOfUnits>
           <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
           <unit kind="second" exponent="-1" scale="1" multiplier="3600"/>
           <unit kind="litre" exponent="-1" scale="3" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition>
+      <unitDefinition id="DeciM_PER_HR">
         <listOfUnits>
           <unit kind="metre" exponent="1" scale="-1" multiplier="1"/>
           <unit kind="second" exponent="-1" scale="1" multiplier="3600"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition>
+      <unitDefinition id="PER_H">
         <listOfUnits>
           <unit kind="second" exponent="-1" scale="1" multiplier="3600"/>
         </listOfUnits>
@@ -630,7 +642,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_scFBlood" id="scFBlood" value="4.8" constant="true">
+      <parameter metaid="meta_scFBlood" id="scFBlood" value="4.8" units="L_PER_KiloGM_HR" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_scFBlood">
@@ -695,7 +707,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_Falv" id="Falv" value="2220" constant="true">
+      <parameter metaid="meta_Falv" id="Falv" value="2220" units="L_PER_HR" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Falv">
@@ -825,7 +837,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_Vmax" sboTerm="SBO:0000186" id="Vmax" value="0" constant="true">
+      <parameter metaid="meta_Vmax" sboTerm="SBO:0000186" id="Vmax" value="0" units="MilliMOL_PER_L_HR" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Vmax">
@@ -864,7 +876,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_Kp_sc_vs" sboTerm="SBO:0000491" id="Kp_sc_vs" value="0.01" constant="true">
+      <parameter metaid="meta_Kp_sc_vs" sboTerm="SBO:0000491" id="Kp_sc_vs" value="0.01" units="DeciM_PER_HR" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Kp_sc_vs">
@@ -877,7 +889,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_kGut" id="kGut" value="1" constant="true">
+      <parameter metaid="meta_kGut" id="kGut" value="1" units="PER_H" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_kGut">
@@ -890,7 +902,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_CLH" id="CLH" value="132" constant="true">
+      <parameter metaid="meta_CLH" id="CLH" value="132" units="L_PER_HR" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_CLH">
@@ -903,7 +915,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_Ke" id="Ke" value="7.5" constant="true">
+      <parameter metaid="meta_Ke" id="Ke" value="7.5" units="L_PER_HR" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Ke">
@@ -1091,7 +1103,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FBlood" id="FBlood" value="336" constant="false">
+      <parameter metaid="meta_FBlood" id="FBlood" value="336" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FBlood">
@@ -1104,7 +1116,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FFat" id="FFat" value="28.56" constant="false">
+      <parameter metaid="meta_FFat" id="FFat" value="28.56" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FFat">
@@ -1117,7 +1129,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FPoor" id="FPoor" value="40.32" constant="false">
+      <parameter metaid="meta_FPoor" id="FPoor" value="40.32" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FPoor">
@@ -1130,7 +1142,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FLiver" id="FLiver" value="90.72" constant="false">
+      <parameter metaid="meta_FLiver" id="FLiver" value="90.72" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FLiver">
@@ -1143,7 +1155,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FSkin" id="FSkin" value="16.8" constant="false">
+      <parameter metaid="meta_FSkin" id="FSkin" value="16.8" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FSkin">
@@ -1156,7 +1168,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FRich" id="FRich" value="159.6" constant="false">
+      <parameter metaid="meta_FRich" id="FRich" value="159.6" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FRich">
@@ -1169,7 +1181,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FSkin_e" id="FSkin_e" value="1.68" constant="false">
+      <parameter metaid="meta_FSkin_e" id="FSkin_e" value="1.68" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FSkin_e">
@@ -1182,7 +1194,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FSkin_u" id="FSkin_u" value="15.12" constant="false">
+      <parameter metaid="meta_FSkin_u" id="FSkin_u" value="15.12" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FSkin_u">
@@ -1504,7 +1516,7 @@
       </assignmentRule>
     </listOfRules>
     <listOfReactions>
-      <reaction id="_J0" reversible="true" fast="false">
+      <reaction id="_J0" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1525,7 +1537,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J1" reversible="true" fast="false">
+      <reaction id="_J1" reversible="true">
         <listOfReactants>
           <speciesReference species="QFat" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1550,7 +1562,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J2" reversible="true" fast="false">
+      <reaction id="_J2" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1571,7 +1583,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J3" reversible="true" fast="false">
+      <reaction id="_J3" reversible="true">
         <listOfReactants>
           <speciesReference species="QRich" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1596,7 +1608,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J4" reversible="true" fast="false">
+      <reaction id="_J4" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1617,7 +1629,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J5" reversible="true" fast="false">
+      <reaction id="_J5" reversible="true">
         <listOfReactants>
           <speciesReference species="QPoor" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1642,7 +1654,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J6" reversible="true" fast="false">
+      <reaction id="_J6" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1663,7 +1675,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J7" reversible="true" fast="false">
+      <reaction id="_J7" reversible="true">
         <listOfReactants>
           <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1688,7 +1700,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J8" reversible="true" fast="false">
+      <reaction id="_J8" reversible="true">
         <listOfReactants>
           <speciesReference species="QGut" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1705,7 +1717,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J9" reversible="true" fast="false">
+      <reaction id="_J9" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1726,7 +1738,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J10" reversible="true" fast="false">
+      <reaction id="_J10" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1751,7 +1763,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J11" reversible="true" fast="false">
+      <reaction id="_J11" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1776,7 +1788,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J12" reversible="true" fast="false">
+      <reaction id="_J12" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_sc_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1797,7 +1809,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J13" reversible="true" fast="false">
+      <reaction id="_J13" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1818,7 +1830,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J14" reversible="true" fast="false">
+      <reaction id="_J14" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1843,7 +1855,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J15" reversible="true" fast="false">
+      <reaction id="_J15" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1868,7 +1880,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J16" reversible="true" fast="false">
+      <reaction id="_J16" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_sc_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1889,7 +1901,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J17" reversible="true" fast="false">
+      <reaction id="_J17" reversible="true">
         <listOfReactants>
           <speciesReference species="QVen" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1910,7 +1922,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J18" reversible="true" fast="false">
+      <reaction id="_J18" reversible="true">
         <listOfReactants>
           <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1952,7 +1964,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J19" reversible="true" fast="false">
+      <reaction id="_J19" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1977,7 +1989,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J20" reversible="true" fast="false">
+      <reaction id="_J20" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
