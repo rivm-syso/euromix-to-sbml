@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
   <model metaid="euromix" id="euromix" substanceUnits="MilliMOL" timeUnits="SEC" volumeUnits="L">
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -1486,7 +1486,7 @@
       </assignmentRule>
     </listOfRules>
     <listOfReactions>
-      <reaction id="_J0" reversible="true" fast="false">
+      <reaction id="_J0" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1507,7 +1507,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J1" reversible="true" fast="false">
+      <reaction id="_J1" reversible="true">
         <listOfReactants>
           <speciesReference species="QFat" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1532,7 +1532,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J2" reversible="true" fast="false">
+      <reaction id="_J2" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1553,7 +1553,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J3" reversible="true" fast="false">
+      <reaction id="_J3" reversible="true">
         <listOfReactants>
           <speciesReference species="QRich" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1578,7 +1578,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J4" reversible="true" fast="false">
+      <reaction id="_J4" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1599,7 +1599,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J5" reversible="true" fast="false">
+      <reaction id="_J5" reversible="true">
         <listOfReactants>
           <speciesReference species="QPoor" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1624,7 +1624,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J6" reversible="true" fast="false">
+      <reaction id="_J6" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1645,7 +1645,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J7" reversible="true" fast="false">
+      <reaction id="_J7" reversible="true">
         <listOfReactants>
           <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1670,7 +1670,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J8" reversible="true" fast="false">
+      <reaction id="_J8" reversible="true">
         <listOfReactants>
           <speciesReference species="QGut" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1687,7 +1687,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J9" reversible="true" fast="false">
+      <reaction id="_J9" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1708,7 +1708,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J10" reversible="true" fast="false">
+      <reaction id="_J10" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1733,7 +1733,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J11" reversible="true" fast="false">
+      <reaction id="_J11" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1758,7 +1758,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J12" reversible="true" fast="false">
+      <reaction id="_J12" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_sc_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1779,7 +1779,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J13" reversible="true" fast="false">
+      <reaction id="_J13" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1800,7 +1800,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J14" reversible="true" fast="false">
+      <reaction id="_J14" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1825,7 +1825,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J15" reversible="true" fast="false">
+      <reaction id="_J15" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1850,7 +1850,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J16" reversible="true" fast="false">
+      <reaction id="_J16" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_sc_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1871,7 +1871,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J17" reversible="true" fast="false">
+      <reaction id="_J17" reversible="true">
         <listOfReactants>
           <speciesReference species="QVen" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1892,7 +1892,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J18" reversible="true" fast="false">
+      <reaction id="_J18" reversible="true">
         <listOfReactants>
           <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1934,7 +1934,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J19" reversible="true" fast="false">
+      <reaction id="_J19" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1959,7 +1959,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J20" reversible="true" fast="false">
+      <reaction id="_J20" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
