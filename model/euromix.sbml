@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" metaid="meta_4f0e259a4972c25060b4be8dfe13e9b3" level="3" version="2">
-  <annotation>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_4f0e259a4972c25060b4be8dfe13e9b3">
-        <bqmodel:is>
-          <rdf:Bag>
-            <rdf:li rdf:resource="http://identifiers.org/mamo/MAMO_0000203"/>
-            <rdf:li rdf:resource="http://identifiers.org/mamo/MAMO_0000046"/>
-          </rdf:Bag>
-        </bqmodel:is>
-        <bqbiol:hasTaxon>
-          <rdf:Bag>
-            <rdf:li rdf:resource="http://identifiers.org/taxonomy/40674"/>
-          </rdf:Bag>
-        </bqbiol:hasTaxon>
-      </rdf:Description>
-    </rdf:RDF>
-  </annotation>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
   <model metaid="euromix" id="euromix" substanceUnits="MilliMOL" timeUnits="SEC" volumeUnits="L">
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+        <rdf:Description rdf:about="#euromix">
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/mamo/MAMO_0000203"/>
+              <rdf:li rdf:resource="http://identifiers.org/mamo/MAMO_0000046"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqbiol:hasTaxon>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/40674"/>
+            </rdf:Bag>
+          </bqbiol:hasTaxon>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
     <listOfFunctionDefinitions>
       <functionDefinition id="conc">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -235,10 +235,10 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_pp" id="pp" spatialDimensions="3" size="32.243" units="L" constant="false">
+      <compartment metaid="meta_Poor" id="Poor" spatialDimensions="3" size="32.243" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_pp">
+            <rdf:Description rdf:about="#meta_Poor">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/UBERON:0000479"/>
@@ -248,10 +248,10 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_liver" id="liver" spatialDimensions="3" size="1.68" units="L" constant="false">
+      <compartment metaid="meta_Liver" id="Liver" spatialDimensions="3" size="1.68" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_liver">
+            <rdf:Description rdf:about="#meta_Liver">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/UBERON:0002107"/>
@@ -261,10 +261,10 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_gut" id="gut" spatialDimensions="3" size="1" units="L" constant="true">
+      <compartment metaid="meta_Gut" id="Gut" spatialDimensions="3" size="1" units="L" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_gut">
+            <rdf:Description rdf:about="#meta_Gut">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/UBERON:0001555"/>
@@ -274,10 +274,10 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_su" id="su" spatialDimensions="3" size="2.0862" units="L" constant="false">
+      <compartment metaid="meta_Skin_u" id="Skin_u" spatialDimensions="3" size="2.0862" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_su">
+            <rdf:Description rdf:about="#meta_Skin_u">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/UBERON:0002097"/>
@@ -287,10 +287,10 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_se" id="se" spatialDimensions="3" size="0.2318" units="L" constant="false">
+      <compartment metaid="meta_Skin_e" id="Skin_e" spatialDimensions="3" size="0.2318" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_se">
+            <rdf:Description rdf:about="#meta_Skin_e">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/UBERON:0002097"/>
@@ -300,10 +300,10 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_scu" id="scu" spatialDimensions="3" size="0.0171" units="L" constant="false">
+      <compartment metaid="meta_Skin_sc_u" id="Skin_sc_u" spatialDimensions="3" size="0.0171" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_scu">
+            <rdf:Description rdf:about="#meta_Skin_sc_u">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/UBERON:0002097"/>
@@ -313,10 +313,10 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_sce" id="sce" spatialDimensions="3" size="0.0019" units="L" constant="false">
+      <compartment metaid="meta_Skin_sc_e" id="Skin_sc_e" spatialDimensions="3" size="0.0019" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_sce">
+            <rdf:Description rdf:about="#meta_Skin_sc_e">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/UBERON:0002097"/>
@@ -380,7 +380,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QPoor" sboTerm="SBO:0000247" id="QPoor" compartment="pp" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QPoor" sboTerm="SBO:0000247" id="QPoor" compartment="Poor" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QPoor">
@@ -393,7 +393,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QLiver" sboTerm="SBO:0000247" id="QLiver" compartment="liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QLiver" sboTerm="SBO:0000247" id="QLiver" compartment="Liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QLiver">
@@ -406,20 +406,20 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QMetab" sboTerm="SBO:0000247" id="QMetab" compartment="liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QMetab" id="QMetab" compartment="Liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QMetab">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:25212"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QGut" sboTerm="SBO:0000247" id="QGut" compartment="gut" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QGut" sboTerm="SBO:0000247" id="QGut" compartment="Gut" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QGut">
@@ -432,7 +432,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_u" sboTerm="SBO:0000247" id="QSkin_u" compartment="su" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_u" sboTerm="SBO:0000247" id="QSkin_u" compartment="Skin_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_u">
@@ -445,7 +445,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_e" sboTerm="SBO:0000247" id="QSkin_e" compartment="se" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_e" sboTerm="SBO:0000247" id="QSkin_e" compartment="Skin_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_e">
@@ -458,7 +458,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_sc_u" sboTerm="SBO:0000247" id="QSkin_sc_u" compartment="scu" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_sc_u" sboTerm="SBO:0000247" id="QSkin_sc_u" compartment="Skin_sc_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_sc_u">
@@ -471,7 +471,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_sc_e" sboTerm="SBO:0000247" id="QSkin_sc_e" compartment="sce" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_sc_e" sboTerm="SBO:0000247" id="QSkin_sc_e" compartment="Skin_sc_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_sc_e">
@@ -544,7 +544,7 @@
             <rdf:Description rdf:about="#meta_BM">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C81328"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C81328"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -557,7 +557,7 @@
             <rdf:Description rdf:about="#meta_BSA">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C25157"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25157"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -570,7 +570,7 @@
             <rdf:Description rdf:about="#meta_Height_sc">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/OBA:VT0001200"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C41145"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -583,7 +583,7 @@
             <rdf:Description rdf:about="#meta_Height_vs">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/OBA:VT0001200"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C41145"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -648,7 +648,7 @@
             <rdf:Description rdf:about="#meta_scFBlood">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/OBA:VT0000182"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CMO_0000196"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -713,7 +713,7 @@
             <rdf:Description rdf:about="#meta_Falv">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94967"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94967"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -726,7 +726,7 @@
             <rdf:Description rdf:about="#meta_PCFat">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C20610"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20610"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -739,7 +739,7 @@
             <rdf:Description rdf:about="#meta_PCLiver">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C20610"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20610"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -752,7 +752,7 @@
             <rdf:Description rdf:about="#meta_PCRich">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C20610"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20610"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -765,7 +765,7 @@
             <rdf:Description rdf:about="#meta_PCPoor">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C20610"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20610"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -778,7 +778,7 @@
             <rdf:Description rdf:about="#meta_PCSkin_sc">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C20610"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20610"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -791,7 +791,7 @@
             <rdf:Description rdf:about="#meta_PCSkin">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C20610"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20610"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -804,7 +804,7 @@
             <rdf:Description rdf:about="#meta_PCAir">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C20610"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20610"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -856,7 +856,7 @@
             <rdf:Description rdf:about="#meta_fub">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/PKPBO:00134"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C135490"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -895,7 +895,7 @@
             <rdf:Description rdf:about="#meta_kGut">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/pbpko/PKPBO:00126"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94967"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -908,7 +908,7 @@
             <rdf:Description rdf:about="#meta_CLH">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/pbpko/PKPBO:00215"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/OMIT_0009720"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -921,7 +921,7 @@
             <rdf:Description rdf:about="#meta_Ke">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/pbpko/PKPBO:00218"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C85534"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -934,15 +934,9 @@
             <rdf:Description rdf:about="#meta_VFat">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/PKPBO:00077"/>
                   <rdf:li rdf:resource="http://identifiers.org/PATO:0000918"/>
                 </rdf:Bag>
               </bqbiol:is>
-              <bqbiol:isPropertyOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/UBERON:0001013"/>
-                </rdf:Bag>
-              </bqbiol:isPropertyOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -953,7 +947,7 @@
             <rdf:Description rdf:about="#meta_VRich">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/PKPBO:00093"/>
+                  <rdf:li rdf:resource="http://identifiers.org/PATO:0000918"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -966,7 +960,7 @@
             <rdf:Description rdf:about="#meta_VLiver">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/PKPBO:00069"/>
+                  <rdf:li rdf:resource="http://identifiers.org/PATO:0000918"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1070,46 +1064,22 @@
             <rdf:Description rdf:about="#meta_VPoor">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/PKPBO:00091"/>
+                  <rdf:li rdf:resource="http://identifiers.org/PATO:0000918"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_f_su" id="f_su" value="1.71" constant="false">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_f_su">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/pbpko/PKPBO:00003"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_f_se" id="f_se" value="0.19" constant="false">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_f_se">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/pbpko/PKPBO:00003"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
+      <parameter id="f_su" value="1.71" constant="false"/>
+      <parameter id="f_se" value="0.19" constant="false"/>
       <parameter metaid="meta_FBlood" id="FBlood" value="336" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FBlood">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94866"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94866"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1122,7 +1092,7 @@
             <rdf:Description rdf:about="#meta_FFat">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94866"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94866"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1135,7 +1105,7 @@
             <rdf:Description rdf:about="#meta_FPoor">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94866"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94866"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1148,7 +1118,7 @@
             <rdf:Description rdf:about="#meta_FLiver">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94866"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94866"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1161,7 +1131,7 @@
             <rdf:Description rdf:about="#meta_FSkin">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94866"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94866"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1174,7 +1144,7 @@
             <rdf:Description rdf:about="#meta_FRich">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94866"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94866"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1187,7 +1157,7 @@
             <rdf:Description rdf:about="#meta_FSkin_e">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94866"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94866"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1200,7 +1170,7 @@
             <rdf:Description rdf:about="#meta_FSkin_u">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/obo/NCIT:C94866"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C94866"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1219,32 +1189,32 @@
           <ci> VRich </ci>
         </math>
       </assignmentRule>
-      <assignmentRule variable="pp">
+      <assignmentRule variable="Poor">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <ci> VPoor </ci>
         </math>
       </assignmentRule>
-      <assignmentRule variable="liver">
+      <assignmentRule variable="Liver">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <ci> VLiver </ci>
         </math>
       </assignmentRule>
-      <assignmentRule variable="su">
+      <assignmentRule variable="Skin_u">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <ci> VSkin_u </ci>
         </math>
       </assignmentRule>
-      <assignmentRule variable="se">
+      <assignmentRule variable="Skin_e">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <ci> VSkin_e </ci>
         </math>
       </assignmentRule>
-      <assignmentRule variable="scu">
+      <assignmentRule variable="Skin_sc_u">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <ci> VSkin_sc_u </ci>
         </math>
       </assignmentRule>
-      <assignmentRule variable="sce">
+      <assignmentRule variable="Skin_sc_e">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <ci> VSkin_sc_e </ci>
         </math>
@@ -1516,7 +1486,7 @@
       </assignmentRule>
     </listOfRules>
     <listOfReactions>
-      <reaction id="_J0" reversible="true">
+      <reaction id="_J0" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1537,7 +1507,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J1" reversible="true">
+      <reaction id="_J1" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QFat" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1562,7 +1532,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J2" reversible="true">
+      <reaction id="_J2" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1583,7 +1553,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J3" reversible="true">
+      <reaction id="_J3" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QRich" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1608,7 +1578,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J4" reversible="true">
+      <reaction id="_J4" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1629,7 +1599,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J5" reversible="true">
+      <reaction id="_J5" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QPoor" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1646,7 +1616,7 @@
                 <apply>
                   <ci> conc </ci>
                   <ci> QPoor </ci>
-                  <ci> pp </ci>
+                  <ci> Poor </ci>
                 </apply>
               </apply>
               <ci> PCPoor </ci>
@@ -1654,7 +1624,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J6" reversible="true">
+      <reaction id="_J6" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1675,7 +1645,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J7" reversible="true">
+      <reaction id="_J7" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1692,7 +1662,7 @@
                 <apply>
                   <ci> conc </ci>
                   <ci> QLiver </ci>
-                  <ci> liver </ci>
+                  <ci> Liver </ci>
                 </apply>
               </apply>
               <ci> PCLiver </ci>
@@ -1700,7 +1670,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J8" reversible="true">
+      <reaction id="_J8" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QGut" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1717,7 +1687,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J9" reversible="true">
+      <reaction id="_J9" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1738,7 +1708,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J10" reversible="true">
+      <reaction id="_J10" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1755,7 +1725,7 @@
                 <apply>
                   <ci> conc </ci>
                   <ci> QSkin_u </ci>
-                  <ci> su </ci>
+                  <ci> Skin_u </ci>
                 </apply>
               </apply>
               <ci> PCSkin </ci>
@@ -1763,7 +1733,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J11" reversible="true">
+      <reaction id="_J11" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1780,7 +1750,7 @@
                 <apply>
                   <ci> conc </ci>
                   <ci> QSkin_u </ci>
-                  <ci> su </ci>
+                  <ci> Skin_u </ci>
                 </apply>
               </apply>
               <ci> PCSkin_sc </ci>
@@ -1788,7 +1758,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J12" reversible="true">
+      <reaction id="_J12" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QSkin_sc_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1803,13 +1773,13 @@
               <apply>
                 <ci> conc </ci>
                 <ci> QSkin_sc_u </ci>
-                <ci> scu </ci>
+                <ci> Skin_sc_u </ci>
               </apply>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J13" reversible="true">
+      <reaction id="_J13" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1830,7 +1800,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J14" reversible="true">
+      <reaction id="_J14" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1847,7 +1817,7 @@
                 <apply>
                   <ci> conc </ci>
                   <ci> QSkin_e </ci>
-                  <ci> se </ci>
+                  <ci> Skin_e </ci>
                 </apply>
               </apply>
               <ci> PCSkin </ci>
@@ -1855,7 +1825,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J15" reversible="true">
+      <reaction id="_J15" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1872,7 +1842,7 @@
                 <apply>
                   <ci> conc </ci>
                   <ci> QSkin_e </ci>
-                  <ci> se </ci>
+                  <ci> Skin_e </ci>
                 </apply>
               </apply>
               <ci> PCSkin_sc </ci>
@@ -1880,7 +1850,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J16" reversible="true">
+      <reaction id="_J16" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QSkin_sc_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1895,13 +1865,13 @@
               <apply>
                 <ci> conc </ci>
                 <ci> QSkin_sc_e </ci>
-                <ci> sce </ci>
+                <ci> Skin_sc_e </ci>
               </apply>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J17" reversible="true">
+      <reaction id="_J17" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QVen" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1922,7 +1892,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J18" reversible="true">
+      <reaction id="_J18" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1942,7 +1912,7 @@
                     <ci> Km </ci>
                     <ci> PCLiver </ci>
                     <ci> QLiver </ci>
-                    <ci> liver </ci>
+                    <ci> Liver </ci>
                   </apply>
                   <apply>
                     <gt/>
@@ -1956,7 +1926,7 @@
                     <ci> CLH </ci>
                     <ci> PCLiver </ci>
                     <ci> QLiver </ci>
-                    <ci> liver </ci>
+                    <ci> Liver </ci>
                   </apply>
                 </otherwise>
               </piecewise>
@@ -1964,7 +1934,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J19" reversible="true">
+      <reaction id="_J19" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1989,7 +1959,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J20" reversible="true">
+      <reaction id="_J20" reversible="true" fast="false">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
