@@ -1,4 +1,4 @@
-﻿element_id,sbml_type,unit
+element_id,sbml_type,unit
 timeUnits,document,s
 substanceUnits,document,mmol
 volumeUnits,document,L
@@ -79,5 +79,5 @@ Kp_sc_vs,parameter,dm.h-1
 kGut,parameter,h-1
 CLH,parameter,L.h-1
 Ke,parameter,L.h-1
-f_su,parameter,
-f_se,parameter,
+f_su,parameter,unitless
+f_se,parameter,unitless
