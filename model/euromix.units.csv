@@ -50,7 +50,7 @@ VSkin_u,parameter,L
 VSkin_sc_e,parameter,L
 VSkin_sc_u,parameter,L
 VPoor,parameter,L
-rho,parameter,g/L
+rho,parameter,kg/L
 scFBlood,parameter,L.kg-1.h-1
 scFFat,parameter,unitless
 scFPoor,parameter,unitless

@@ -35,7 +35,7 @@ model euromix()
   Falv = 2220
   
   ### Density
-  rho = 1000
+  rho = 1
 
   ## Biochemical parameters
 
