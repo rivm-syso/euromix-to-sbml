@@ -1,4 +1,4 @@
-﻿pattern,sbml_type,element_id,element_description,annotation_type,qualifier,resource,name,remark
+pattern,sbml_type,element_id,element_description,annotation_type,qualifier,resource,name,remark
 # Model annotations
 euromix,model,,,rdf,BQM_IS,mamo/MAMO_0000203,physiologically based pharmacokinetic model,
 euromix,model,,,rdf,BQM_IS,mamo/MAMO_0000046,ordinary differential equation model,
@@ -81,3 +81,4 @@ VSkin_e,parameter,VSkin_e,exposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volum
 VSkin_u,parameter,VSkin_u,unexposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
 VSkin_sc_e,parameter,VSkin_sc_e,stratum corneum exposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
 VSkin_sc_u,parameter,VSkin_sc_u,stratum corneum unexposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
+rho,parameter,rho,density of the tissues,rdf,none,density,
