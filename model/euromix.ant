@@ -33,6 +33,9 @@ model euromix()
   scFLiver = 0.27
   scFSkin = 0.05
   Falv = 2220
+  
+  ### Density
+  rho = 1
 
   ## Biochemical parameters
 
@@ -66,17 +69,17 @@ model euromix()
   ## Physiology
 
   ### Body size
-  const VFat := BM * scVFat
-  const VRich := BM * scVRich
-  const VLiver := BM * scVLiver
-  const VBlood := BM * scVBlood
+  const VFat := BM * scVFat / rho
+  const VRich := BM * scVRich / rho
+  const VLiver := BM * scVLiver / rho
+  const VBlood := BM * scVBlood / rho
   const VArt := VBlood / 3.0
   const VVen := VBlood - VArt
   const VSkin_e := BSA * Height_vs * fSA_exposed
   const VSkin_u := BSA * Height_vs * (1 - fSA_exposed)
   const VSkin_sc_e := BSA * Height_sc * fSA_exposed
   const VSkin_sc_u := BSA * Height_sc * (1 - fSA_exposed)
-  const VPoor := BM - VFat - VRich - VLiver - VSkin_e - VSkin_u - VSkin_sc_e - VSkin_sc_u - VBlood - 0.1 * BM
+  const VPoor := (BM / rho) - VFat - VRich - VLiver - VSkin_e - VSkin_u - VSkin_sc_e - VSkin_sc_u - VBlood - 0.1 * (BM / rho)
 
   const f_su := Kp_sc_vs * BSA * (1 - fSA_exposed)
   const f_se := Kp_sc_vs * BSA * fSA_exposed
