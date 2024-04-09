@@ -80,5 +80,5 @@ Kp_sc_vs,parameter,dm.h-1
 kGut,parameter,h-1
 CLH,parameter,L.h-1
 Ke,parameter,L.h-1
-f_su,parameter,unitless
-f_se,parameter,unitless
+f_su,parameter,L.h-1
+f_se,parameter,L.h-1
