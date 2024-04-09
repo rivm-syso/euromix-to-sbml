@@ -34,7 +34,7 @@ model euromix()
   scFSkin = 0.05
   Falv = 2220
   
-  ### Density
+  ### Tissue density
   rho = 1
 
   ## Biochemical parameters
