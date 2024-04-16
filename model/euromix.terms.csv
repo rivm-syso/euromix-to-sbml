@@ -1,9 +1,7 @@
-pattern,sbml_type,element_id,element_description,annotation_type,qualifier,resource,name,remark
-# Model annotations
+﻿pattern,sbml_type,element_id,element_description,annotation_type,qualifier,resource,name,remark
 euromix,model,,,rdf,BQM_IS,mamo/MAMO_0000203,physiologically based pharmacokinetic model,
 euromix,model,,,rdf,BQM_IS,mamo/MAMO_0000046,ordinary differential equation model,
 euromix,model,,,rdf,BQB_HAS_TAXON,taxonomy/40674,mammalia,
-# Compartment annotations
 default_compartment,compartment,default_compartment,,rdf,BQB_IS,sbo/SBO:0000290,physical compartment,Seems to be used for QAir and QExcrete. Better to model these separately?
 Fat,compartment,Fat,adipose tissue,rdf,BQB_IS,uberon/UBERON:0001013,adipose tissue,
 Rich,compartment,Rich,richly perfused tissue,rdf,BQB_IS,uberon/UBERON:0000479,richly perfused tissue,Using parent term tissue.
@@ -16,7 +14,6 @@ Skin_sc_u,compartment,scu,skin unexposed stratum corneum,rdf,BQB_IS,uberon/UBERO
 Skin_sc_e,compartment,sce,skin exposed stratum corneum,rdf,BQB_IS,uberon/UBERON:0002097,skin exposed stratum corneum,Using parent term skin.
 Art,compartment,Art,arterial blood,rdf,BQB_IS,uberon/UBERON:0013755,arterial blood,
 Ven,compartment,Ven,venous blood,rdf,BQB_IS,uberon/UBERON:0013756,venous blood,
-# Species annotations
 QFat,species,QFat,quantity in fat tissues,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
 QRich,species,QRich,quantity in richly tissues (e.g.viscera),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
 QPoor,species,QPoor,quantity in poor tissues (e.g. muscles),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
@@ -31,7 +28,6 @@ QArt,species,QArt,quantity in arterial blood,rdf,BQB_IS,sbo/SBO:0000247,simple c
 QVen,species,QVen,quantity in venous blood,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
 QExcret,species,QExcret,quantity excreted in urine (cumulated),rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
 QAir,species,QAir,quantity in air,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
-# Parameter annotations
 BM,parameter,BM,body mass,rdf,BQB_IS,http://purl.obolibrary.org/obo/NCIT_C81328,body weight,
 BSA,parameter,BSA,body surface area,rdf,BQB_IS,http://purl.obolibrary.org/obo/NCIT_C25157,body surface area,
 CLH,parameter,CLH,metabolic clearance rate,rdf,BQB_IS,http://purl.obolibrary.org/obo/OMIT_0009720,metabolic clearance rate,
@@ -81,4 +77,4 @@ VSkin_e,parameter,VSkin_e,exposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volum
 VSkin_u,parameter,VSkin_u,unexposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
 VSkin_sc_e,parameter,VSkin_sc_e,stratum corneum exposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
 VSkin_sc_u,parameter,VSkin_sc_u,stratum corneum unexposed skin volume,rdf,BQB_IS,pato/PATO:0000918,volume,
-rho,parameter,rho,density of the tissues,rdf,BQB_IS,density,
+rho,parameter,rho,density of the tissues,rdf,BQB_IS,http://purl.obolibrary.org/obo/NCIT_C45781,density,
