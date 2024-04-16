@@ -732,7 +732,7 @@
             <rdf:Description rdf:about="#meta_rho">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="density"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C45781"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
