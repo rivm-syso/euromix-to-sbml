@@ -26,8 +26,6 @@ The converted SBML file does not yet contain annotations of terms and units. It 
 
 An initial version of an annotations file is available (see, [euromix.annotations.csv](model/euromix.annotations.csv)). This demonstrates how elements of the model are related to ontology terms and units. The script [annotate_sbml_terms.py](src/python/annotate_sbml.py) combines the model file and annotations file to obtain an SBML file with annotated terms. The script [annotate_sbml_units.py](src/python/annotate_sbml_units.py) combines the model file and annotations file to obtain an SBML file with annotated units. Both scripts are heavily inspired by the [sbmlUtils](https://github.com/matthiaskoenig/sbmlutils) package. What remains to be done is to establish the vocabularies/ontologies to use for annotation and decide on the annotation requirements. I.e., what needs to be annotated? Also, it remains unclear how to distinguish different substances from species (in case of multiple-substance models).
 
-Notebook [test_model_annotation.ipynb](notebooks/test_model_annotation.ipynb) shows how to annotate the model using an annotations file.
-
 ## SBML validation [in progress]
 
 Automatic validation can be included to check for model errors, model consistency, consitency of units, and also on more PBK-model specific aspects (such as mass balance). The script [validate_sbml.py](src/python/validate_sbml.py) can be run to run validation checks on the SBML file. This is a first version in which some rudimentary file and consistency checks are performed. This first version is inspired by the [example](https://synonym.caltech.edu/software/libsbml/5.18.0/docs/formatted/python-api/validate_s_b_m_l_8py-example.html) presented in the libSBML documentation.
