@@ -2,7 +2,8 @@
 timeUnits,document,s
 substanceUnits,document,mmol
 volumeUnits,document,L
-default_compartment,compartment,L
+Air,compartment,L
+Urine,compartment,L
 Fat,compartment,L
 Rich,compartment,L
 Poor,compartment,L

@@ -2,16 +2,17 @@
 euromix,model,,,rdf,BQM_IS,mamo/MAMO_0000203,physiologically based pharmacokinetic model,
 euromix,model,,,rdf,BQM_IS,mamo/MAMO_0000046,ordinary differential equation model,
 euromix,model,,,rdf,BQB_HAS_TAXON,taxonomy/40674,mammalia,
-default_compartment,compartment,default_compartment,,rdf,BQB_IS,sbo/SBO:0000290,physical compartment,Seems to be used for QAir and QExcrete. Better to model these separately?
+Urine,compartment,Urine,,rdf,BQB_IS,uberon/UBERON:0001088,Urine,
+Air,compartment,Air,,rdf,BQB_IS,http://purl.obolibrary.org/obo/NCIT_C150891,Air,
 Fat,compartment,Fat,adipose tissue,rdf,BQB_IS,uberon/UBERON:0001013,adipose tissue,
 Rich,compartment,Rich,richly perfused tissue,rdf,BQB_IS,uberon/UBERON:0000479,richly perfused tissue,Using parent term tissue.
-Poor,compartment,pp,poortly perfused tissue,rdf,BQB_IS,uberon/UBERON:0000479,poorly perfused tissue,Using parent term tissue.
-Liver,compartment,liver,liver,rdf,BQB_IS,uberon/UBERON:0002107,liver,
-Gut,compartment,gut,gut,rdf,BQB_IS,uberon/UBERON:0001555,digestive tract,
-Skin_u,compartment,su,viable unexposed skin,rdf,BQB_IS,uberon/UBERON:0002097,viable unexposed skin,Using parent term skin.
-Skin_e,compartment,se,viable exposed skin,rdf,BQB_IS,uberon/UBERON:0002097,viable exposed skin,Using parent term skin.
-Skin_sc_u,compartment,scu,skin unexposed stratum corneum,rdf,BQB_IS,uberon/UBERON:0002097,skin unexposed stratum corneum,Using parent term skin.
-Skin_sc_e,compartment,sce,skin exposed stratum corneum,rdf,BQB_IS,uberon/UBERON:0002097,skin exposed stratum corneum,Using parent term skin.
+Poor,compartment,Poor,poortly perfused tissue,rdf,BQB_IS,uberon/UBERON:0000479,poorly perfused tissue,Using parent term tissue.
+Liver,compartment,Liver,liver,rdf,BQB_IS,uberon/UBERON:0002107,liver,
+Gut,compartment,Gut,gut,rdf,BQB_IS,uberon/UBERON:0001555,digestive tract,
+Skin_u,compartment,Skin_u,viable unexposed skin,rdf,BQB_IS,uberon/UBERON:0002097,viable unexposed skin,Using parent term skin.
+Skin_e,compartment,Skin_e,viable exposed skin,rdf,BQB_IS,uberon/UBERON:0002097,viable exposed skin,Using parent term skin.
+Skin_sc_u,compartment,Skin_sc_u,skin unexposed stratum corneum,rdf,BQB_IS,uberon/UBERON:0002097,skin unexposed stratum corneum,Using parent term skin.
+Skin_sc_e,compartment,Skin_sc_e,skin exposed stratum corneum,rdf,BQB_IS,uberon/UBERON:0002097,skin exposed stratum corneum,Using parent term skin.
 Art,compartment,Art,arterial blood,rdf,BQB_IS,uberon/UBERON:0013755,arterial blood,
 Ven,compartment,Ven,venous blood,rdf,BQB_IS,uberon/UBERON:0013756,venous blood,
 QFat,species,QFat,quantity in fat tissues,rdf,BQB_IS,sbo/SBO:0000247,simple chemical,
