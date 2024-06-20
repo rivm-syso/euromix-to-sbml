@@ -84,6 +84,8 @@ model euromix()
   const FSkin_u := FSkin - FSkin_e
 
   # Compartments and Species
+  compartment Air
+  compartment Urine
   compartment Fat := BM * scVFat / rho
   compartment Rich := BM * scVRich / rho
   compartment Liver := BM * scVLiver / rho
@@ -109,7 +111,8 @@ model euromix()
   substanceOnly species QSkin_sc_e in Skin_sc_e
   substanceOnly species QArt in Art
   substanceOnly species QVen in Ven
-  substanceOnly species QExcret
+  substanceOnly species QExcret in Urine
+  substanceOnly species QAir in Air
 
   QFat = 0
   QPoor = 0
@@ -157,11 +160,13 @@ model euromix()
   QVen -> QArt; FBlood * conc(QVen, Ven)
 
   ## Metabolism
-
   QLiver -> QMetab; fub * piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, Liver), Michaelis > 0.5, metab_MA(CLH, PCLiver, QLiver, Liver))
 
   ## Excretion
-  QArt -> QAir; Falv * conc(QArt, Art) / PCAir
   QArt -> QExcret; Ke * fub * conc(QArt, Art)
+  
+  # Air exchange
+  QArt -> QAir; Falv * conc(QArt, Art) / PCAir
+  QAir -> QArt; FBlood * conc(QAir, Air)
 
 end
