@@ -164,7 +164,7 @@ model euromix()
   QLiver -> QMetab; fub * piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, Liver), Michaelis > 0.5, metab_MA(CLH, PCLiver, QLiver, Liver))
 
   ## Excretion
-  QArt -> QAir; Falv * conc(QArt, Art) / PCAir
+  QVen -> QAir; Falv * conc(QArt, Art) / PCAir
   QArt -> QExcret; Ke * fub * conc(QArt, Art)
 
 end
