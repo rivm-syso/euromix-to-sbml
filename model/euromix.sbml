@@ -1812,14 +1812,33 @@
       </reaction>
       <reaction id="_J19" reversible="true">
         <listOfReactants>
-          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QExcret" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> Ke </ci>
+              <ci> fub </ci>
+              <apply>
+                <ci> conc </ci>
+                <ci> QArt </ci>
+                <ci> Art </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J20" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
           <speciesReference species="QAir" stoichiometry="1" constant="true"/>
         </listOfProducts>
-        <listOfModifiers>
-          <modifierSpeciesReference species="QArt"/>
-        </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
@@ -1838,23 +1857,22 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J20" reversible="true">
+      <reaction id="_J21" reversible="true">
         <listOfReactants>
-          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+          <speciesReference species="QAir" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="QExcret" stoichiometry="1" constant="true"/>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> Ke </ci>
-              <ci> fub </ci>
+              <ci> FBlood </ci>
               <apply>
                 <ci> conc </ci>
-                <ci> QArt </ci>
-                <ci> Art </ci>
+                <ci> QAir </ci>
+                <ci> Air </ci>
               </apply>
             </apply>
           </math>
