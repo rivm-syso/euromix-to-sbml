@@ -1812,11 +1812,14 @@
       </reaction>
       <reaction id="_J19" reversible="true">
         <listOfReactants>
-          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+          <speciesReference species="QVen" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
           <speciesReference species="QAir" stoichiometry="1" constant="true"/>
         </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="QArt"/>
+        </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
