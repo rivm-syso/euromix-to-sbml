@@ -160,11 +160,13 @@ model euromix()
   QVen -> QArt; FBlood * conc(QVen, Ven)
 
   ## Metabolism
-
   QLiver -> QMetab; fub * piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, Liver), Michaelis > 0.5, metab_MA(CLH, PCLiver, QLiver, Liver))
 
   ## Excretion
-  QVen -> QAir; Falv * conc(QVen, Ven) / PCAir
   QArt -> QExcret; Ke * fub * conc(QArt, Art)
+  
+  # Air exchange
+  QArt -> QAir; Falv * conc(QArt, Art) / PCAir
+  QAir -> QArt; FBlood * conc(QAir, Air)
 
 end
