@@ -1,6 +1,6 @@
 # Euromix model to SBML
 
-This repository contains a re-implementation of the EuroMix PBK model[^1] in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html) and demonstrates how this Antimony model implementation is automatically converted to an annotated Systems Biology Markup Language ([SBML](https://sbml.org/)) file using the [SBML PBK workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow). The purpose of this repository is to test/demonstrate how to create and publish interoperable PBK models using the EuroMix PBK model as example.
+This repository contains a re-implementation of the [EuroMix PBK model](https://doi.org/10.1016/j.fct.2020.111440) in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html) and demonstrates how this Antimony model implementation is automatically converted to an annotated Systems Biology Markup Language ([SBML](https://sbml.org/)) file using the [SBML PBK workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow). The purpose of this repository is to test/demonstrate how to create and publish interoperable PBK models using the EuroMix PBK model as example.
 
 ## Model diagram
 
@@ -33,5 +33,3 @@ Install the required python packages using the command:
 ```
 pip install -r requirements.txt
 ```
-
-[^1] Tebby, C., van der Voet, H., de Sousa, G., Rorije, E., Kumar, V., de Boer, W., Kruisselbrink, J. W., Bois, F. Y., Faniband, M., Moretto, A., and Brochot, C. A generic pbtk model implemented in the mcra platform: predictive performance and uses in risk assessment of chemicals. Food and Chemical Toxicology, 142:111440, 2020. URL: https://www.sciencedirect.com/science/article/pii/S0278691520303306.
