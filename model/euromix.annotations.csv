@@ -1,4 +1,4 @@
-element_id,sbml_type,element_description,unit,annotation_type,qualifier,URI,description,remark
+element_id,sbml_type,element_name,unit,annotation_type,qualifier,URI,description,remark
 substanceUnits,document,model substances unit,mmol,,,,Model substances unit.,
 timeUnits,document,model time unit,s,,,,Model time unit.,
 volumeUnits,document,model volume unit,L,,,,Model volume unit.,
