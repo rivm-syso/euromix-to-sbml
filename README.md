@@ -18,7 +18,7 @@ Annotations of the model and its element are specified in the file [euromix.anno
 
 ## SBML conversion and SBML model annotation
 
-The [SBML PBK workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow) follows several steps. It first converts the Antimony model implementation to SBML. Then, it annotates this SBML file using the annotations specified in the [euromix.annotations.csv](model/euromix.annotations.csv) file. After this, it runs (unit) validation scripts on the generated SBML file. Finally, it publishes the generated SBML file (and log files) as build artifacts and pushes the generated/updated sbml file ([euromix.sbml](model/euromix.sbml)) to the repository.
+Conversion to an annotated SBML file is done automatically using the [SBML PBK workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow). This workflow follows several steps. It first converts the Antimony model implementation to SBML. Then, it annotates this SBML file using the annotations specified in the [euromix.annotations.csv](model/euromix.annotations.csv) file. After this, it runs validation scripts on the generated SBML file to check for consistency and completeness (e.g, of the units). Finally, it publishes the generated SBML file (and log files) as build artifacts and adds/updates the generated/updated SBML file ([euromix.sbml](model/euromix.sbml)) in this repository.
 
 Notebook [get_model_info.ipynb](notebooks/get_model_info.ipynb) shows how information can be retrieved from the annotated SBML model file (e.g., units, differential equations, diagrams, semantic annotations). Notebook [run_sbml_model.ipynb](notebooks/run_sbml_model.ipynb) demonstrates how to run the SBML model.
 
