@@ -571,7 +571,7 @@
             <rdf:Description rdf:about="#meta_BM">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00007"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00009"/>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C81328"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -585,8 +585,7 @@
             <rdf:Description rdf:about="#meta_BSA">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00008"/>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00007"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25157"/>
                 </rdf:Bag>
               </bqbiol:is>
