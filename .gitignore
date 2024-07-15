@@ -2,6 +2,7 @@
 *bak*
 *.o
 *.so
+*.dll
 
 # Visual studio code
 .vscode/*

@@ -10,7 +10,7 @@ This repository contains a re-implementation of the [EuroMix PBK model](https://
 
 The model was reimplemented in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html), see file [euromix.ant](model/euromix.ant).
 
-Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb) shows the results of the validation comparison with the results obtained by the R/MCSim/desolve implementation. The results of the R simulation and the SBML simulation (using libroadrunner in Python) match. Note that the [libRoadRunner](https://www.libroadrunner.org/) engine that is used for the python simulations returns concentrations, also if a species is declared to be `substanceOnly`. Therefore it is necessary to convert the output to amounts by multiplying the concentration with volume of the compartment the species is placed in in order to obtain amounts.
+Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb) shows the results of the validation comparison with the results obtained by the R/MCSim/deSolve implementation. The results of the R simulation and the SBML simulation (using libroadrunner in Python) match. Note that the [libRoadRunner](https://www.libroadrunner.org/) engine that is used for the python simulations returns concentrations, also if a species is declared to be `substanceOnly`. Therefore it is necessary to convert the output to amounts by multiplying the concentration with volume of the compartment the species is placed in in order to obtain amounts.
 
 ## Model annotation
 
