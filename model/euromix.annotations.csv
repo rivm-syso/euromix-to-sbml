@@ -1,6 +1,6 @@
 element_id,sbml_type,element_name,unit,annotation_type,qualifier,URI,description,remark
 substanceUnits,document,model substances unit,mmol,,,,Model substances unit.,
-timeUnits,document,model time unit,s,,,,Model time unit.,
+timeUnits,document,model time unit,h,,,,Model time unit.,
 volumeUnits,document,model volume unit,L,,,,Model volume unit.,
 euromix,model,,,rdf,BQM_IS,http://identifiers.org/mamo/MAMO_0000203,physiologically based pharmacokinetic model,
 euromix,model,,,rdf,BQM_IS,http://identifiers.org/mamo/MAMO_0000046,ordinary differential equation model,
