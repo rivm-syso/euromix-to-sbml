@@ -14,7 +14,7 @@ Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb
 
 ## Model annotation
 
-Annotations of the model and its element are specified in the file [euromix.annotations.csv](model/euromix.annotations.csv). This annotations file links the different model elements (e.g., compartments and parameters) to ontological terms and specifies the units of measure. For the annotations of modelling terms, the [BPBK ontology](http://obofoundry.org/ontology/pbpko) is used. For the annotation of the units of measure, the [UCUM](https://ucum.org/) notation is adopted.
+Annotations of the model and its element are specified in the file [euromix.annotations.csv](model/euromix.annotations.csv). This annotations file links the different model elements (e.g., compartments and parameters) to ontological terms and specifies the units of measure. For the annotations of modelling terms, the [PBPK ontology](http://obofoundry.org/ontology/pbpko) is used. For the annotation of the units of measure, the [UCUM](https://ucum.org/) notation is adopted.
 
 ## SBML conversion and SBML model annotation
 
