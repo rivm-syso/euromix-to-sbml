@@ -1,4 +1,7 @@
-tellurium==2.2.8
-antimony==2.13.2
-sbmlutils==0.8.7
-sbmlDIAGRAMS==1.4.0
+tellurium==2.2.10
+antimony==2.15.0
+sbmlutils==0.9.0
+python-libsbml==5.20.4
+sbmlnetwork==0.1.2
+pandas
+seaborn
