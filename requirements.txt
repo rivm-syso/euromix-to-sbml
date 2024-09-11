@@ -2,6 +2,6 @@ tellurium==2.2.10
 antimony==2.15.0
 sbmlutils==0.9.0
 python-libsbml==5.20.4
-sbmlnetwork==0.1.2
+sbmlnetwork==0.2.2
 pandas
 seaborn
