@@ -322,11 +322,11 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00467"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:is>
+              <bqbiol:isPartOf>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002097"/>
                 </rdf:Bag>
-              </bqbiol:is>
+              </bqbiol:isPartOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -340,11 +340,11 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00466"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:is>
+              <bqbiol:isPartOf>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002097"/>
                 </rdf:Bag>
-              </bqbiol:is>
+              </bqbiol:isPartOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -355,14 +355,14 @@
             <rdf:Description rdf:about="#meta_Skin_sc_e">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00469"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00458"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:is>
+              <bqbiol:isPartOf>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002027"/>
                 </rdf:Bag>
-              </bqbiol:is>
+              </bqbiol:isPartOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -373,14 +373,14 @@
             <rdf:Description rdf:about="#meta_Skin_sc_u">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00468"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00457"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:is>
+              <bqbiol:isPartOf>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002027"/>
                 </rdf:Bag>
-              </bqbiol:is>
+              </bqbiol:isPartOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
