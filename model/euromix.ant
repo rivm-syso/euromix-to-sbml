@@ -34,9 +34,6 @@ model euromix()
   scFSkin = 0.05
   Falv = 2220
   
-  ### Tissue density
-  rho = 1
-
   ## Biochemical parameters
 
   ### Partition coefficients
@@ -71,7 +68,7 @@ model euromix()
   ### Body size
   const f_su := Kp_sc_vs * BSA * (1 - fSA_exposed)
   const f_se := Kp_sc_vs * BSA * fSA_exposed
-  const VBlood := BM * scVBlood / rho
+  const VBlood := BM * scVBlood
 
   ### Flow rates
   const FBlood := scFBlood * BM
@@ -86,16 +83,16 @@ model euromix()
   # Compartments and Species
   compartment Air
   compartment Urine
-  compartment Fat := BM * scVFat / rho
-  compartment Rich := BM * scVRich / rho
-  compartment Liver := BM * scVLiver / rho
+  compartment Fat := BM * scVFat
+  compartment Rich := BM * scVRich
+  compartment Liver := BM * scVLiver
   compartment Art := VBlood / 3.0
   compartment Ven := VBlood - Art
   compartment Skin_e := BSA * Height_vs * fSA_exposed
   compartment Skin_u := BSA * Height_vs * (1 - fSA_exposed)
   compartment Skin_sc_e := BSA * Height_sc * fSA_exposed
   compartment Skin_sc_u := BSA * Height_sc * (1 - fSA_exposed)
-  compartment Poor := (BM / rho) - Fat - Rich - Liver - Skin_e - Skin_u - Skin_sc_e - Skin_sc_u - VBlood - 0.1 * (BM / rho)
+  compartment Poor := BM - Fat - Rich - Liver - Skin_e - Skin_u - Skin_sc_e - Skin_sc_u - VBlood - 0.1 * BM
   compartment Gut
 
   # Species
