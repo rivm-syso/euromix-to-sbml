@@ -1189,7 +1189,8 @@
                 <apply>
                   <minus/>
                   <apply>
-                    <minus/>
+                    <times/>
+                    <ci> BM </ci>
                     <apply>
                       <minus/>
                       <apply>
@@ -1198,28 +1199,27 @@
                           <minus/>
                           <apply>
                             <minus/>
-                            <ci> BM </ci>
-                            <ci> Fat </ci>
+                            <apply>
+                              <minus/>
+                              <cn type="integer"> 1 </cn>
+                              <ci> scVFat </ci>
+                            </apply>
+                            <ci> scVRich </ci>
                           </apply>
-                          <ci> Rich </ci>
+                          <ci> scVLiver </ci>
                         </apply>
-                        <ci> Liver </ci>
+                        <ci> scVBlood </ci>
                       </apply>
-                      <ci> Skin_e </ci>
+                      <cn> 0.1 </cn>
                     </apply>
-                    <ci> Skin_u </ci>
                   </apply>
-                  <ci> Skin_sc_e </ci>
+                  <ci> Skin_e </ci>
                 </apply>
-                <ci> Skin_sc_u </ci>
+                <ci> Skin_u </ci>
               </apply>
-              <ci> VBlood </ci>
+              <ci> Skin_sc_e </ci>
             </apply>
-            <apply>
-              <times/>
-              <cn> 0.1 </cn>
-              <ci> BM </ci>
-            </apply>
+            <ci> Skin_sc_u </ci>
           </apply>
         </math>
       </assignmentRule>
