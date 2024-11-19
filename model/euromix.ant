@@ -92,7 +92,7 @@ model euromix()
   compartment Skin_u := BSA * Height_vs * (1 - fSA_exposed)
   compartment Skin_sc_e := BSA * Height_sc * fSA_exposed
   compartment Skin_sc_u := BSA * Height_sc * (1 - fSA_exposed)
-  compartment Poor := BM - Fat - Rich - Liver - Skin_e - Skin_u - Skin_sc_e - Skin_sc_u - VBlood - 0.1 * BM
+  compartment Poor := BM * (1 - scVFat-scVRich - scVLiver - scVBlood - 0.1) - Skin_e - Skin_u - Skin_sc_e - Skin_sc_u
   compartment Gut
 
   # Species
