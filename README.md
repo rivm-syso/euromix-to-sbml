@@ -1,5 +1,9 @@
 # EuroMix model to SBML
 
+[![Licence](https://img.shields.io/github/license/rivm-syso/euromix-to-sbml)](https://github.com/rivm-syso/euromix-to-sbml/blob/main/LICENSE)
+[![Build](https://img.shields.io/github/actions/workflow/status/rivm-syso/euromix-to-sbml/build.yml?label=build)](https://github.com/rivm-syso/euromix-to-sbml/actions/workflows/build.yml)
+[![Validate](https://img.shields.io/github/actions/workflow/status/rivm-syso/euromix-to-sbml/validate.yml?label=validate)](https://github.com/rivm-syso/euromix-to-sbml/actions/workflows/validate.yml)
+
 This repository contains a re-implementation of the [EuroMix PBK model](https://doi.org/10.1016/j.fct.2020.111440) in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html) and demonstrates how this Antimony model implementation is automatically converted to an annotated Systems Biology Markup Language ([SBML](https://sbml.org/)) file using the [SBML PBK workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow). The purpose of this repository is to test/demonstrate how to create and publish interoperable PBK models using the EuroMix PBK model as example.
 
 ## Model diagram
