@@ -1,9 +1,9 @@
-name: Create and annotate SBML
+name: Build
 on: [push, workflow_dispatch]
 
 jobs:
   create-and-annotate-sbml:
-    uses: jwkruisselbrink/sbml-pbk-workflow/.github/workflows/build.yml@v3
+    uses: jwkruisselbrink/sbml-pbk-workflow/.github/workflows/build.yml@v4
     with:
       model-name: euromix
     permissions:

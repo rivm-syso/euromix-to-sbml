@@ -1,0 +1,13 @@
+# .github/workflows/test_action.yaml
+name: Validate
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types: [completed]
+jobs:
+  validate-sbml:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: jwkruisselbrink/sbml-pbk-workflow/.github/workflows/validate.yml@v4
+    with:
+      model-name: euromix
+    secrets: inherit
