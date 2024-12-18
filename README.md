@@ -6,15 +6,11 @@
 
 This repository contains a re-implementation of the [EuroMix PBK model](https://doi.org/10.1016/j.fct.2020.111440) in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html) and demonstrates how this Antimony model implementation is automatically converted to an annotated Systems Biology Markup Language ([SBML](https://sbml.org/)) file using the [SBML PBK workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow). The purpose of this repository is to test/demonstrate how to create and publish interoperable PBK models using the EuroMix PBK model as example.
 
-## Model diagram
-
-![Model diagram of the EuroMix PBK model](euromix-pbk-model.png)
-
 ## Reimplementation in Antimony
 
-The model was reimplemented in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html), see file [euromix.ant](model/euromix.ant).
+The model was reimplemented in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html), see file [euromix.ant](model/euromix.ant). Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb) shows the results of the validation comparison with the results obtained by the R/MCSim/deSolve implementation. The results of the R simulation and the SBML simulation (using libroadrunner in Python) match.
 
-Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb) shows the results of the validation comparison with the results obtained by the R/MCSim/deSolve implementation. The results of the R simulation and the SBML simulation (using libroadrunner in Python) match. Note that the [libRoadRunner](https://www.libroadrunner.org/) engine that is used for the python simulations returns concentrations, also if a species is declared to be `substanceOnly`. Therefore it is necessary to convert the output to amounts by multiplying the concentration with volume of the compartment the species is placed in in order to obtain amounts.
+![Model diagram of the EuroMix PBK model](euromix-pbk-model.png)
 
 ## Model annotation
 
