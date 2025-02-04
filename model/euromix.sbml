@@ -192,7 +192,6 @@
               <bqmodel:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00448"/>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00458"/>
                 </rdf:Bag>
               </bqmodel:is>
               <bqbiol:is>
@@ -321,11 +320,6 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00456"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:isPartOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002097"/>
-                </rdf:Bag>
-              </bqbiol:isPartOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -339,11 +333,6 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00455"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:isPartOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002097"/>
-                </rdf:Bag>
-              </bqbiol:isPartOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -357,11 +346,6 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00458"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:isPartOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002027"/>
-                </rdf:Bag>
-              </bqbiol:isPartOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -375,11 +359,6 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00457"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:isPartOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002027"/>
-                </rdf:Bag>
-              </bqbiol:isPartOf>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
