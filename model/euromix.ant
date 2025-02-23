@@ -13,56 +13,63 @@ end
 model euromix()
 
   # Parameters
-  
+
   ## Physiology
 
   ### Body size
-  BM = 70
-  BSA = 190
-  Height_sc = 0.0001
-  Height_vs = 0.0122
-  scVFat = 0.209
-  scVRich = 0.105
-  scVLiver = 0.024
-  scVBlood = 0.068
+  BM = 70             # body weight [kg]
+  BSA = 190           # body surface area [cm2]
+
+  ### Relative compartment volumes
+  scVFat = 0.209      # fat volume as as fraction of total body volume [L/kg]
+  scVRich = 0.105     # richly perfused tissues volume as as fraction of total body volume [L/kg]
+  scVLiver = 0.024    # liver volume as as fraction of total body volume [L/kg]
+  scVBlood = 0.068    # blood volume as as fraction of total body volume [L/kg]
 
   ### Flow rates
-  scFBlood = 4.8
-  scFFat = 0.085
-  scFPoor = 0.12
-  scFLiver = 0.27
-  scFSkin = 0.05
-  Falv = 2220
-  
+  scFBlood = 4.8      # total blood flow per unit mass [L/(kg.h)]
+  scFFat = 0.085      # fraction of blood flow going to adipose tissue [-]
+  scFPoor = 0.12      # fraction total blood flow going to poorly perfused tissue [-]
+  scFLiver = 0.27     # fraction total blood flow going to liver [-]
+  scFSkin = 0.05      # fraction total blood flow going to skin [-]
+
+  ### Skin parameters
+  fSA_exposed = 0.1   # fraction of skin surface area actually exposed [-]
+  Height_sc = 0.0001  # thickness stratum corneum [dm]
+  Height_vs = 0.0122  # thickness viable epidermis [dm]
+
+  ### Lung parameters
+  Falv = 2220         # alveolar ventilation rate [L/h]
+
   ## Biochemical parameters
 
   ### Partition coefficients
-  PCFat = 2.53
-  PCLiver = 0.923
-  PCRich = 0.875
-  PCPoor = 0.647
-  PCSkin_sc = 0.889
-  PCSkin = 0.889
+  PCFat = 2.53        # partition coefficient fat over blood [-]
+  PCLiver = 0.923     # partition coefficient liver over blood [-]
+  PCRich = 0.875      # partition coefficient poorly perfused tissue over blood [-]
+  PCPoor = 0.647      # partition coefficient richly perfused tissue over blood [-]
+  PCSkin_sc = 0.889   # partition coefficient viable skin over stratum corneum [-]
+  PCSkin = 0.889      # partition coefficient viable skin over blood [-]
+  PCAir = 1e+99       # partition coefficient blood over air [-]
 
-  PCAir = 1e+99
+  ## Absorption
+  kGut = 1            # absorption rate constant gut [1/h]
+  Kp_sc_vs = 0.01     # diffusion rate from stratum corneum to viable skin [dm/h]
 
   ### Metabolism
-  Km = 0
-  Michaelis = 0
-  Vmax = 0
-
-  ### Others
-  fub = 0.51
-  fSA_exposed = 0.1
-  Kp_sc_vs = 0.01
+  Km = 0              # Michaelis-Menten constant liver [mmol]
+  Michaelis = 0       # flag for Michaelis-Menten or linear metabolism [-]
+  Vmax = 0            # maximum rate of metabolism in the liver [mmol/(L.h)]
 
   ### Excretion
-  kGut = 1
-  CLH = 132
-  Ke = 7.5
+  CLH = 132           # hepatic clearance rate [L/h]
+  Ke = 7.5            # renal excretion rate [L/h]
+
+  ### Others
+  fub = 0.51          # fraction unbound in blood [-]
 
   # Assignments
-  
+
   ## Physiology
 
   ### Body size
@@ -161,7 +168,7 @@ model euromix()
 
   ## Excretion
   QArt -> QExcret; Ke * fub * conc(QArt, Art)
-  
+
   # Air exchange
   QArt -> QAir; Falv * conc(QArt, Art) / PCAir
   QAir -> QArt; FBlood * conc(QAir, Air)
