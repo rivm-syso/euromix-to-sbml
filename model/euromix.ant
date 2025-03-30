@@ -87,7 +87,7 @@ model euromix()
   const FSkin_e := FSkin * fSA_exposed
   const FSkin_u := FSkin - FSkin_e
 
-  # Compartments and Species
+  # Compartments
   compartment Air
   compartment Urine
   compartment Fat := BM * scVFat
@@ -103,33 +103,20 @@ model euromix()
   compartment Gut
 
   # Species
-  substanceOnly species QFat in Fat
-  substanceOnly species QRich in Rich
-  substanceOnly species QPoor in Poor
-  substanceOnly species QLiver in Liver
-  substanceOnly species QMetab in Liver
-  substanceOnly species QGut in Gut
-  substanceOnly species QSkin_u in Skin_u
-  substanceOnly species QSkin_e in Skin_e
-  substanceOnly species QSkin_sc_u in Skin_sc_u
-  substanceOnly species QSkin_sc_e in Skin_sc_e
-  substanceOnly species QArt in Art
-  substanceOnly species QVen in Ven
-  substanceOnly species QExcret in Urine
-  substanceOnly species QAir in Air
-
-  QFat = 0
-  QPoor = 0
-  QRich = 0
-  QGut = 0
-  QMetab = 0
-  QLiver = 0
-  QSkin_u = 0
-  QSkin_e = 0
-  QSkin_sc_u = 0
-  QSkin_sc_e = 0
-  QArt = 0
-  QVen = 0
+  substanceOnly species QFat in Fat = 0
+  substanceOnly species QRich in Rich = 0
+  substanceOnly species QPoor in Poor = 0
+  substanceOnly species QLiver in Liver = 0
+  substanceOnly species QMetab in Liver = 0
+  substanceOnly species QGut in Gut = 0
+  substanceOnly species QSkin_u in Skin_u = 0
+  substanceOnly species QSkin_e in Skin_e = 0
+  substanceOnly species QSkin_sc_u in Skin_sc_u = 0
+  substanceOnly species QSkin_sc_e in Skin_sc_e = 0
+  substanceOnly species QArt in Art = 0
+  substanceOnly species QVen in Ven = 0
+  substanceOnly species QExcret in Urine = 0
+  substanceOnly species QAir in Air = 0
 
   # Model
 
