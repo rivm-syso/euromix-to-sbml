@@ -4,6 +4,9 @@
 *.so
 *.dll
 
+# Log files
+*.log
+
 # Visual studio code
 .vscode/*
 
