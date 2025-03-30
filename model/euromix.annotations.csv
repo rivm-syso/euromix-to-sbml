@@ -1,5 +1,6 @@
 element_id,sbml_type,element_name,unit,annotation_type,qualifier,URI,remark
 substanceUnits,document,model substances unit,mmol,,,,
+extentUnits,document,model substances unit,mmol,,,,
 timeUnits,document,model time unit,h,,,,
 volumeUnits,document,model volume unit,L,,,,
 Air,compartment,alveolar air,L,rdf,BQM_IS,http://purl.obolibrary.org/obo/PBPKO_00448,
