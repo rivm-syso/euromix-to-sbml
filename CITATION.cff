@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: EuroMix Generik PBK Antimony re-implementation
+abstract: Antimony re-implementation of the EuroMix Generik PBK model.
+version: 0.1.0
+authors:
+  - family-names: Palm
+    given-names: Margriet
+    orcid: "0000-0003-2253-8920"
+    affiliation: RIVM
+  - family-names: Minnema
+    given-names: Jordi
+    orcid: "0000-0002-1847-4218"
+    affiliation: RIVM
+  - family-names: Kruisselbrink
+    given-names: Johannes
+    affiliation: WUR
+    orcid: "0000-0003-1673-5725"
