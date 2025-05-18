@@ -12,6 +12,7 @@
 
 # R
 .Rproj.user
+.Rhistory
 
 # Python
 **/__pycache__
