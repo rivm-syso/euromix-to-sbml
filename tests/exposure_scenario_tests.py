@@ -1,12 +1,9 @@
 import unittest
-import sys
 import os
 import roadrunner as rr
 import pandas as pd
 from parameterized import parameterized
 from helpers import plot_simulation_results, load_parametrisation
-
-sys.path.append('../sbmlpbkutils/')
 
 __test_outputs_path__ = './tests/__testoutputs__'
 __model_code__ = 'euromix'
