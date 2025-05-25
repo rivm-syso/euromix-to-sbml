@@ -32,7 +32,7 @@ class ExposureScenarioTests(unittest.TestCase):
         rr_model.setBoundary(input_species, False)
 
         # Run simulation
-        results = rr_model.simulate(start=0, end=num_days * evaluation_frequency, points=100)
+        results = rr_model.simulate(start=0, end=num_days * 24, points=num_days * evaluation_frequency + 1)
         df = pd.DataFrame(results, columns=results.colnames)
 
         # Save to CSV file
@@ -54,7 +54,7 @@ class ExposureScenarioTests(unittest.TestCase):
         daily_intake = 1 # 1 unit dose per day
         days_after_exposure = int(days_of_exposure / 10)
         num_days = days_of_exposure + days_after_exposure
-        evaluation_frequency = 24 # evals per unit of time
+        evaluation_frequency = 24 # evals per day
 
         # Load the PBPK model from the SBML file
         rr_model = rr.RoadRunner(__sbml_file_path__)
@@ -69,13 +69,13 @@ class ExposureScenarioTests(unittest.TestCase):
 
         # Create a repeating daily oral dosing
         eid = f"oral_daily_exposure"
-        rr_model.addEvent(eid, False, f"time % 1 == 0 && time < {days_of_exposure}", False)
+        rr_model.addEvent(eid, False, f"time % 24 == 0 && time < {days_of_exposure*24}", False)
         rr_model.addEventAssignment(eid, input_id, f"{input_id} + {daily_intake} * BM", False)
         rr_model.regenerateModel(True, True)
 
         # Simulate the PBPK model
         plot_params = rr_model.timeCourseSelections + ['BM']
-        results = rr_model.simulate(0, num_days, evaluation_frequency * num_days + 1, plot_params)
+        results = rr_model.simulate(0, num_days * 24, evaluation_frequency * num_days + 1, plot_params)
 
         # Save to CSV file
         csv_filename = os.path.join(__test_outputs_path__, f'{scenario_id}.csv')
@@ -110,7 +110,7 @@ class ExposureScenarioTests(unittest.TestCase):
                 self.assertIn(
                     row['Parameter'],
                     model_params,
-                    f"Parameter {row['Parameter']} of instance {df['idModelInstance']} is not an assignable parameter of the model."
+                    f"Parameter {row['Parameter']} of instance {row['idModelInstance']} is not an assignable parameter of the model."
                 )
 
 if __name__ == '__main__':
