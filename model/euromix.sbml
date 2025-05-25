@@ -4,6 +4,31 @@
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
         <rdf:Description rdf:about="#euromix">
+          <dcterms:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Palm</vCard4:family-name>
+                  <vCard4:given-name>Margriet</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:organization-name>RIVM</vCard4:organization-name>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Minnema</vCard4:family-name>
+                  <vCard4:given-name>Jordi</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:organization-name>RIVM</vCard4:organization-name>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Kruisselbrink</vCard4:family-name>
+                  <vCard4:given-name>Johannes</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:organization-name>WUR</vCard4:organization-name>
+              </rdf:li>
+            </rdf:Bag>
+          </dcterms:creator>
           <bqbiol:hasTaxon>
             <rdf:Bag>
               <rdf:li rdf:resource="http://identifiers.org/taxonomy/40674"/>

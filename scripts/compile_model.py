@@ -34,6 +34,8 @@ def create_file_logger(logfile: str) -> logging.Logger:
     logger.addHandler(fh)
     return logger
 
+citation_file = './CITATION.cff'
+
 for file in os.listdir(model_path):
     if file.endswith('.ant'):
         ant_file = os.path.join(model_path, file)
@@ -62,6 +64,7 @@ for file in os.listdir(model_path):
         annotator.annotate(
             document,
             annotations_file,
+            citation_file,
             logger = logger
         )
         ls.writeSBML(document, str(annotated_sbml_file))
