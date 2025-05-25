@@ -1,6 +1,7 @@
 import unittest
 import os
 import roadrunner as rr
+import libsbml as ls
 import pandas as pd
 from parameterized import parameterized
 from helpers import plot_simulation_results, load_parametrisation
@@ -27,8 +28,8 @@ class ExposureScenarioTests(unittest.TestCase):
 
         # Set initial amount set constant and boundary for Gut
         rr_model.setInitAmount(input_species, intake)
-        rr_model.setConstant(input_species, True)
-        rr_model.setBoundary(input_species, True)
+        rr_model.setConstant(input_species, False)
+        rr_model.setBoundary(input_species, False)
 
         # Run simulation
         results = rr_model.simulate(start=0, end=num_days * evaluation_frequency, points=100)
@@ -56,8 +57,7 @@ class ExposureScenarioTests(unittest.TestCase):
         evaluation_frequency = 24 # evals per unit of time
 
         # Load the PBPK model from the SBML file
-        sbml_file = os.path.join('model/euromix.sbml')
-        rr_model = rr.RoadRunner(sbml_file)
+        rr_model = rr.RoadRunner(__sbml_file_path__)
 
         # Make sure QGut is not constant and does not have boundary conditions
         rr_model.setInitAmount(input_id, 0)
@@ -84,6 +84,34 @@ class ExposureScenarioTests(unittest.TestCase):
         fig = plot_simulation_results(results, rr_model.timeCourseSelections)
         png_filename = os.path.join(__test_outputs_path__, f'{scenario_id}.png')
         fig.savefig(png_filename)
+
+    @parameterized.expand([
+        (f'./parametrisations/euromix_default_params.csv'),
+        (f'./parametrisations/parametrisations_euromix.csv'),
+    ])
+    def test_parametrisation(self, filename):
+
+        # Get parameters of the model
+        document = ls.readSBML(__sbml_file_path__)
+        model = document.getModel()
+        model_params = []
+        for i in range(0,model.getNumParameters()):
+            param = model.getParameter(i)
+            if param.isSetConstant():
+                model_params.append(param.getId())
+
+        # Iterate over model instances
+        df = pd.read_csv(filename)
+        instance_ids = df['idModelInstance'].unique()
+        for instance_id in instance_ids:
+            df = df.loc[df['idModelInstance'] == instance_id]
+            # Check for each instance parameter whether it is defined in the model
+            for index, row in df.iterrows():
+                self.assertIn(
+                    row['Parameter'],
+                    model_params,
+                    f"Parameter {row['Parameter']} of instance {df['idModelInstance']} is not an assignable parameter of the model."
+                )
 
 if __name__ == '__main__':
     unittest.main()

@@ -16,7 +16,6 @@ import uuid
 import tellurium as te
 import libsbml as ls
 import logging
-import pandas as pd
 from pathlib import Path
 
 model_path = './model/'
