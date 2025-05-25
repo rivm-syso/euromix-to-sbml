@@ -29,9 +29,7 @@ The generated annotated SBML file is considered to be the interoperable digital 
 
 ## Running the notebooks
 
-To run the Jupyter notebooks, install Jupyter notebook and the the required python packages.
-
-Install notebook and the required python packages using the command:
+To run the Jupyter notebooks, install Jupyter notebook and the the required python packages. Install notebook and the required python packages using the command:
 
 ```
 pip install -r requirements.txt

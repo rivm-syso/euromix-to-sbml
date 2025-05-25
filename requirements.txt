@@ -3,7 +3,7 @@ antimony==2.15.0
 sbmlutils==0.9.0
 parameterized>=0.9.0
 python-libsbml==5.20.5
-sbmlpbkutils @ git+https://github.com/jwkruisselbrink/sbml-pbk-utils.git@v0.22.0
+sbmlpbkutils @ git+https://github.com/jwkruisselbrink/sbml-pbk-utils.git@v0.24.0
 pandas>=2.2.3
 seaborn>=0.13.2
 nbconvert>=7.16.6
