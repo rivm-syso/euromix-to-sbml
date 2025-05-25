@@ -1,5 +1,5 @@
 function conc(q,vol)
-  piecewise(q/vol, vol > 1e-5, 0)
+  piecewise(q/vol, vol > 0, 0)
 end
 
 function metab_MM(Vmax, Km, PC, q, vol)
@@ -25,6 +25,7 @@ model euromix()
   scVRich = 0.105     # richly perfused tissues volume as as fraction of total body volume [L/kg]
   scVLiver = 0.024    # liver volume as as fraction of total body volume [L/kg]
   scVBlood = 0.068    # blood volume as as fraction of total body volume [L/kg]
+  scVArt = 1/3        # arterial blood volume as fraction of total blood volume
 
   ### Flow rates
   scFBlood = 4.8      # total blood flow per unit mass [L/(kg.h)]
@@ -93,7 +94,7 @@ model euromix()
   compartment Fat := BM * scVFat
   compartment Rich := BM * scVRich
   compartment Liver := BM * scVLiver
-  compartment Art := VBlood / 3.0
+  compartment Art := VBlood * scVArt
   compartment Ven := VBlood - Art
   compartment Skin_e := BSA * Height_vs * fSA_exposed
   compartment Skin_u := BSA * Height_vs * (1 - fSA_exposed)
@@ -120,44 +121,40 @@ model euromix()
 
   # Model
 
-  ## Absorption
-  # Should either be done by events
-  # or by adding boundary species
+  # Air exchange
+  QArt -> QAir; Falv * (QArt/Art) / PCAir
+  QAir -> QArt; FBlood * (QAir/Air)
 
   ## Distribution
-  QArt -> QFat; FFat * conc(QArt, Art)
-  QFat -> QVen; FFat * conc(QFat, Fat) / PCFat
+  QArt -> QFat; FFat * (QArt/Art)
+  QFat -> QVen; FFat * (QFat/Fat) / PCFat
 
-  QArt -> QRich; FRich * conc(QArt, Art)
-  QRich -> QVen; FRich * conc(QRich, Rich) / PCRich
+  QArt -> QRich; FRich * (QArt/Art)
+  QRich -> QVen; FRich * (QRich/Rich) / PCRich
 
-  QArt -> QPoor; FPoor * conc(QArt, Art)
-  QPoor -> QVen; FPoor * conc(QPoor, Poor) / PCPoor
+  QArt -> QPoor; FPoor * (QArt/Art)
+  QPoor -> QVen; FPoor * (QPoor/Poor) / PCPoor
 
-  QArt -> QLiver; FLiver * conc(QArt, Art)
-  QLiver -> QVen; FLiver * conc(QLiver, Liver) / PCLiver
+  QArt -> QLiver; FLiver * (QArt/Art)
+  QLiver -> QVen; FLiver * (QLiver/Liver) / PCLiver
   QGut -> QLiver; kGut * QGut
 
-  QArt -> QSkin_u; FSkin_u * conc(QArt, Art)
+  QArt -> QSkin_u; FSkin_u * (QArt/Art)
   QSkin_u -> QVen; FSkin_u * conc(QSkin_u, Skin_u) / PCSkin
   QSkin_u -> QSkin_sc_u; f_su * conc(QSkin_u, Skin_u) / PCSkin_sc
   QSkin_sc_u -> QSkin_u; f_su * conc(QSkin_sc_u, Skin_sc_u)
 
-  QArt -> QSkin_e; FSkin_e * conc(QArt, Art)
+  QArt -> QSkin_e; FSkin_e * (QArt/Art)
   QSkin_e -> QVen; FSkin_e * conc(QSkin_e, Skin_e) / PCSkin
   QSkin_e -> QSkin_sc_e; f_se * conc(QSkin_e, Skin_e) / PCSkin_sc
   QSkin_sc_e -> QSkin_e; f_se * conc(QSkin_sc_e, Skin_sc_e)
 
-  QVen -> QArt; FBlood * conc(QVen, Ven)
+  QVen -> QArt; FBlood * (QVen/Ven)
 
   ## Metabolism
   QLiver -> QMetab; fub * piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, Liver), Michaelis > 0.5, metab_MA(CLH, PCLiver, QLiver, Liver))
 
   ## Excretion
-  QArt -> QExcret; Ke * fub * conc(QArt, Art)
-
-  # Air exchange
-  QArt -> QAir; Falv * conc(QArt, Art) / PCAir
-  QAir -> QArt; FBlood * conc(QAir, Air)
+  QArt -> QExcret; Ke * fub * (QArt/Art)
 
 end

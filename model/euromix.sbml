@@ -4,31 +4,11 @@
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
         <rdf:Description rdf:about="#euromix">
-          <dcterms:creator>
+          <bqbiol:hasTaxon>
             <rdf:Bag>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>Palm</vCard4:family-name>
-                  <vCard4:given-name>Margriet</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:organization-name>RIVM</vCard4:organization-name>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>Minnema</vCard4:family-name>
-                  <vCard4:given-name>Jordi</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:organization-name>RIVM</vCard4:organization-name>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>Kruisselbrink</vCard4:family-name>
-                  <vCard4:given-name>Johannes</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:organization-name>WUR</vCard4:organization-name>
-              </rdf:li>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/40674"/>
             </rdf:Bag>
-          </dcterms:creator>
+          </bqbiol:hasTaxon>
         </rdf:Description>
       </rdf:RDF>
     </annotation>
@@ -52,7 +32,7 @@
                 <apply>
                   <gt/>
                   <ci> vol </ci>
-                  <cn type="e-notation"> 1 <sep/> -5 </cn>
+                  <cn type="integer"> 0 </cn>
                 </apply>
               </piece>
               <otherwise>
@@ -178,16 +158,16 @@
           <unit kind="gram" exponent="-1" scale="3" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
+      <unitDefinition id="UNITLESS">
+        <listOfUnits>
+          <unit kind="dimensionless" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
       <unitDefinition id="L_PER_KiloGM_HR">
         <listOfUnits>
           <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
           <unit kind="gram" exponent="-1" scale="3" multiplier="1"/>
           <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="UNITLESS">
-        <listOfUnits>
-          <unit kind="dimensionless" exponent="1" scale="0" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
       <unitDefinition id="L_PER_HR">
@@ -598,20 +578,20 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QExcret" sboTerm="SBO:0000247" id="QExcret" name="amount of chemical excreted in urine (cumulated)" compartment="Urine" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QExcret" id="QExcret" name="amount of chemical excreted in urine (cumulated)" compartment="Urine" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QExcret">
-              <bqbiol:is>
+              <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00274"/>
                 </rdf:Bag>
-              </bqbiol:is>
+              </bqmodel:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QAir" sboTerm="SBO:0000247" id="QAir" name="amount of chemical in air" compartment="Air" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QAir" sboTerm="SBO:0000247" id="QAir" name="amount of chemical in alveolar air" compartment="Air" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QAir">
@@ -714,6 +694,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
+      <parameter id="scVArt" name="arterial blood volume as fraction of total blood volume" value="0.333333333333333" units="UNITLESS" constant="true"/>
       <parameter id="scFBlood" name="total blood flow per unit mass" value="4.8" units="L_PER_KiloGM_HR" constant="true"/>
       <parameter metaid="meta_scFFat" id="scFFat" name="fraction of blood flow going to adipose tissue" value="0.085" units="UNITLESS" constant="true">
         <annotation>
@@ -1086,6 +1067,7 @@
       <parameter id="FSkin_e" name="blood flow to exposed skin" value="1.68" units="L_PER_HR" constant="false"/>
       <parameter id="FSkin_u" name="blood flow to unexposed skin" value="15.12" units="L_PER_HR" constant="false"/>
     </listOfParameters>
+    <listOfInitialAssignments/>
     <listOfRules>
       <assignmentRule variable="Fat">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1117,9 +1099,9 @@
       <assignmentRule variable="Art">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
-            <divide/>
+            <times/>
             <ci> VBlood </ci>
-            <cn type="integer"> 3 </cn>
+            <ci> scVArt </ci>
           </apply>
         </math>
       </assignmentRule>
@@ -1349,6 +1331,52 @@
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
+          <speciesReference species="QAir" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Falv </ci>
+                <apply>
+                  <divide/>
+                  <ci> QArt </ci>
+                  <ci> Art </ci>
+                </apply>
+              </apply>
+              <ci> PCAir </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J1" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QAir" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> FBlood </ci>
+              <apply>
+                <divide/>
+                <ci> QAir </ci>
+                <ci> Air </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="_J2" reversible="true">
+        <listOfReactants>
+          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
           <speciesReference species="QFat" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
@@ -1357,7 +1385,7 @@
               <times/>
               <ci> FFat </ci>
               <apply>
-                <ci> conc </ci>
+                <divide/>
                 <ci> QArt </ci>
                 <ci> Art </ci>
               </apply>
@@ -1365,7 +1393,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J1" reversible="true">
+      <reaction id="_J3" reversible="true">
         <listOfReactants>
           <speciesReference species="QFat" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1380,7 +1408,7 @@
                 <times/>
                 <ci> FFat </ci>
                 <apply>
-                  <ci> conc </ci>
+                  <divide/>
                   <ci> QFat </ci>
                   <ci> Fat </ci>
                 </apply>
@@ -1390,7 +1418,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J2" reversible="true">
+      <reaction id="_J4" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1403,7 +1431,7 @@
               <times/>
               <ci> FRich </ci>
               <apply>
-                <ci> conc </ci>
+                <divide/>
                 <ci> QArt </ci>
                 <ci> Art </ci>
               </apply>
@@ -1411,7 +1439,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J3" reversible="true">
+      <reaction id="_J5" reversible="true">
         <listOfReactants>
           <speciesReference species="QRich" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1426,7 +1454,7 @@
                 <times/>
                 <ci> FRich </ci>
                 <apply>
-                  <ci> conc </ci>
+                  <divide/>
                   <ci> QRich </ci>
                   <ci> Rich </ci>
                 </apply>
@@ -1436,7 +1464,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J4" reversible="true">
+      <reaction id="_J6" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1449,7 +1477,7 @@
               <times/>
               <ci> FPoor </ci>
               <apply>
-                <ci> conc </ci>
+                <divide/>
                 <ci> QArt </ci>
                 <ci> Art </ci>
               </apply>
@@ -1457,7 +1485,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J5" reversible="true">
+      <reaction id="_J7" reversible="true">
         <listOfReactants>
           <speciesReference species="QPoor" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1472,7 +1500,7 @@
                 <times/>
                 <ci> FPoor </ci>
                 <apply>
-                  <ci> conc </ci>
+                  <divide/>
                   <ci> QPoor </ci>
                   <ci> Poor </ci>
                 </apply>
@@ -1482,7 +1510,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J6" reversible="true">
+      <reaction id="_J8" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1495,7 +1523,7 @@
               <times/>
               <ci> FLiver </ci>
               <apply>
-                <ci> conc </ci>
+                <divide/>
                 <ci> QArt </ci>
                 <ci> Art </ci>
               </apply>
@@ -1503,7 +1531,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J7" reversible="true">
+      <reaction id="_J9" reversible="true">
         <listOfReactants>
           <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1518,7 +1546,7 @@
                 <times/>
                 <ci> FLiver </ci>
                 <apply>
-                  <ci> conc </ci>
+                  <divide/>
                   <ci> QLiver </ci>
                   <ci> Liver </ci>
                 </apply>
@@ -1528,7 +1556,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J8" reversible="true">
+      <reaction id="_J10" reversible="true">
         <listOfReactants>
           <speciesReference species="QGut" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1545,7 +1573,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J9" reversible="true">
+      <reaction id="_J11" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1558,7 +1586,7 @@
               <times/>
               <ci> FSkin_u </ci>
               <apply>
-                <ci> conc </ci>
+                <divide/>
                 <ci> QArt </ci>
                 <ci> Art </ci>
               </apply>
@@ -1566,7 +1594,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J10" reversible="true">
+      <reaction id="_J12" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1591,7 +1619,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J11" reversible="true">
+      <reaction id="_J13" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1616,7 +1644,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J12" reversible="true">
+      <reaction id="_J14" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_sc_u" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1637,7 +1665,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J13" reversible="true">
+      <reaction id="_J15" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1650,7 +1678,7 @@
               <times/>
               <ci> FSkin_e </ci>
               <apply>
-                <ci> conc </ci>
+                <divide/>
                 <ci> QArt </ci>
                 <ci> Art </ci>
               </apply>
@@ -1658,7 +1686,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J14" reversible="true">
+      <reaction id="_J16" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1683,7 +1711,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J15" reversible="true">
+      <reaction id="_J17" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1708,7 +1736,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J16" reversible="true">
+      <reaction id="_J18" reversible="true">
         <listOfReactants>
           <speciesReference species="QSkin_sc_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1729,7 +1757,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J17" reversible="true">
+      <reaction id="_J19" reversible="true">
         <listOfReactants>
           <speciesReference species="QVen" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1742,7 +1770,7 @@
               <times/>
               <ci> FBlood </ci>
               <apply>
-                <ci> conc </ci>
+                <divide/>
                 <ci> QVen </ci>
                 <ci> Ven </ci>
               </apply>
@@ -1750,7 +1778,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J18" reversible="true">
+      <reaction id="_J20" reversible="true">
         <listOfReactants>
           <speciesReference species="QLiver" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1792,7 +1820,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="_J19" reversible="true">
+      <reaction id="_J21" reversible="true">
         <listOfReactants>
           <speciesReference species="QArt" stoichiometry="1" constant="true"/>
         </listOfReactants>
@@ -1806,55 +1834,9 @@
               <ci> Ke </ci>
               <ci> fub </ci>
               <apply>
-                <ci> conc </ci>
+                <divide/>
                 <ci> QArt </ci>
                 <ci> Art </ci>
-              </apply>
-            </apply>
-          </math>
-        </kineticLaw>
-      </reaction>
-      <reaction id="_J20" reversible="true">
-        <listOfReactants>
-          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference species="QAir" stoichiometry="1" constant="true"/>
-        </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-              <divide/>
-              <apply>
-                <times/>
-                <ci> Falv </ci>
-                <apply>
-                  <ci> conc </ci>
-                  <ci> QArt </ci>
-                  <ci> Art </ci>
-                </apply>
-              </apply>
-              <ci> PCAir </ci>
-            </apply>
-          </math>
-        </kineticLaw>
-      </reaction>
-      <reaction id="_J21" reversible="true">
-        <listOfReactants>
-          <speciesReference species="QAir" stoichiometry="1" constant="true"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference species="QArt" stoichiometry="1" constant="true"/>
-        </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <apply>
-              <times/>
-              <ci> FBlood </ci>
-              <apply>
-                <ci> conc </ci>
-                <ci> QAir </ci>
-                <ci> Air </ci>
               </apply>
             </apply>
           </math>
