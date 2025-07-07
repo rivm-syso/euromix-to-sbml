@@ -29,11 +29,6 @@
               </rdf:li>
             </rdf:Bag>
           </dcterms:creator>
-          <bqbiol:hasTaxon>
-            <rdf:Bag>
-              <rdf:li rdf:resource="http://identifiers.org/taxonomy/40674"/>
-            </rdf:Bag>
-          </bqbiol:hasTaxon>
         </rdf:Description>
       </rdf:RDF>
     </annotation>
@@ -172,11 +167,6 @@
           <unit kind="metre" exponent="2" scale="-1" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition id="DeciM">
-        <listOfUnits>
-          <unit kind="metre" exponent="1" scale="-1" multiplier="1"/>
-        </listOfUnits>
-      </unitDefinition>
       <unitDefinition id="L_PER_KiloGM">
         <listOfUnits>
           <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
@@ -195,16 +185,19 @@
           <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
         </listOfUnits>
       </unitDefinition>
+      <unitDefinition id="DeciM">
+        <listOfUnits>
+          <unit kind="metre" exponent="1" scale="-1" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
       <unitDefinition id="L_PER_HR">
         <listOfUnits>
           <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
           <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition id="MilliMOL_PER_L_HR">
+      <unitDefinition id="PER_H">
         <listOfUnits>
-          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
-          <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
           <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
         </listOfUnits>
       </unitDefinition>
@@ -214,8 +207,10 @@
           <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition id="PER_H">
+      <unitDefinition id="MilliMOL_PER_L_HR">
         <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+          <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
           <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
         </listOfUnits>
       </unitDefinition>
@@ -454,6 +449,11 @@
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QRich">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00629"/>
+                </rdf:Bag>
+              </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
@@ -467,6 +467,11 @@
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QPoor">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00630"/>
+                </rdf:Bag>
+              </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
@@ -498,9 +503,14 @@
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QMetab">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
+                </rdf:Bag>
+              </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:25212"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25212"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -581,6 +591,11 @@
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QArt">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00631"/>
+                </rdf:Bag>
+              </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
@@ -594,6 +609,11 @@
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QVen">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00632"/>
+                </rdf:Bag>
+              </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
@@ -620,6 +640,11 @@
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QAir">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00633"/>
+                </rdf:Bag>
+              </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
@@ -661,6 +686,7 @@
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25157"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00010"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -720,7 +746,19 @@
         </annotation>
       </parameter>
       <parameter id="scVArt" name="arterial blood volume as fraction of total blood volume" value="0.333333333333333" units="UNITLESS" constant="true"/>
-      <parameter id="scFBlood" name="total blood flow per unit mass" value="4.8" units="L_PER_KiloGM_HR" constant="true"/>
+      <parameter metaid="meta_scFBlood" id="scFBlood" name="total blood flow per unit mass" value="4.8" units="L_PER_KiloGM_HR" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_scFBlood">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00030"/>
+                </rdf:Bag>
+              </bqmodel:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
       <parameter metaid="meta_scFFat" id="scFFat" name="fraction of blood flow going to adipose tissue" value="0.085" units="UNITLESS" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -971,19 +1009,20 @@
             <rdf:Description rdf:about="#meta_Ke">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00223"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00237"/>
                 </rdf:Bag>
               </bqmodel:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_fub" id="fub" name="fraction of chemical unbound in blood" value="0.51" units="UNITLESS" constant="true">
+      <parameter metaid="meta_fub" id="fub" name="fraction unbound in blood" value="0.51" units="UNITLESS" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_fub">
               <bqmodel:is>
                 <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00622"/>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PKPBO_00134"/>
                 </rdf:Bag>
               </bqmodel:is>
@@ -1015,6 +1054,11 @@
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FBlood">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00030"/>
+                </rdf:Bag>
+              </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>

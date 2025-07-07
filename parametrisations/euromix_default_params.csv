@@ -29,4 +29,4 @@ euromix_PARAM,Michaelis,0.0,dimensionless,flag for Michaelis-Menten or linear me
 euromix_PARAM,Vmax,0.0,mmol/L/h,maximum rate of metabolism in the liver,
 euromix_PARAM,CLH,132.0,L/h,hepatic clearance rate,
 euromix_PARAM,Ke,7.5,L/h,renal excretion rate,
-euromix_PARAM,fub,0.51,dimensionless,fraction of chemical unbound in blood,
+euromix_PARAM,fub,0.51,dimensionless,fraction unbound in blood,
