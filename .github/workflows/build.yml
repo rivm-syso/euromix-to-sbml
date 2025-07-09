@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   create-and-annotate-sbml:
-    uses: jwkruisselbrink/sbml-pbk-workflow/.github/workflows/build.yml@v8
+    uses: jwkruisselbrink/sbml-pbk-workflow/.github/workflows/build.yml@v9
     with:
       model-name: euromix
     permissions:
