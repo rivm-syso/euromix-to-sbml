@@ -5,11 +5,11 @@
 [![Test](https://img.shields.io/github/actions/workflow/status/rivm-syso/euromix-to-sbml/test.yml?label=test)](https://github.com/rivm-syso/euromix-to-sbml/actions/workflows/test.yml)
 [![Validate](https://img.shields.io/github/actions/workflow/status/rivm-syso/euromix-to-sbml/validate.yml?label=validate)](https://github.com/rivm-syso/euromix-to-sbml/actions/workflows/validate.yml)
 
-This repository contains a re-implementation of the [EuroMix PBK model](https://doi.org/10.1016/j.fct.2020.111440) in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html) and demonstrates how this Antimony model implementation is automatically converted to an annotated Systems Biology Markup Language ([SBML](https://sbml.org/)) file using the [SBML PBK workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow). The purpose of this repository is to test/demonstrate how to create and publish interoperable PBK models using the EuroMix PBK model as example.
+This repository contains a re-implementation of the [EuroMix PBK model](https://doi.org/10.1016/j.fct.2020.111440) in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html) and demonstrates how this Antimony model implementation is automatically converted to an annotated Systems Biology Markup Language ([SBML](https://sbml.org/)) file using the [SBML PBK workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow). The purpose of this re-implementation is to demonstrate how to create and publish interoperable PBK models using the EuroMix PBK model as example.
 
 ## Reimplementation in Antimony
 
-The model was reimplemented in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html), see file [euromix.ant](model/euromix.ant). Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb) shows the results of the validation comparison with the results obtained by the R/MCSim/deSolve implementation. The results of the R simulation and the SBML simulation (using libroadrunner in Python) match.
+The model was re-implemented in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html), see file [euromix.ant](model/euromix.ant). Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb) shows the results of the validation comparison with the results obtained by the R/MCSim/deSolve implementation. The results of the R simulation and the SBML simulation (using libroadrunner in Python) match.
 
 ![Model diagram of the EuroMix PBK model](euromix-pbk-model.png)
 
