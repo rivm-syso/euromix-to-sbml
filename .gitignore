@@ -4,6 +4,9 @@
 *.so
 *.dll
 
+# Cache files
+.cache/
+
 # Log files
 *.log
 
