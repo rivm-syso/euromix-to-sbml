@@ -29,6 +29,17 @@
               </rdf:li>
             </rdf:Bag>
           </dcterms:creator>
+          <bqbiol:hasTaxon>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/40674"/>
+            </rdf:Bag>
+          </bqbiol:hasTaxon>
+          <bqbiol:hasProperty>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+              <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25212"/>
+            </rdf:Bag>
+          </bqbiol:hasProperty>
         </rdf:Description>
       </rdf:RDF>
     </annotation>
@@ -427,7 +438,7 @@
       </compartment>
     </listOfCompartments>
     <listOfSpecies>
-      <species metaid="meta_QFat" sboTerm="SBO:0000247" id="QFat" name="amount of chemical in fat tissues" compartment="Fat" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QFat" id="QFat" name="amount of chemical in fat tissues" compartment="Fat" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QFat">
@@ -438,14 +449,14 @@
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QRich" sboTerm="SBO:0000247" id="QRich" name="amount of chemical in richly tissues" compartment="Rich" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QRich" id="QRich" name="amount of chemical in richly tissues" compartment="Rich" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QRich">
@@ -456,14 +467,14 @@
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QPoor" sboTerm="SBO:0000247" id="QPoor" name="amount of chemical in poor tissues" compartment="Poor" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QPoor" id="QPoor" name="amount of chemical in poor tissues" compartment="Poor" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QPoor">
@@ -474,14 +485,14 @@
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QLiver" sboTerm="SBO:0000247" id="QLiver" name="amount of chemical in liver" compartment="Liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QLiver" id="QLiver" name="amount of chemical in liver" compartment="Liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QLiver">
@@ -492,7 +503,7 @@
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -517,7 +528,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QGut" sboTerm="SBO:0000247" id="QGut" name="amount of chemical in gut lumen" compartment="Gut" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QGut" id="QGut" name="amount of chemical in gut lumen" compartment="Gut" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QGut">
@@ -528,66 +539,66 @@
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_u" sboTerm="SBO:0000247" id="QSkin_u" name="amount of chemical in viable epidermis of unexposed skin" compartment="Skin_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_u" id="QSkin_u" name="amount of chemical in viable epidermis of unexposed skin" compartment="Skin_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_u">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_e" sboTerm="SBO:0000247" id="QSkin_e" name="amount of chemical in viable epidermis of exposed skin" compartment="Skin_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_e" id="QSkin_e" name="amount of chemical in viable epidermis of exposed skin" compartment="Skin_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_e">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_sc_u" sboTerm="SBO:0000247" id="QSkin_sc_u" name="amount of chemical in skin stratum corneum of unexposed skin" compartment="Skin_sc_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_sc_u" id="QSkin_sc_u" name="amount of chemical in skin stratum corneum of unexposed skin" compartment="Skin_sc_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_sc_u">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_sc_e" sboTerm="SBO:0000247" id="QSkin_sc_e" name="amount of chemical in skin stratum corneum of exposed skin" compartment="Skin_sc_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_sc_e" id="QSkin_sc_e" name="amount of chemical in skin stratum corneum of exposed skin" compartment="Skin_sc_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_sc_e">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QArt" sboTerm="SBO:0000247" id="QArt" name="amount of chemical in arterial blood" compartment="Art" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QArt" id="QArt" name="amount of chemical in arterial blood" compartment="Art" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QArt">
@@ -598,14 +609,14 @@
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QVen" sboTerm="SBO:0000247" id="QVen" name="amount of chemical in venous blood" compartment="Ven" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QVen" id="QVen" name="amount of chemical in venous blood" compartment="Ven" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QVen">
@@ -616,7 +627,7 @@
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -632,11 +643,16 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00274"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QAir" sboTerm="SBO:0000247" id="QAir" name="amount of chemical in alveolar air" compartment="Air" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QAir" id="QAir" name="amount of chemical in alveolar air" compartment="Air" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QAir">
@@ -647,7 +663,7 @@
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -665,11 +681,6 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00008"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C81328"/>
-                </rdf:Bag>
-              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -683,12 +694,6 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00010"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25157"/>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00010"/>
-                </rdf:Bag>
-              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -746,19 +751,7 @@
         </annotation>
       </parameter>
       <parameter id="scVArt" name="arterial blood volume as fraction of total blood volume" value="0.333333333333333" units="UNITLESS" constant="true"/>
-      <parameter metaid="meta_scFBlood" id="scFBlood" name="total blood flow per unit mass" value="4.8" units="L_PER_KiloGM_HR" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_scFBlood">
-              <bqmodel:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00030"/>
-                </rdf:Bag>
-              </bqmodel:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
+      <parameter id="scFBlood" name="total blood flow per unit mass" value="4.8" units="L_PER_KiloGM_HR" constant="true"/>
       <parameter metaid="meta_scFFat" id="scFFat" name="fraction of blood flow going to adipose tissue" value="0.085" units="UNITLESS" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -778,7 +771,7 @@
             <rdf:Description rdf:about="#meta_scFPoor">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00046"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00047"/>
                 </rdf:Bag>
               </bqmodel:is>
             </rdf:Description>
@@ -843,11 +836,11 @@
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_PCFat">
-              <bqmodel:is>
+              <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00165"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
-              </bqmodel:is>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -858,9 +851,14 @@
             <rdf:Description rdf:about="#meta_PCLiver">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00165"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00577"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -871,9 +869,14 @@
             <rdf:Description rdf:about="#meta_PCRich">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00165"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00587"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -884,9 +887,14 @@
             <rdf:Description rdf:about="#meta_PCPoor">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00165"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00584"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -897,9 +905,14 @@
             <rdf:Description rdf:about="#meta_PCSkin_sc">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00165"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00182"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -910,9 +923,14 @@
             <rdf:Description rdf:about="#meta_PCSkin">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00165"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00588"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -923,9 +941,14 @@
             <rdf:Description rdf:about="#meta_PCAir">
               <bqmodel:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00165"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00568"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -937,26 +960,18 @@
               <bqmodel:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00141"/>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PKPBO_00126"/>
                 </rdf:Bag>
               </bqmodel:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_Kp_sc_vs" id="Kp_sc_vs" name="diffusion rate from stratum corneum to viable epidermis" value="0.01" units="DeciM_PER_HR" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_Kp_sc_vs">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00184"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </parameter>
+      <parameter id="Kp_sc_vs" name="diffusion rate from stratum corneum to viable epidermis" value="0.01" units="DeciM_PER_HR" constant="true"/>
       <parameter metaid="meta_Km" id="Km" name="Michaelis-Menten constant liver" value="0" units="MilliMOL" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -966,6 +981,11 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00214"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -980,6 +1000,11 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00213"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -991,12 +1016,11 @@
               <bqmodel:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00234"/>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PKPBO_00234"/>
                 </rdf:Bag>
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/OMIT_0009720"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1012,6 +1036,11 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00237"/>
                 </rdf:Bag>
               </bqmodel:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+                </rdf:Bag>
+              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
@@ -1023,12 +1052,11 @@
               <bqmodel:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00622"/>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PKPBO_00134"/>
                 </rdf:Bag>
               </bqmodel:is>
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00151"/>
+                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -1059,11 +1087,6 @@
                   <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00030"/>
                 </rdf:Bag>
               </bqmodel:is>
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
-                </rdf:Bag>
-              </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
