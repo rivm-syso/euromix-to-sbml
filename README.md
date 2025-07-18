@@ -9,9 +9,9 @@ This repository contains a re-implementation of the [EuroMix PBK model](https://
 
 ## Reimplementation in Antimony
 
-The model was re-implemented in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html), see file [euromix.ant](model/euromix.ant). Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb) shows the results of the validation comparison with the results obtained by the R/MCSim/deSolve implementation. The results of the R simulation and the SBML simulation (using libroadrunner in Python) match.
+The model was re-implemented in [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html), see file [euromix.ant](model/euromix.ant). Notebook [validate_antimony_model.ipynb](notebooks/validate_antimony_model.ipynb) shows the results of the validation comparison with the results obtained by the R/MCSim/deSolve implementation. The results of the R simulation and the SBML simulation (using [libroadrunner](https://www.libroadrunner.org/) in Python) match.
 
-![Model diagram of the EuroMix PBK model](euromix-pbk-model.png)
+![Model diagram of the EuroMix PBK model](euromix.svg)
 
 ## Model annotation
 
