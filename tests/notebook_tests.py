@@ -2,7 +2,6 @@ import unittest
 import nbformat
 from parameterized import parameterized
 from nbconvert.preprocessors import ExecutePreprocessor
-import os
 
 __test_outputs_path__ = './tests/__testoutputs__'
 

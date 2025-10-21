@@ -1,5 +1,6 @@
 import unittest
 import os
+from pathlib import Path
 import roadrunner as rr
 import libsbml as ls
 import pandas as pd
@@ -14,7 +15,6 @@ __default_params_file_path__ = os.path.join(f'./parametrisations/{__model_code__
 class ExposureScenarioTests(unittest.TestCase):
 
     def setUp(self):
-        from pathlib import Path
         Path(__test_outputs_path__).mkdir(parents=True, exist_ok=True)
 
     def test_single_oral_bolus(self):
@@ -32,7 +32,11 @@ class ExposureScenarioTests(unittest.TestCase):
         rr_model.setBoundary(input_species, False)
 
         # Run simulation
-        results = rr_model.simulate(start=0, end=num_days * 24, points=num_days * evaluation_frequency + 1)
+        results = rr_model.simulate(
+            start=0,
+            end=num_days * 24,
+            points=num_days * evaluation_frequency + 1
+        )
         df = pd.DataFrame(results, columns=results.colnames)
 
         # Save to CSV file
@@ -68,14 +72,19 @@ class ExposureScenarioTests(unittest.TestCase):
         load_parametrisation(rr_model, __default_params_file_path__, __model_code__)
 
         # Create a repeating daily oral dosing
-        eid = f"oral_daily_exposure"
+        eid = "oral_daily_exposure"
         rr_model.addEvent(eid, False, f"time % 24 == 0 && time < {days_of_exposure*24}", False)
         rr_model.addEventAssignment(eid, input_id, f"{input_id} + {daily_intake} * BM", False)
         rr_model.regenerateModel(True, True)
 
         # Simulate the PBPK model
         plot_params = rr_model.timeCourseSelections + ['BM']
-        results = rr_model.simulate(0, num_days * 24, evaluation_frequency * num_days + 1, plot_params)
+        results = rr_model.simulate(
+            start = 0,
+            end = num_days * 24,
+            points = evaluation_frequency * num_days + 1,
+            selections = plot_params
+        )
 
         # Save to CSV file
         csv_filename = os.path.join(__test_outputs_path__, f'{scenario_id}.csv')
@@ -86,8 +95,8 @@ class ExposureScenarioTests(unittest.TestCase):
         fig.savefig(png_filename)
 
     @parameterized.expand([
-        (f'./parametrisations/euromix_default_params.csv'),
-        (f'./parametrisations/parametrisations_euromix.csv'),
+        ('./parametrisations/euromix_default_params.csv'),
+        ('./parametrisations/parametrisations_euromix.csv'),
     ])
     def test_parametrisation(self, filename):
 

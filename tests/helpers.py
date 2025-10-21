@@ -1,5 +1,5 @@
-import pandas as pd
 import math
+import pandas as pd
 import matplotlib.pyplot as plt
 
 def generateBolusDoseEventsPattern(amount, start, step, stop):
@@ -37,7 +37,7 @@ def plot_simulation_results(res, selections, ncols=4):
     for i in range(1, len(selections)):
         sid = selections[i]
         axes[i-1].plot(res['time'], res[sid], linewidth=1)
-        axes[i-1].set(ylabel=f"Amount", title=labels[i])
+        axes[i-1].set(ylabel=labels[i])
     for j in range(len(selections), nrows*ncols + 1):
         fig.delaxes(axes[j-1])
     fig.tight_layout()
