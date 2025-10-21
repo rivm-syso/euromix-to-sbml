@@ -43,7 +43,7 @@ for file in os.listdir(model_path):
 
         print(f"Creating SBML file [{sbml_file}] from Antimony file [{ant_file}].")
         r = te.loada(ant_file)
-        r.exportToSBML(sbml_file)
+        r.exportToSBML(sbml_file, current=False)
 
         document = ls.readSBML(sbml_file)
 

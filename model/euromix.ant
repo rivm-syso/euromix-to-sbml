@@ -25,7 +25,7 @@ model euromix()
   scVRich = 0.105     # richly perfused tissues volume as as fraction of total body volume [L/kg]
   scVLiver = 0.024    # liver volume as as fraction of total body volume [L/kg]
   scVBlood = 0.068    # blood volume as as fraction of total body volume [L/kg]
-  scVArt = 1/3        # arterial blood volume as fraction of total blood volume
+  scVArt = 0.333      # arterial blood volume as fraction of total blood volume
 
   ### Flow rates
   scFBlood = 4.8      # total blood flow per unit mass [L/(kg.h)]

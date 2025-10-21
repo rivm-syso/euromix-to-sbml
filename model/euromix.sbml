@@ -227,7 +227,7 @@
       </unitDefinition>
     </listOfUnitDefinitions>
     <listOfCompartments>
-      <compartment metaid="meta_Air" id="Air" name="alveolar air" spatialDimensions="3" size="1" units="L" constant="true">
+      <compartment metaid="meta_Air" id="Air" name="alveolar air" spatialDimensions="3" units="L" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Air">
@@ -245,7 +245,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Urine" id="Urine" name="urine" spatialDimensions="3" size="1" units="L" constant="true">
+      <compartment metaid="meta_Urine" id="Urine" name="urine" spatialDimensions="3" units="L" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Urine">
@@ -263,7 +263,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Fat" id="Fat" name="adipose tissue" spatialDimensions="3" size="14.63" units="L" constant="false">
+      <compartment metaid="meta_Fat" id="Fat" name="adipose tissue" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Fat">
@@ -281,7 +281,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Rich" id="Rich" name="richly perfused tissue" spatialDimensions="3" size="7.35" units="L" constant="false">
+      <compartment metaid="meta_Rich" id="Rich" name="richly perfused tissue" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Rich">
@@ -299,7 +299,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Liver" id="Liver" name="liver" spatialDimensions="3" size="1.68" units="L" constant="false">
+      <compartment metaid="meta_Liver" id="Liver" name="liver" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Liver">
@@ -317,7 +317,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Art" id="Art" name="arterial blood" spatialDimensions="3" size="1.58666666666667" units="L" constant="false">
+      <compartment metaid="meta_Art" id="Art" name="arterial blood" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Art">
@@ -335,7 +335,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Ven" id="Ven" name="venous blood" spatialDimensions="3" size="3.17333333333333" units="L" constant="false">
+      <compartment metaid="meta_Ven" id="Ven" name="venous blood" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Ven">
@@ -353,7 +353,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Skin_e" id="Skin_e" name="viable epidermis exposed skin" spatialDimensions="3" size="0.2318" units="L" constant="false">
+      <compartment metaid="meta_Skin_e" id="Skin_e" name="viable epidermis exposed skin" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Skin_e">
@@ -366,7 +366,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Skin_u" id="Skin_u" name="viable epidermis unexposed skin" spatialDimensions="3" size="2.0862" units="L" constant="false">
+      <compartment metaid="meta_Skin_u" id="Skin_u" name="viable epidermis unexposed skin" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Skin_u">
@@ -379,7 +379,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Skin_sc_e" id="Skin_sc_e" name="stratum corneum exposed skin" spatialDimensions="3" size="0.0019" units="L" constant="false">
+      <compartment metaid="meta_Skin_sc_e" id="Skin_sc_e" name="stratum corneum exposed skin" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Skin_sc_e">
@@ -392,7 +392,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Skin_sc_u" id="Skin_sc_u" name="stratum corneum unexposed skin" spatialDimensions="3" size="0.0171" units="L" constant="false">
+      <compartment metaid="meta_Skin_sc_u" id="Skin_sc_u" name="stratum corneum unexposed skin" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Skin_sc_u">
@@ -405,7 +405,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Poor" id="Poor" name="poorly perfused tissue" spatialDimensions="3" size="32.243" units="L" constant="false">
+      <compartment metaid="meta_Poor" id="Poor" name="poorly perfused tissue" spatialDimensions="3" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Poor">
@@ -418,7 +418,7 @@
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="meta_Gut" id="Gut" name="gut" spatialDimensions="3" size="1" units="L" constant="true">
+      <compartment metaid="meta_Gut" id="Gut" name="gut" spatialDimensions="3" units="L" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Gut">
@@ -438,7 +438,7 @@
       </compartment>
     </listOfCompartments>
     <listOfSpecies>
-      <species metaid="meta_QFat" id="QFat" name="amount of chemical in fat tissues" compartment="Fat" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QFat" id="QFat" name="amount of chemical in fat tissues" compartment="Fat" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QFat">
@@ -456,7 +456,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QRich" id="QRich" name="amount of chemical in richly tissues" compartment="Rich" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QRich" id="QRich" name="amount of chemical in richly tissues" compartment="Rich" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QRich">
@@ -474,7 +474,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QPoor" id="QPoor" name="amount of chemical in poor tissues" compartment="Poor" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QPoor" id="QPoor" name="amount of chemical in poor tissues" compartment="Poor" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QPoor">
@@ -492,7 +492,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QLiver" id="QLiver" name="amount of chemical in liver" compartment="Liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QLiver" id="QLiver" name="amount of chemical in liver" compartment="Liver" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QLiver">
@@ -510,7 +510,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QMetab" id="QMetab" name="amount of chemical metabolized (cumulated)" compartment="Liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QMetab" id="QMetab" name="amount of chemical metabolized (cumulated)" compartment="Liver" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QMetab">
@@ -528,7 +528,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QGut" id="QGut" name="amount of chemical in gut lumen" compartment="Gut" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QGut" id="QGut" name="amount of chemical in gut lumen" compartment="Gut" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QGut">
@@ -546,7 +546,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_u" id="QSkin_u" name="amount of chemical in viable epidermis of unexposed skin" compartment="Skin_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_u" id="QSkin_u" name="amount of chemical in viable epidermis of unexposed skin" compartment="Skin_u" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_u">
@@ -559,7 +559,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_e" id="QSkin_e" name="amount of chemical in viable epidermis of exposed skin" compartment="Skin_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_e" id="QSkin_e" name="amount of chemical in viable epidermis of exposed skin" compartment="Skin_e" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_e">
@@ -572,7 +572,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_sc_u" id="QSkin_sc_u" name="amount of chemical in skin stratum corneum of unexposed skin" compartment="Skin_sc_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_sc_u" id="QSkin_sc_u" name="amount of chemical in skin stratum corneum of unexposed skin" compartment="Skin_sc_u" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_sc_u">
@@ -585,7 +585,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_sc_e" id="QSkin_sc_e" name="amount of chemical in skin stratum corneum of exposed skin" compartment="Skin_sc_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_sc_e" id="QSkin_sc_e" name="amount of chemical in skin stratum corneum of exposed skin" compartment="Skin_sc_e" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_sc_e">
@@ -598,7 +598,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QArt" id="QArt" name="amount of chemical in arterial blood" compartment="Art" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QArt" id="QArt" name="amount of chemical in arterial blood" compartment="Art" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QArt">
@@ -616,7 +616,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QVen" id="QVen" name="amount of chemical in venous blood" compartment="Ven" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QVen" id="QVen" name="amount of chemical in venous blood" compartment="Ven" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QVen">
@@ -634,7 +634,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QExcret" id="QExcret" name="amount of chemical excreted in urine (cumulated)" compartment="Urine" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QExcret" id="QExcret" name="amount of chemical excreted in urine (cumulated)" compartment="Urine" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QExcret">
@@ -652,7 +652,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QAir" id="QAir" name="amount of chemical in alveolar air" compartment="Air" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QAir" id="QAir" name="amount of chemical in alveolar air" compartment="Air" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QAir">
@@ -750,7 +750,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter id="scVArt" name="arterial blood volume as fraction of total blood volume" value="0.333333333333333" units="UNITLESS" constant="true"/>
+      <parameter id="scVArt" name="arterial blood volume as fraction of total blood volume" value="0.333" units="UNITLESS" constant="true"/>
       <parameter id="scFBlood" name="total blood flow per unit mass" value="4.8" units="L_PER_KiloGM_HR" constant="true"/>
       <parameter metaid="meta_scFFat" id="scFFat" name="fraction of blood flow going to adipose tissue" value="0.085" units="UNITLESS" constant="true">
         <annotation>
@@ -1063,9 +1063,9 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter id="f_su" value="1.71" units="L_PER_HR" constant="false"/>
-      <parameter id="f_se" value="0.19" units="L_PER_HR" constant="false"/>
-      <parameter metaid="meta_VBlood" id="VBlood" name="total blood volume" value="4.76" units="L" constant="false">
+      <parameter id="f_su" units="L_PER_HR" constant="false"/>
+      <parameter id="f_se" units="L_PER_HR" constant="false"/>
+      <parameter metaid="meta_VBlood" id="VBlood" name="total blood volume" units="L" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_VBlood">
@@ -1078,7 +1078,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FBlood" id="FBlood" name="blood flow" value="336" units="L_PER_HR" constant="false">
+      <parameter metaid="meta_FBlood" id="FBlood" name="blood flow" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FBlood">
@@ -1091,7 +1091,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FFat" id="FFat" name="blood flow to the fat" value="28.56" units="L_PER_HR" constant="false">
+      <parameter metaid="meta_FFat" id="FFat" name="blood flow to the fat" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FFat">
@@ -1104,7 +1104,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FPoor" id="FPoor" name="blood flow to poorly perfused tissues" value="40.32" units="L_PER_HR" constant="false">
+      <parameter metaid="meta_FPoor" id="FPoor" name="blood flow to poorly perfused tissues" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FPoor">
@@ -1117,7 +1117,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FLiver" id="FLiver" name="blood flow to the liver" value="90.72" units="L_PER_HR" constant="false">
+      <parameter metaid="meta_FLiver" id="FLiver" name="blood flow to the liver" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FLiver">
@@ -1130,7 +1130,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FSkin" id="FSkin" name="blood flow to the skin" value="16.8" units="L_PER_HR" constant="false">
+      <parameter metaid="meta_FSkin" id="FSkin" name="blood flow to the skin" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FSkin">
@@ -1143,7 +1143,7 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FRich" id="FRich" name="blood flow to richly perfused tissues" value="159.6" units="L_PER_HR" constant="false">
+      <parameter metaid="meta_FRich" id="FRich" name="blood flow to richly perfused tissues" units="L_PER_HR" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FRich">
@@ -1156,10 +1156,9 @@
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter id="FSkin_e" name="blood flow to exposed skin" value="1.68" units="L_PER_HR" constant="false"/>
-      <parameter id="FSkin_u" name="blood flow to unexposed skin" value="15.12" units="L_PER_HR" constant="false"/>
+      <parameter id="FSkin_e" name="blood flow to exposed skin" units="L_PER_HR" constant="false"/>
+      <parameter id="FSkin_u" name="blood flow to unexposed skin" units="L_PER_HR" constant="false"/>
     </listOfParameters>
-    <listOfInitialAssignments/>
     <listOfRules>
       <assignmentRule variable="Fat">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
