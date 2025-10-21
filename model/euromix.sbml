@@ -438,7 +438,7 @@
       </compartment>
     </listOfCompartments>
     <listOfSpecies>
-      <species metaid="meta_QFat" id="QFat" name="amount of chemical in fat tissues" compartment="Fat" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QFat" id="QFat" name="amount of chemical in fat tissues" compartment="Fat" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QFat">
@@ -456,7 +456,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QRich" id="QRich" name="amount of chemical in richly tissues" compartment="Rich" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QRich" id="QRich" name="amount of chemical in richly tissues" compartment="Rich" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QRich">
@@ -474,7 +474,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QPoor" id="QPoor" name="amount of chemical in poor tissues" compartment="Poor" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QPoor" id="QPoor" name="amount of chemical in poor tissues" compartment="Poor" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QPoor">
@@ -492,7 +492,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QLiver" id="QLiver" name="amount of chemical in liver" compartment="Liver" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QLiver" id="QLiver" name="amount of chemical in liver" compartment="Liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QLiver">
@@ -510,7 +510,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QMetab" id="QMetab" name="amount of chemical metabolized (cumulated)" compartment="Liver" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QMetab" id="QMetab" name="amount of chemical metabolized (cumulated)" compartment="Liver" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QMetab">
@@ -528,7 +528,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QGut" id="QGut" name="amount of chemical in gut lumen" compartment="Gut" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QGut" id="QGut" name="amount of chemical in gut lumen" compartment="Gut" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QGut">
@@ -546,7 +546,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_u" id="QSkin_u" name="amount of chemical in viable epidermis of unexposed skin" compartment="Skin_u" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_u" id="QSkin_u" name="amount of chemical in viable epidermis of unexposed skin" compartment="Skin_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_u">
@@ -559,7 +559,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_e" id="QSkin_e" name="amount of chemical in viable epidermis of exposed skin" compartment="Skin_e" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_e" id="QSkin_e" name="amount of chemical in viable epidermis of exposed skin" compartment="Skin_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_e">
@@ -572,7 +572,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_sc_u" id="QSkin_sc_u" name="amount of chemical in skin stratum corneum of unexposed skin" compartment="Skin_sc_u" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_sc_u" id="QSkin_sc_u" name="amount of chemical in skin stratum corneum of unexposed skin" compartment="Skin_sc_u" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_sc_u">
@@ -585,7 +585,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QSkin_sc_e" id="QSkin_sc_e" name="amount of chemical in skin stratum corneum of exposed skin" compartment="Skin_sc_e" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QSkin_sc_e" id="QSkin_sc_e" name="amount of chemical in skin stratum corneum of exposed skin" compartment="Skin_sc_e" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QSkin_sc_e">
@@ -598,7 +598,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QArt" id="QArt" name="amount of chemical in arterial blood" compartment="Art" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QArt" id="QArt" name="amount of chemical in arterial blood" compartment="Art" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QArt">
@@ -616,7 +616,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QVen" id="QVen" name="amount of chemical in venous blood" compartment="Ven" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QVen" id="QVen" name="amount of chemical in venous blood" compartment="Ven" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QVen">
@@ -634,7 +634,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QExcret" id="QExcret" name="amount of chemical excreted in urine (cumulated)" compartment="Urine" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QExcret" id="QExcret" name="amount of chemical excreted in urine (cumulated)" compartment="Urine" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QExcret">
@@ -652,7 +652,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_QAir" id="QAir" name="amount of chemical in alveolar air" compartment="Air" initialConcentration="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+      <species metaid="meta_QAir" id="QAir" name="amount of chemical in alveolar air" compartment="Air" initialAmount="0" substanceUnits="MilliMOL" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QAir">
