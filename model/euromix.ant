@@ -74,33 +74,32 @@ model euromix()
   ## Physiology
 
   ### Body size
-  const f_su := Kp_sc_vs * BSA * (1 - fSA_exposed)
-  const f_se := Kp_sc_vs * BSA * fSA_exposed
-  const VBlood := BM * scVBlood
+  f_su := Kp_sc_vs * BSA * (1 - fSA_exposed)
+  f_se := Kp_sc_vs * BSA * fSA_exposed
 
   ### Flow rates
-  const FBlood := scFBlood * BM
-  const FFat := FBlood * scFFat
-  const FPoor := FBlood * scFPoor
-  const FLiver := FBlood * scFLiver
-  const FSkin := FBlood * scFSkin
-  const FRich := FBlood - FFat - FPoor - FLiver - FSkin
-  const FSkin_e := FSkin * fSA_exposed
-  const FSkin_u := FSkin - FSkin_e
+  FBlood := scFBlood * BM
+  FFat := FBlood * scFFat
+  FPoor := FBlood * scFPoor
+  FLiver := FBlood * scFLiver
+  FSkin := FBlood * scFSkin
+  FRich := FBlood - FFat - FPoor - FLiver - FSkin
+  FSkin_e := FSkin * fSA_exposed
+  FSkin_u := FSkin - FSkin_e
 
   # Compartments
-  compartment Air
+  compartment Air = 1E8
   compartment Urine
   compartment Fat := BM * scVFat
   compartment Rich := BM * scVRich
   compartment Liver := BM * scVLiver
-  compartment Art := VBlood * scVArt
-  compartment Ven := VBlood - Art
+  compartment Art := BM * scVBlood * scVArt
+  compartment Ven := BM * scVBlood - Art
   compartment Skin_e := BSA * Height_vs * fSA_exposed
   compartment Skin_u := BSA * Height_vs * (1 - fSA_exposed)
   compartment Skin_sc_e := BSA * Height_sc * fSA_exposed
   compartment Skin_sc_u := BSA * Height_sc * (1 - fSA_exposed)
-  compartment Poor := BM * (1 - scVFat-scVRich - scVLiver - scVBlood - 0.1) - Skin_e - Skin_u - Skin_sc_e - Skin_sc_u
+  compartment Poor := BM * (1 - scVFat - scVRich - scVLiver - scVBlood - 0.1) - Skin_e - Skin_u - Skin_sc_e - Skin_sc_u
   compartment Gut
 
   # Species
