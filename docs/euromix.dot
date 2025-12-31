@@ -1,0 +1,242 @@
+digraph {
+	graph [ratio=fill,
+		size="7,4"
+	];
+	node [fontname=Arial];
+	subgraph cluster_Air {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Air",
+			label=Air,
+			shape=box,
+			style="filled,rounded"
+		];
+		QAir	[color=black,
+			fillcolor=gold,
+			href="#species-QAir",
+			label=QAir,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Urine {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Urine",
+			label=Urine,
+			shape=box,
+			style="filled,rounded"
+		];
+		QExcret	[color=black,
+			fillcolor=gold,
+			href="#species-QExcret",
+			label=QExcret,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Fat {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Fat",
+			label=Fat,
+			shape=box,
+			style="filled,rounded"
+		];
+		QFat	[color=black,
+			fillcolor=gold,
+			href="#species-QFat",
+			label=QFat,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Rich {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Rich",
+			label=Rich,
+			shape=box,
+			style="filled,rounded"
+		];
+		QRich	[color=black,
+			fillcolor=gold,
+			href="#species-QRich",
+			label=QRich,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Liver {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Liver",
+			label=Liver,
+			shape=box,
+			style="filled,rounded"
+		];
+		QLiver	[color=black,
+			fillcolor=gold,
+			href="#species-QLiver",
+			label=QLiver,
+			shape=box,
+			style="filled,rounded"];
+		QMetab	[color=black,
+			fillcolor=gold,
+			href="#species-QMetab",
+			label=QMetab,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Art {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Art",
+			label=Art,
+			shape=box,
+			style="filled,rounded"
+		];
+		QArt	[color=black,
+			fillcolor=gold,
+			href="#species-QArt",
+			label=QArt,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Ven {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Ven",
+			label=Ven,
+			shape=box,
+			style="filled,rounded"
+		];
+		QVen	[color=black,
+			fillcolor=gold,
+			href="#species-QVen",
+			label=QVen,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Skin_e {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Skin_e",
+			label=Skin_e,
+			shape=box,
+			style="filled,rounded"
+		];
+		QSkin_e	[color=black,
+			fillcolor=gold,
+			href="#species-QSkin_e",
+			label=QSkin_e,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Skin_u {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Skin_u",
+			label=Skin_u,
+			shape=box,
+			style="filled,rounded"
+		];
+		QSkin_u	[color=black,
+			fillcolor=gold,
+			href="#species-QSkin_u",
+			label=QSkin_u,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Skin_sc_e {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Skin_sc_e",
+			label=Skin_sc_e,
+			shape=box,
+			style="filled,rounded"
+		];
+		QSkin_sc_e	[color=black,
+			fillcolor=gold,
+			href="#species-QSkin_sc_e",
+			label=QSkin_sc_e,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Skin_sc_u {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Skin_sc_u",
+			label=Skin_sc_u,
+			shape=box,
+			style="filled,rounded"
+		];
+		QSkin_sc_u	[color=black,
+			fillcolor=gold,
+			href="#species-QSkin_sc_u",
+			label=QSkin_sc_u,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Poor {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Poor",
+			label=Poor,
+			shape=box,
+			style="filled,rounded"
+		];
+		QPoor	[color=black,
+			fillcolor=gold,
+			href="#species-QPoor",
+			label=QPoor,
+			shape=box,
+			style="filled,rounded"];
+	}
+	subgraph cluster_Gut {
+		graph [color=black,
+			fillcolor=lightblue,
+			fontname=Arial,
+			href="#compartment-Gut",
+			label=Gut,
+			shape=box,
+			style="filled,rounded"
+		];
+		QGut	[color=black,
+			fillcolor=gold,
+			href="#species-QGut",
+			label=QGut,
+			shape=box,
+			style="filled,rounded"];
+	}
+	QAir -> QArt;
+	QFat -> QVen;
+	QRich -> QVen;
+	QLiver -> QMetab	[minlen=1];
+	QLiver -> QVen;
+	QArt -> QAir;
+	QArt -> QExcret	[minlen=1];
+	QArt -> QFat;
+	QArt -> QRich;
+	QArt -> QLiver;
+	QArt -> QSkin_e;
+	QArt -> QSkin_u;
+	QArt -> QPoor;
+	QVen -> QArt;
+	QSkin_e -> QVen;
+	QSkin_e -> QSkin_sc_e;
+	QSkin_u -> QVen;
+	QSkin_u -> QSkin_sc_u;
+	QSkin_sc_e -> QSkin_e;
+	QSkin_sc_u -> QSkin_u;
+	QPoor -> QVen;
+	QGut -> QLiver	[minlen=1];
+}
