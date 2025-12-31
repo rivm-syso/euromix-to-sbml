@@ -32,3 +32,4 @@ venv.bak/
 
 # Test output
 **/__testoutputs__
+validation/outputs

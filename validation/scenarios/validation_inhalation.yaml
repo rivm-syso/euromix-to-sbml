@@ -1,0 +1,36 @@
+id: inhalation
+label: inhalation
+model_instances:
+  - id: SBML
+    label: SBML
+    param_file: ./parametrisations/validation_params_imazalil.csv
+    model_path: model/euromix.sbml
+    target_mappings:
+      CAir: '[QAir]'
+      CArt: '[QArt]'
+      CLiver: '[QLiver]'
+
+scenarios:
+  - id: inhalation_repeated
+    label: Inhalation repeated dosing
+    time_unit: DAY
+    amount_unit: MILLIMOLES
+    duration: 10
+    evaluation_resolution: 24
+    dosing_events:
+      - type: repeated_continuous
+        target: QAir
+        amount: 100
+        time: 0
+        duration: 0.4
+        interval: 1
+    outputs:
+      - id: CAir
+        label: Conc. air
+        output: CAir
+      - id: CArt
+        label: Conc. in blood
+        output: CArt
+      - id: CLiver
+        label: Conc. in liver
+        output: CLiver

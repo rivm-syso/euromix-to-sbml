@@ -1,0 +1,58 @@
+id: dermal
+label: dermal
+model_instances:
+  - id: SBML
+    label: SBML
+    param_file: ./parametrisations/validation_params_imazalil.csv
+    model_path: model/euromix.sbml
+    target_mappings:
+      CSkin_e: '[QSkin_e]'
+      CSkin_u: '[QSkin_u]'
+      CArt: '[QArt]'
+      CLiver: '[QLiver]'
+
+scenarios:
+  - id: dermal_repeated
+    label: Dermal repeated dosing
+    time_unit: DAY
+    amount_unit: MILLIMOLES
+    duration: 100
+    evaluation_resolution: 24
+    dosing_events:
+      - type: repeated_bolus
+        target: QSkin_sc_e
+        amount: 100
+        time: 0
+        interval: 1
+    outputs:
+      - id: CSkin_e
+        label: Conc. viable epidermis exposed skin
+        output: CSkin_e
+      - id: CSkin_u
+        label: Conc. viable epidermis unexposed skin
+        output: CSkin_u
+      - id: CArt
+        label: Conc. in arterial blood
+        output: CArt
+      - id: CLiver
+        label: Conc. in liver
+        output: CLiver
+    reference_data:
+      - id: reference
+        label: reference
+        file_path: validation/outputs/R/results_dermal.csv
+        series_type: TIMELINE
+        time_unit: HOUR
+        outputs:
+        - id: CSkin_e
+          label: Conc. viable epidermis exposed skin
+          output: CSkin_e
+        - id: CSkin_u
+          label: Conc. viable epidermis unexposed skin
+          output: CSkin_u
+        - id: CArt
+          label: Conc. in arterial blood
+          output: CArt
+        - id: CLiver
+          label: Conc. in liver
+          output: CLiver
