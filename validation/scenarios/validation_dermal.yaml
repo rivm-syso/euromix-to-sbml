@@ -40,7 +40,7 @@ scenarios:
     reference_data:
       - id: reference
         label: reference
-        file_path: validation/outputs/R/results_dermal.csv
+        file_path: validation/reference/R/outputs/results_dermal.csv
         series_type: TIMELINE
         time_unit: HOUR
         outputs:

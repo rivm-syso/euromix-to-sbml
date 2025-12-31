@@ -6,7 +6,7 @@ library(deSolve)
 # Filename of the model
 dllName <- "PBPK_generic_model_v6"
 dllPath <- paste("validation/reference/R/", dllName, sep="")
-resultsPath <- "validation/outputs/R"
+resultsPath <- "validation/reference/R/outputs"
 
 if (!dir.exists(file.path(resultsPath))) {
   dir.create(file.path(resultsPath))

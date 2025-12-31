@@ -11,11 +11,13 @@ CONFIGS_PATH = './validation/scenarios/'
 OUTPUT_PATH = './validation/outputs'
 R_CONFIGS = [
     {
-        'id': 'run_model_full',
+        'id': 'R',
         'file_path': 'validation/reference/R/run_validation_scenarios.R',
         'output_files': [
-            'R/results_MA.csv',
-            'R/results_MM.csv'
+            './validation/reference/R/outputs/results_MA.csv',
+            './validation/reference/R/outputs/results_MM.csv',
+            './validation/reference/R/outputs/results_dermal.csv',
+            './validation/reference/R/outputs/results_oral.csv'
         ]
     }
 ]
@@ -85,7 +87,7 @@ def run_r_validation_scenarios(
     logger: logging.Logger
 ):
     for r_config in R_CONFIGS:
-        out_files = [os.path.join(OUTPUT_PATH, o) for o in r_config['output_files']]
+        out_files = r_config['output_files']
         if not force_recompute and all([os.path.exists(o) for o in out_files]):
             logger.info(f"Skipping {r_config['id']} validation scenarios: results already available")
             return
