@@ -161,7 +161,7 @@ write.csv(outnew, paste(resultsPath, "/results_MA.csv", sep=""))
 
 # Set resolution and times
 scenario <- createTimesAndDoses(
-  days = 100,
+  days = 150,
   resolution = 1,
   oral = 100
 )

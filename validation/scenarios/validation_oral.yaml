@@ -14,7 +14,7 @@ scenarios:
     label: Oral repeated dosing
     time_unit: DAY
     amount_unit: MILLIMOLES
-    duration: 100
+    duration: 150
     evaluation_resolution: 24
     dosing_events:
       - type: repeated_bolus
