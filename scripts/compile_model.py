@@ -5,18 +5,18 @@ implementations located in the models folder.
 
 Usage:
 Run the script from the command line with the following syntax:
-  python models/compile_models.py
+  python scripts/compile_models.py
 
 Dependencies:
 See requirements.txt (install using `pip install -r requirements.txt`).
 """
 
-import os
-import uuid
-import tellurium as te
-import libsbml as ls
 import logging
+import os
 from pathlib import Path
+import uuid
+import libsbml as ls
+import tellurium as te
 
 from sbmlpbkutils import PbkModelValidator
 from sbmlpbkutils import AnnotationsTemplateGenerator

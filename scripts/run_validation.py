@@ -1,3 +1,16 @@
+"""
+Description:
+This script runs the validation simulation scenarios defined in the
+validation scenarios folder.
+
+Usage:
+Run the script from the command line with the following syntax:
+  python scripts/run_validation.py
+
+Dependencies:
+See requirements.txt (install using `pip install -r requirements.txt`).
+"""
+
 import glob
 import os
 import argparse

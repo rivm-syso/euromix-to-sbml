@@ -1,6 +1,18 @@
+"""
+Description:
+This script generates a markdown report for the annotated SBML file.
+
+Usage:
+Run the script from the command line with the following syntax:
+  python scripts/create_report.py
+
+Dependencies:
+See requirements.txt (install using `pip install -r requirements.txt`).
+"""
+
 import os
-import libsbml as ls
 from pathlib import Path
+import libsbml as ls
 
 from sbmlpbkutils import (
     PbkModelReportGenerator,
