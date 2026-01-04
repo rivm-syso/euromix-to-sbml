@@ -14,7 +14,7 @@ scenarios:
     label: Initial amount in gut
     time_unit: HOUR
     amount_unit: MILLIMOLES
-    duration: 48
+    duration: 72
     evaluation_resolution: 20
     initial_states:
       - target: QGut
@@ -28,7 +28,7 @@ scenarios:
         output: CLiver
     reference_data:
       - id: reference
-        label: reference
+        label: R/deSolve
         file_path: validation/reference/R/outputs/results_MM.csv
         series_type: TIMELINE
         time_unit: HOUR

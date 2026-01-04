@@ -3,21 +3,21 @@
 Find below a description of the validation scenarios.
 
 ## MA
-- Initial gut amount scenario (48 hours).
+- Initial gut amount scenario (72 hours).
 - Model parametrisation for mass action kinetics.
 - Evaluate concentration in arterial blood and liver.
 - Compare against results obtained with R/deSolve.
 - Diffs show near-exact agreement (residuals ~1e-7–1e-6).
 
 ## MM
-- Initial gut amount scenario (48 hours).
+- Initial gut amount scenario (72 hours).
 - Model parametrisation for Michaelis Menten kinetics.
 - Evaluate concentration in arterial blood and liver.
 - Compare against results obtained with R/deSolve.
 - Diffs show near-exact agreement (residuals ~1e-7–1e-6).
 
 ## Oral
-- Repeated oral bolus dosing scenario (1 per day, 100 days).
+- Repeated oral bolus dosing scenario (1 per day, 150 days).
 - Use model parametrisation for imazalil.
 - Evaluate concentration in arterial blood and liver.
 - Compare against results obtained with R/deSolve.

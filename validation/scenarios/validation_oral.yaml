@@ -31,7 +31,7 @@ scenarios:
         output: CLiver
     reference_data:
       - id: reference
-        label: reference
+        label: R/deSolve
         file_path: validation/reference/R/outputs/results_oral.csv
         series_type: TIMELINE
         time_unit: HOUR

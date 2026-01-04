@@ -111,7 +111,7 @@ dyn.load(paste(dllPath, .Platform$dynlib.ext, sep=""))
 
 # Set resolution and times
 scenario <- createTimesAndDoses(
-  days = 2,
+  days = 3,
   resolution = 1/20
 )
 times <- scenario$times
@@ -139,7 +139,7 @@ write.csv(outnew, paste(resultsPath, "/results_MM.csv", sep=""))
 
 # Set resolution and times
 scenario <- createTimesAndDoses(
-  days = 2,
+  days = 3,
   resolution = 1/20
 )
 times <- scenario$times

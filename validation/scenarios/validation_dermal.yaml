@@ -26,33 +26,33 @@ scenarios:
         interval: 1
     outputs:
       - id: CSkin_e
-        label: Conc. viable epidermis exposed skin
+        label: Concentration viable epidermis exposed skin
         output: CSkin_e
       - id: CSkin_u
-        label: Conc. viable epidermis unexposed skin
+        label: Concentration viable epidermis unexposed skin
         output: CSkin_u
       - id: CArt
-        label: Conc. in arterial blood
+        label: Concentration in arterial blood
         output: CArt
       - id: CLiver
-        label: Conc. in liver
+        label: Concentration in liver
         output: CLiver
     reference_data:
       - id: reference
-        label: reference
+        label: R/deSolve
         file_path: validation/reference/R/outputs/results_dermal.csv
         series_type: TIMELINE
         time_unit: HOUR
         outputs:
         - id: CSkin_e
-          label: Conc. viable epidermis exposed skin
+          label: Concentration viable epidermis exposed skin
           output: CSkin_e
         - id: CSkin_u
-          label: Conc. viable epidermis unexposed skin
+          label: Concentration viable epidermis unexposed skin
           output: CSkin_u
         - id: CArt
-          label: Conc. in arterial blood
+          label: Concentration in arterial blood
           output: CArt
         - id: CLiver
-          label: Conc. in liver
+          label: Concentration in liver
           output: CLiver
