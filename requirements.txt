@@ -3,6 +3,6 @@ antimony>=3.1.1
 sbmlutils>=0.9.4
 parameterized>=0.9.0
 python-libsbml>=5.20.5
-sbmlpbkutils @ git+https://github.com/jwkruisselbrink/sbml-pbk-utils.git@v0.34.0
+sbmlpbkutils @ git+https://github.com/jwkruisselbrink/sbml-pbk-utils.git@v0.36.0
 pandas>=2.2.3
 jupyter>=1.1.1
