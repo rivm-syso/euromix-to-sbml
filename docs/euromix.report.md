@@ -4,7 +4,7 @@
 
 | key                          | value                                                                                  |
 |:-----------------------------|:---------------------------------------------------------------------------------------|
-| Modelled species/orgamism(s) | *not specified*                                                                        |
+| Modelled species/orgamism(s) | http://purl.obolibrary.org/obo/NCBITaxon_40674                                         |
 | Model chemical(s)            | http://purl.obolibrary.org/obo/CHEBI_59999, http://purl.obolibrary.org/obo/CHEBI_25212 |
 | Input route(s)               | 3 (inhalation, dermal, oral)                                                           |
 | Time resolution              | h                                                                                      |
@@ -227,8 +227,8 @@ $metab_MA( \mathit{CLH},  \mathit{PC},  \mathit{q},  \mathit{vol}) =  \lambda(\m
 | CLH         | hepatic clearance rate                                          | L/h           | http://purl.obolibrary.org/obo/PBPKO_00234 |
 | Ke          | renal excretion rate                                            | L/h           | http://purl.obolibrary.org/obo/PBPKO_00237 |
 | fub         | fraction unbound in blood                                       | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00622 |
-| f_su        | *not specified*                                                 | L/h           | *not specified*                            |
-| f_se        | *not specified*                                                 | L/h           | *not specified*                            |
+| f_su        | dermal absorption flow through unexposed skin                   | L/h           | *not specified*                            |
+| f_se        | dermal absorption flow through exposed skin                     | L/h           | *not specified*                            |
 | FBlood      | blood flow                                                      | L/h           | http://purl.obolibrary.org/obo/PBPKO_00030 |
 | FFat        | blood flow to the fat                                           | L/h           | http://purl.obolibrary.org/obo/PBPKO_00032 |
 | FPoor       | blood flow to poorly perfused tissues                           | L/h           | http://purl.obolibrary.org/obo/PBPKO_00046 |
