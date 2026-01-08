@@ -5,7 +5,7 @@ implementations located in the models folder.
 
 Usage:
 Run the script from the command line with the following syntax:
-  python scripts/compile_models.py
+  python scripts/compile_model.py
 
 Dependencies:
 See requirements.txt (install using `pip install -r requirements.txt`).
