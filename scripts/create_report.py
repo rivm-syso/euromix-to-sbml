@@ -17,7 +17,8 @@ import libsbml as ls
 from sbmlpbkutils import (
     PbkModelReportGenerator,
     DiagramCreator,
-    NamesDisplay
+    NamesDisplay,
+    RenderMode
 )
 
 MODEL_PATH = './model/'
@@ -37,7 +38,7 @@ def create_report():
     sbml_basename = os.path.basename(sbml_file)
     report_file = os.path.join(REPORT_PATH, Path(sbml_basename).with_suffix('.report.md'))
     generator = PbkModelReportGenerator(document)
-    generator.create_md_report(report_file)
+    generator.create_md_report(report_file, math_render_mode = RenderMode.TEXT)
 
     # Diagram creator instance
     generator = DiagramCreator()

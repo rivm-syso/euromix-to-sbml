@@ -65,140 +65,82 @@
 
 ## Transfer equations
 
-| id   | from       | to         | equation                                                                                                                                                                                                                                                                                                             |
-|:-----|:-----------|:-----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| _J0  | QArt       | QAir       | $ \frac{\mathit{Falv}\cdot \frac{\mathit{QArt}}{\mathit{Art}}}{\mathit{PCAir}}$                                                                                                                                                                                                                                      |
-| _J1  | QAir       | QArt       | $ \mathit{FBlood}\cdot \frac{\mathit{QAir}}{\mathit{Air}}$                                                                                                                                                                                                                                                           |
-| _J2  | QArt       | QFat       | $ \mathit{FFat}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$                                                                                                                                                                                                                                                             |
-| _J3  | QFat       | QVen       | $ \frac{\mathit{FFat}\cdot \frac{\mathit{QFat}}{\mathit{Fat}}}{\mathit{PCFat}}$                                                                                                                                                                                                                                      |
-| _J4  | QArt       | QRich      | $ \mathit{FRich}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$                                                                                                                                                                                                                                                            |
-| _J5  | QRich      | QVen       | $ \frac{\mathit{FRich}\cdot \frac{\mathit{QRich}}{\mathit{Rich}}}{\mathit{PCRich}}$                                                                                                                                                                                                                                  |
-| _J6  | QArt       | QPoor      | $ \mathit{FPoor}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$                                                                                                                                                                                                                                                            |
-| _J7  | QPoor      | QVen       | $ \frac{\mathit{FPoor}\cdot \frac{\mathit{QPoor}}{\mathit{Poor}}}{\mathit{PCPoor}}$                                                                                                                                                                                                                                  |
-| _J8  | QArt       | QLiver     | $ \mathit{FLiver}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$                                                                                                                                                                                                                                                           |
-| _J9  | QLiver     | QVen       | $ \frac{\mathit{FLiver}\cdot \frac{\mathit{QLiver}}{\mathit{Liver}}}{\mathit{PCLiver}}$                                                                                                                                                                                                                              |
-| _J10 | QGut       | QLiver     | $ \mathit{kGut}\cdot \mathit{QGut}$                                                                                                                                                                                                                                                                                  |
-| _J11 | QArt       | QSkin_u    | $ \mathit{FSkin_{u}}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$                                                                                                                                                                                                                                                        |
-| _J12 | QSkin_u    | QVen       | $ \frac{\mathit{FSkin_{u}}\cdot \mathit{conc}\left(\mathit{QSkin_{u}},\mathit{Skin_{u}}\right)}{\mathit{PCSkin}}$                                                                                                                                                                                                    |
-| _J13 | QSkin_u    | QSkin_sc_u | $ \frac{\mathit{f_{su}}\cdot \mathit{conc}\left(\mathit{QSkin_{u}},\mathit{Skin_{u}}\right)}{\mathit{PCSkin_{sc}}}$                                                                                                                                                                                                  |
-| _J14 | QSkin_sc_u | QSkin_u    | $ \mathit{f_{su}}\cdot \mathit{conc}\left(\mathit{QSkin\_sc\_u},\mathit{Skin\_sc\_u}\right)$                                                                                                                                                                                                                         |
-| _J15 | QArt       | QSkin_e    | $ \mathit{FSkin_{e}}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$                                                                                                                                                                                                                                                        |
-| _J16 | QSkin_e    | QVen       | $ \frac{\mathit{FSkin_{e}}\cdot \mathit{conc}\left(\mathit{QSkin_{e}},\mathit{Skin_{e}}\right)}{\mathit{PCSkin}}$                                                                                                                                                                                                    |
-| _J17 | QSkin_e    | QSkin_sc_e | $ \frac{\mathit{f_{se}}\cdot \mathit{conc}\left(\mathit{QSkin_{e}},\mathit{Skin_{e}}\right)}{\mathit{PCSkin_{sc}}}$                                                                                                                                                                                                  |
-| _J18 | QSkin_sc_e | QSkin_e    | $ \mathit{f_{se}}\cdot \mathit{conc}\left(\mathit{QSkin\_sc\_e},\mathit{Skin\_sc\_e}\right)$                                                                                                                                                                                                                         |
-| _J19 | QVen       | QArt       | $ \mathit{FBlood}\cdot \frac{\mathit{QVen}}{\mathit{Ven}}$                                                                                                                                                                                                                                                           |
-| _J20 | QLiver     | QMetab     | $ \mathit{fub}\cdot \begin{cases} \mathit{metab_{MM}}\left(\mathit{Vmax},\mathit{Km},\mathit{PCLiver},\mathit{QLiver},\mathit{Liver}\right)& \text{  if  } & \mathit{Michaelis}>0.5\\ \mathit{metab_{MA}}\left(\mathit{CLH},\mathit{PCLiver},\mathit{QLiver},\mathit{Liver}\right)& {\text{  otherwise}}\end{cases}$ |
-| _J21 | QArt       | QExcret    | $ \mathit{Ke}\cdot \mathit{fub}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$                                                                                                                                                                                                                                             |
+| id   | from       | to         | equation                                                                                                               |
+|:-----|:-----------|:-----------|:-----------------------------------------------------------------------------------------------------------------------|
+| _J0  | QArt       | QAir       | Falv * (QArt / Art) / PCAir                                                                                            |
+| _J1  | QAir       | QArt       | FBlood * (QAir / Air)                                                                                                  |
+| _J2  | QArt       | QFat       | FFat * (QArt / Art)                                                                                                    |
+| _J3  | QFat       | QVen       | FFat * (QFat / Fat) / PCFat                                                                                            |
+| _J4  | QArt       | QRich      | FRich * (QArt / Art)                                                                                                   |
+| _J5  | QRich      | QVen       | FRich * (QRich / Rich) / PCRich                                                                                        |
+| _J6  | QArt       | QPoor      | FPoor * (QArt / Art)                                                                                                   |
+| _J7  | QPoor      | QVen       | FPoor * (QPoor / Poor) / PCPoor                                                                                        |
+| _J8  | QArt       | QLiver     | FLiver * (QArt / Art)                                                                                                  |
+| _J9  | QLiver     | QVen       | FLiver * (QLiver / Liver) / PCLiver                                                                                    |
+| _J10 | QGut       | QLiver     | kGut * QGut                                                                                                            |
+| _J11 | QArt       | QSkin_u    | FSkin_u * (QArt / Art)                                                                                                 |
+| _J12 | QSkin_u    | QVen       | FSkin_u * conc(QSkin_u, Skin_u) / PCSkin                                                                               |
+| _J13 | QSkin_u    | QSkin_sc_u | f_su * conc(QSkin_u, Skin_u) / PCSkin_sc                                                                               |
+| _J14 | QSkin_sc_u | QSkin_u    | f_su * conc(QSkin_sc_u, Skin_sc_u)                                                                                     |
+| _J15 | QArt       | QSkin_e    | FSkin_e * (QArt / Art)                                                                                                 |
+| _J16 | QSkin_e    | QVen       | FSkin_e * conc(QSkin_e, Skin_e) / PCSkin                                                                               |
+| _J17 | QSkin_e    | QSkin_sc_e | f_se * conc(QSkin_e, Skin_e) / PCSkin_sc                                                                               |
+| _J18 | QSkin_sc_e | QSkin_e    | f_se * conc(QSkin_sc_e, Skin_sc_e)                                                                                     |
+| _J19 | QVen       | QArt       | FBlood * (QVen / Ven)                                                                                                  |
+| _J20 | QLiver     | QMetab     | fub * piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, Liver), gt(Michaelis, 0.5), metab_MA(CLH, PCLiver, QLiver, Liver)) |
+| _J21 | QArt       | QExcret    | Ke * fub * (QArt / Art)                                                                                                |
 
 ## ODEs
 
-$\frac{d[\mathtt{QFat}]}{dt} =  \mathit{FFat}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-             -  \frac{\mathit{FFat}\cdot \frac{\mathit{QFat}}{\mathit{Fat}}}{\mathit{PCFat}}$
-
-$\frac{d[\mathtt{QRich}]}{dt} =  \mathit{FRich}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-              -  \frac{\mathit{FRich}\cdot \frac{\mathit{QRich}}{\mathit{Rich}}}{\mathit{PCRich}}$
-
-$\frac{d[\mathtt{QPoor}]}{dt} =  \mathit{FPoor}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-              -  \frac{\mathit{FPoor}\cdot \frac{\mathit{QPoor}}{\mathit{Poor}}}{\mathit{PCPoor}}$
-
-$\frac{d[\mathtt{QLiver}]}{dt} =  \mathit{FLiver}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-               -  \frac{\mathit{FLiver}\cdot \frac{\mathit{QLiver}}{\mathit{Liver}}}{\mathit{PCLiver}}
-               +  \mathit{kGut}\cdot \mathit{QGut}
-               -  \mathit{fub}\cdot \begin{cases} \mathit{metab_{MM}}\left(\mathit{Vmax},\mathit{Km},\mathit{PCLiver},\mathit{QLiver},\mathit{Liver}\right)& \text{  if  } & \mathit{Michaelis}>0.5\\ \mathit{metab_{MA}}\left(\mathit{CLH},\mathit{PCLiver},\mathit{QLiver},\mathit{Liver}\right)& {\text{  otherwise}}\end{cases}$
-
-$\frac{d[\mathtt{QMetab}]}{dt} =  \mathit{fub}\cdot \begin{cases} \mathit{metab_{MM}}\left(\mathit{Vmax},\mathit{Km},\mathit{PCLiver},\mathit{QLiver},\mathit{Liver}\right)& \text{  if  } & \mathit{Michaelis}>0.5\\ \mathit{metab_{MA}}\left(\mathit{CLH},\mathit{PCLiver},\mathit{QLiver},\mathit{Liver}\right)& {\text{  otherwise}}\end{cases}$
-
-$\frac{d[\mathtt{QGut}]}{dt} = -  \mathit{kGut}\cdot \mathit{QGut}$
-
-$\frac{d[\mathtt{QSkin-u}]}{dt} =  \mathit{FSkin_{u}}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-                -  \frac{\mathit{FSkin_{u}}\cdot \mathit{conc}\left(\mathit{QSkin_{u}},\mathit{Skin_{u}}\right)}{\mathit{PCSkin}}
-                -  \frac{\mathit{f_{su}}\cdot \mathit{conc}\left(\mathit{QSkin_{u}},\mathit{Skin_{u}}\right)}{\mathit{PCSkin_{sc}}}
-                +  \mathit{f_{su}}\cdot \mathit{conc}\left(\mathit{QSkin\_sc\_u},\mathit{Skin\_sc\_u}\right)$
-
-$\frac{d[\mathtt{QSkin-e}]}{dt} =  \mathit{FSkin_{e}}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-                -  \frac{\mathit{FSkin_{e}}\cdot \mathit{conc}\left(\mathit{QSkin_{e}},\mathit{Skin_{e}}\right)}{\mathit{PCSkin}}
-                -  \frac{\mathit{f_{se}}\cdot \mathit{conc}\left(\mathit{QSkin_{e}},\mathit{Skin_{e}}\right)}{\mathit{PCSkin_{sc}}}
-                +  \mathit{f_{se}}\cdot \mathit{conc}\left(\mathit{QSkin\_sc\_e},\mathit{Skin\_sc\_e}\right)$
-
-$\frac{d[\mathtt{QSkin-sc-u}]}{dt} =  \frac{\mathit{f_{su}}\cdot \mathit{conc}\left(\mathit{QSkin_{u}},\mathit{Skin_{u}}\right)}{\mathit{PCSkin_{sc}}}
-                   -  \mathit{f_{su}}\cdot \mathit{conc}\left(\mathit{QSkin\_sc\_u},\mathit{Skin\_sc\_u}\right)$
-
-$\frac{d[\mathtt{QSkin-sc-e}]}{dt} =  \frac{\mathit{f_{se}}\cdot \mathit{conc}\left(\mathit{QSkin_{e}},\mathit{Skin_{e}}\right)}{\mathit{PCSkin_{sc}}}
-                   -  \mathit{f_{se}}\cdot \mathit{conc}\left(\mathit{QSkin\_sc\_e},\mathit{Skin\_sc\_e}\right)$
-
-$\frac{d[\mathtt{QArt}]}{dt} = -  \frac{\mathit{Falv}\cdot \frac{\mathit{QArt}}{\mathit{Art}}}{\mathit{PCAir}}
-             +  \mathit{FBlood}\cdot \frac{\mathit{QAir}}{\mathit{Air}}
-             -  \mathit{FFat}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-             -  \mathit{FRich}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-             -  \mathit{FPoor}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-             -  \mathit{FLiver}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-             -  \mathit{FSkin_{u}}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-             -  \mathit{FSkin_{e}}\cdot \frac{\mathit{QArt}}{\mathit{Art}}
-             +  \mathit{FBlood}\cdot \frac{\mathit{QVen}}{\mathit{Ven}}
-             -  \mathit{Ke}\cdot \mathit{fub}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$
-
-$\frac{d[\mathtt{QVen}]}{dt} =  \frac{\mathit{FFat}\cdot \frac{\mathit{QFat}}{\mathit{Fat}}}{\mathit{PCFat}}
-             +  \frac{\mathit{FRich}\cdot \frac{\mathit{QRich}}{\mathit{Rich}}}{\mathit{PCRich}}
-             +  \frac{\mathit{FPoor}\cdot \frac{\mathit{QPoor}}{\mathit{Poor}}}{\mathit{PCPoor}}
-             +  \frac{\mathit{FLiver}\cdot \frac{\mathit{QLiver}}{\mathit{Liver}}}{\mathit{PCLiver}}
-             +  \frac{\mathit{FSkin_{u}}\cdot \mathit{conc}\left(\mathit{QSkin_{u}},\mathit{Skin_{u}}\right)}{\mathit{PCSkin}}
-             +  \frac{\mathit{FSkin_{e}}\cdot \mathit{conc}\left(\mathit{QSkin_{e}},\mathit{Skin_{e}}\right)}{\mathit{PCSkin}}
-             -  \mathit{FBlood}\cdot \frac{\mathit{QVen}}{\mathit{Ven}}$
-
-$\frac{d[\mathtt{QExcret}]}{dt} =  \mathit{Ke}\cdot \mathit{fub}\cdot \frac{\mathit{QArt}}{\mathit{Art}}$
-
-$\frac{d[\mathtt{QAir}]}{dt} =  \frac{\mathit{Falv}\cdot \frac{\mathit{QArt}}{\mathit{Art}}}{\mathit{PCAir}}
-             -  \mathit{FBlood}\cdot \frac{\mathit{QAir}}{\mathit{Air}}$
+| species    | equation                                                                                                                                                                                                                                                                                                                                                                       |
+|:-----------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| QFat       | d[QFat]/dt = FFat * (QArt / Art)             - FFat * (QFat / Fat) / PCFat                                                                                                                                                                                                                                                                                                     |
+| QRich      | d[QRich]/dt = FRich * (QArt / Art)              - FRich * (QRich / Rich) / PCRich                                                                                                                                                                                                                                                                                              |
+| QPoor      | d[QPoor]/dt = FPoor * (QArt / Art)              - FPoor * (QPoor / Poor) / PCPoor                                                                                                                                                                                                                                                                                              |
+| QLiver     | d[QLiver]/dt = FLiver * (QArt / Art)               - FLiver * (QLiver / Liver) / PCLiver               + kGut * QGut               - fub * piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, Liver), gt(Michaelis, 0.5), metab_MA(CLH, PCLiver, QLiver, Liver))                                                                                                                    |
+| QMetab     | d[QMetab]/dt = fub * piecewise(metab_MM(Vmax, Km, PCLiver, QLiver, Liver), gt(Michaelis, 0.5), metab_MA(CLH, PCLiver, QLiver, Liver))                                                                                                                                                                                                                                          |
+| QGut       | d[QGut]/dt = - kGut * QGut                                                                                                                                                                                                                                                                                                                                                     |
+| QSkin_u    | d[QSkin_u]/dt = FSkin_u * (QArt / Art)                - FSkin_u * conc(QSkin_u, Skin_u) / PCSkin                - f_su * conc(QSkin_u, Skin_u) / PCSkin_sc                + f_su * conc(QSkin_sc_u, Skin_sc_u)                                                                                                                                                                 |
+| QSkin_e    | d[QSkin_e]/dt = FSkin_e * (QArt / Art)                - FSkin_e * conc(QSkin_e, Skin_e) / PCSkin                - f_se * conc(QSkin_e, Skin_e) / PCSkin_sc                + f_se * conc(QSkin_sc_e, Skin_sc_e)                                                                                                                                                                 |
+| QSkin_sc_u | d[QSkin_sc_u]/dt = f_su * conc(QSkin_u, Skin_u) / PCSkin_sc                   - f_su * conc(QSkin_sc_u, Skin_sc_u)                                                                                                                                                                                                                                                             |
+| QSkin_sc_e | d[QSkin_sc_e]/dt = f_se * conc(QSkin_e, Skin_e) / PCSkin_sc                   - f_se * conc(QSkin_sc_e, Skin_sc_e)                                                                                                                                                                                                                                                             |
+| QArt       | d[QArt]/dt = - Falv * (QArt / Art) / PCAir             + FBlood * (QAir / Air)             - FFat * (QArt / Art)             - FRich * (QArt / Art)             - FPoor * (QArt / Art)             - FLiver * (QArt / Art)             - FSkin_u * (QArt / Art)             - FSkin_e * (QArt / Art)             + FBlood * (QVen / Ven)             - Ke * fub * (QArt / Art) |
+| QVen       | d[QVen]/dt = FFat * (QFat / Fat) / PCFat             + FRich * (QRich / Rich) / PCRich             + FPoor * (QPoor / Poor) / PCPoor             + FLiver * (QLiver / Liver) / PCLiver             + FSkin_u * conc(QSkin_u, Skin_u) / PCSkin             + FSkin_e * conc(QSkin_e, Skin_e) / PCSkin             - FBlood * (QVen / Ven)                                       |
+| QExcret    | d[QExcret]/dt = Ke * fub * (QArt / Art)                                                                                                                                                                                                                                                                                                                                        |
+| QAir       | d[QAir]/dt = Falv * (QArt / Art) / PCAir             - FBlood * (QAir / Air)                                                                                                                                                                                                                                                                                                   |
 
 ## Assignment rules
 
-$Fat =  \mathit{BM}\cdot \mathit{scVFat}$
-
-$Rich =  \mathit{BM}\cdot \mathit{scVRich}$
-
-$Liver =  \mathit{BM}\cdot \mathit{scVLiver}$
-
-$Art =  \mathit{BM}\cdot \mathit{scVBlood}\cdot \mathit{scVArt}$
-
-$Ven =  \mathit{BM}\cdot \mathit{scVBlood}-\mathit{Art}$
-
-$Skin_e =  \mathit{BSA}\cdot \mathit{Height_{vs}}\cdot \mathit{fSA_{exposed}}$
-
-$Skin_u =  \mathit{BSA}\cdot \mathit{Height_{vs}}\cdot (1-\mathit{fSA_{exposed}})$
-
-$Skin_sc_e =  \mathit{BSA}\cdot \mathit{Height_{sc}}\cdot \mathit{fSA_{exposed}}$
-
-$Skin_sc_u =  \mathit{BSA}\cdot \mathit{Height_{sc}}\cdot (1-\mathit{fSA_{exposed}})$
-
-$Poor =  \mathit{BM}\cdot (1-\mathit{scVFat}-\mathit{scVRich}-\mathit{scVLiver}-\mathit{scVBlood}-0.1)-\mathit{Skin_{e}}-\mathit{Skin_{u}}-\mathit{Skin\_sc\_e}-\mathit{Skin\_sc\_u}$
-
-$f_su =  \mathit{Kp\_sc\_vs}\cdot \mathit{BSA}\cdot (1-\mathit{fSA_{exposed}})$
-
-$f_se =  \mathit{Kp\_sc\_vs}\cdot \mathit{BSA}\cdot \mathit{fSA_{exposed}}$
-
-$FBlood =  \mathit{scFBlood}\cdot \mathit{BM}$
-
-$FFat =  \mathit{FBlood}\cdot \mathit{scFFat}$
-
-$FPoor =  \mathit{FBlood}\cdot \mathit{scFPoor}$
-
-$FLiver =  \mathit{FBlood}\cdot \mathit{scFLiver}$
-
-$FSkin =  \mathit{FBlood}\cdot \mathit{scFSkin}$
-
-$FRich =  \mathit{FBlood}-\mathit{FFat}-\mathit{FPoor}-\mathit{FLiver}-\mathit{FSkin}$
-
-$FSkin_e =  \mathit{FSkin}\cdot \mathit{fSA_{exposed}}$
-
-$FSkin_u =  \mathit{FSkin}-\mathit{FSkin_{e}}$
+| variable   | assignment                                                                                        |
+|:-----------|:--------------------------------------------------------------------------------------------------|
+| Fat        | BM * scVFat                                                                                       |
+| Rich       | BM * scVRich                                                                                      |
+| Liver      | BM * scVLiver                                                                                     |
+| Art        | BM * scVBlood * scVArt                                                                            |
+| Ven        | BM * scVBlood - Art                                                                               |
+| Skin_e     | BSA * Height_vs * fSA_exposed                                                                     |
+| Skin_u     | BSA * Height_vs * (1 - fSA_exposed)                                                               |
+| Skin_sc_e  | BSA * Height_sc * fSA_exposed                                                                     |
+| Skin_sc_u  | BSA * Height_sc * (1 - fSA_exposed)                                                               |
+| Poor       | BM * (1 - scVFat - scVRich - scVLiver - scVBlood - 0.1) - Skin_e - Skin_u - Skin_sc_e - Skin_sc_u |
+| f_su       | Kp_sc_vs * BSA * (1 - fSA_exposed)                                                                |
+| f_se       | Kp_sc_vs * BSA * fSA_exposed                                                                      |
+| FBlood     | scFBlood * BM                                                                                     |
+| FFat       | FBlood * scFFat                                                                                   |
+| FPoor      | FBlood * scFPoor                                                                                  |
+| FLiver     | FBlood * scFLiver                                                                                 |
+| FSkin      | FBlood * scFSkin                                                                                  |
+| FRich      | FBlood - FFat - FPoor - FLiver - FSkin                                                            |
+| FSkin_e    | FSkin * fSA_exposed                                                                               |
+| FSkin_u    | FSkin - FSkin_e                                                                                   |
 
 ## Function definitions
 
-$conc( \mathit{q},  \mathit{vol}) =  \lambda(\mathit{q}, \mathit{vol}) =\begin{cases} \frac{\mathit{q}}{\mathit{vol}}& \text{  if  } & \mathit{vol}>0\\ 0& {\text{  otherwise}}\end{cases}$
-
-$metab_MM( \mathit{Vmax},  \mathit{Km},  \mathit{PC},  \mathit{q},  \mathit{vol}) =  \lambda(\mathit{Vmax}, \mathit{Km}, \mathit{PC}, \mathit{q}, \mathit{vol}) =\left(\frac{\mathit{vol}\cdot \mathit{Vmax}\cdot \mathit{conc}\left(\mathit{q},\mathit{vol}\right)}{\mathit{PC}\cdot \mathit{Km}+\mathit{conc}\left(\mathit{q},\mathit{vol}\right)}\right)$
-
-$metab_MA( \mathit{CLH},  \mathit{PC},  \mathit{q},  \mathit{vol}) =  \lambda(\mathit{CLH}, \mathit{PC}, \mathit{q}, \mathit{vol}) =\left(\frac{\mathit{CLH}\cdot \mathit{conc}\left(\mathit{q},\mathit{vol}\right)}{\mathit{PC}}\right)$
+| function   | definition                                                                                                          |
+|:-----------|:--------------------------------------------------------------------------------------------------------------------|
+| conc       | conc(q, vol) = lambda(q, vol, piecewise(q / vol, gt(vol, 0), 0))                                                    |
+| metab_MM   | metab_MM(Vmax, Km, PC, q, vol) = lambda(Vmax, Km, PC, q, vol, vol * Vmax * conc(q, vol) / (PC * Km + conc(q, vol))) |
+| metab_MA   | metab_MA(CLH, PC, q, vol) = lambda(CLH, PC, q, vol, CLH * conc(q, vol) / PC)                                        |
 
 ## Parameters
 
