@@ -1,5 +1,13 @@
 # euromix
 
+## Creators
+
+| first-name   | last-name     | affiliation                                                           | email   |
+|:-------------|:--------------|:----------------------------------------------------------------------|:--------|
+| Margriet     | Palm          | Dutch National Institute for Public Health and the Environment (RIVM) |         |
+| Jordi        | Minnema       | Dutch National Institute for Public Health and the Environment (RIVM) |         |
+| Johannes     | Kruisselbrink | Wageningen University & Research, Biometris                           |         |
+
 ## Overview
 
 | key                          | value                                                                                  |
@@ -235,14 +243,6 @@ $metab_MA( \mathit{CLH},  \mathit{PC},  \mathit{q},  \mathit{vol}) =  \lambda(\m
 | FLiver      | blood flow to the liver                                         | L/h           | http://purl.obolibrary.org/obo/PBPKO_00024 |
 | FSkin       | blood flow to the skin                                          | L/h           | http://purl.obolibrary.org/obo/PBPKO_00036 |
 | FRich       | blood flow to richly perfused tissues                           | L/h           | http://purl.obolibrary.org/obo/PBPKO_00048 |
-| FSkin_e     | blood flow to exposed skin                                      | L/h           | *not specified*                            |
-| FSkin_u     | blood flow to unexposed skin                                    | L/h           | *not specified*                            |
-
-## Creators
-
-|    | first-name   | last-name     | affiliation                                                           | email   |
-|---:|:-------------|:--------------|:----------------------------------------------------------------------|:--------|
-|  0 | Margriet     | Palm          | Dutch National Institute for Public Health and the Environment (RIVM) |         |
-|  1 | Jordi        | Minnema       | Dutch National Institute for Public Health and the Environment (RIVM) |         |
-|  2 | Johannes     | Kruisselbrink | Wageningen University & Research, Biometris                           |         |
+| FSkin_e     | blood flow to exposed skin                                      | L/h           | http://purl.obolibrary.org/obo/PBPKO_00563 |
+| FSkin_u     | blood flow to unexposed skin                                    | L/h           | http://purl.obolibrary.org/obo/PBPKO_00562 |
 

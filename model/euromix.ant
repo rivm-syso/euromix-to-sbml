@@ -89,7 +89,7 @@ model euromix()
 
   # Compartments
   compartment Air = 1E8
-  compartment Urine
+  compartment Urine = 1
   compartment Fat := BM * scVFat
   compartment Rich := BM * scVRich
   compartment Liver := BM * scVLiver
@@ -100,7 +100,7 @@ model euromix()
   compartment Skin_sc_e := BSA * Height_sc * fSA_exposed
   compartment Skin_sc_u := BSA * Height_sc * (1 - fSA_exposed)
   compartment Poor := BM * (1 - scVFat - scVRich - scVLiver - scVBlood - 0.1) - Skin_e - Skin_u - Skin_sc_e - Skin_sc_u
-  compartment Gut
+  compartment Gut = 1
 
   # Species
   substanceOnly species QFat in Fat = 0
