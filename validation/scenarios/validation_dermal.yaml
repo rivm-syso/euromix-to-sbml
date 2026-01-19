@@ -43,16 +43,8 @@ scenarios:
         file_path: validation/reference/R/outputs/results_dermal.csv
         series_type: TIMELINE
         time_unit: HOUR
-        outputs:
-        - id: CSkin_e
-          label: Concentration viable epidermis exposed skin
-          output: CSkin_e
-        - id: CSkin_u
-          label: Concentration viable epidermis unexposed skin
-          output: CSkin_u
-        - id: CArt
-          label: Concentration in arterial blood
-          output: CArt
-        - id: CLiver
-          label: Concentration in liver
-          output: CLiver
+        mappings:
+          CSkin_e: CSkin_e
+          CSkin_u: CSkin_u
+          CArt: CArt
+          CLiver: CLiver

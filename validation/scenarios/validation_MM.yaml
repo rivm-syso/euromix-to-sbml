@@ -32,10 +32,6 @@ scenarios:
         file_path: validation/reference/R/outputs/results_MM.csv
         series_type: TIMELINE
         time_unit: HOUR
-        outputs:
-        - id: CArt
-          label: Concentration in arterial blood
-          output: CArt
-        - id: CLiver
-          label: Concentration in liver
-          output: CLiver
+        mappings:
+          CArt: CArt
+          CLiver: CLiver
