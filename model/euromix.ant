@@ -12,6 +12,11 @@ end
 
 model euromix()
 
+  model notes ```
+    Antimony/SBML reimplementation of the EuroMix PBK model of Tebby et al. 2020.
+  ```
+  model description "https://doi.org/10.1016/j.fct.2020.111440"
+
   # Parameters
 
   ## Physiology

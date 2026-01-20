@@ -8,6 +8,14 @@
 | Jordi        | Minnema       | Dutch National Institute for Public Health and the Environment (RIVM) |         |
 | Johannes     | Kruisselbrink | Wageningen University & Research, Biometris                           |         |
 
+## Notes
+
+<notes>
+  <body xmlns="http://www.w3.org/1999/xhtml">
+    <p>Antimony/SBML reimplementation of the EuroMix PBK model of Tebby et al. 2020. </p>
+  </body>
+</notes>
+
 ## Overview
 
 | key                          | value                                                                                  |
@@ -153,7 +161,7 @@
 | scVLiver    | liver volume as fraction of total body weight                   | L/kg          | http://purl.obolibrary.org/obo/PBPKO_00078 |
 | scVBlood    | blood volume as fraction of total body weight                   | L/kg          | http://purl.obolibrary.org/obo/PBPKO_00107 |
 | scVArt      | arterial blood volume as fraction of total blood volume         | dimensionless | *not specified*                            |
-| scFBlood    | total blood flow per unit mass                                  | L/kg/h        | *not specified*                            |
+| scFBlood    | total blood flow per unit mass                                  | L/kg/h        | http://purl.obolibrary.org/obo/PBPKO_00063 |
 | scFFat      | fraction of blood flow going to adipose tissue                  | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00033 |
 | scFPoor     | fraction total blood flow going to poorly perfused tissue       | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00047 |
 | scFLiver    | fraction total blood flow going to liver                        | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00025 |
