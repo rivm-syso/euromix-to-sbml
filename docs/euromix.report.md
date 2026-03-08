@@ -1,13 +1,5 @@
 # euromix
 
-## Creators
-
-| first-name   | last-name     | affiliation                                                           | email   |
-|:-------------|:--------------|:----------------------------------------------------------------------|:--------|
-| Margriet     | Palm          | Dutch National Institute for Public Health and the Environment (RIVM) |         |
-| Jordi        | Minnema       | Dutch National Institute for Public Health and the Environment (RIVM) |         |
-| Johannes     | Kruisselbrink | Wageningen University & Research, Biometris                           |         |
-
 ## Notes
 
 <notes>
@@ -15,6 +7,14 @@
     <p>Antimony/SBML reimplementation of the EuroMix PBK model of Tebby et al. 2020. </p>
   </body>
 </notes>
+
+## Creators
+
+| first-name   | last-name     | affiliation                                                           | email   |
+|:-------------|:--------------|:----------------------------------------------------------------------|:--------|
+| Margriet     | Palm          | Dutch National Institute for Public Health and the Environment (RIVM) |         |
+| Jordi        | Minnema       | Dutch National Institute for Public Health and the Environment (RIVM) |         |
+| Johannes     | Kruisselbrink | Wageningen University & Research, Biometris                           |         |
 
 ## Overview
 
@@ -62,10 +62,10 @@
 | QLiver     | amount of chemical in liver                                  | mmol   | http://purl.obolibrary.org/obo/PBPKO_00497 |
 | QMetab     | amount of chemical metabolized (cumulated)                   | mmol   | http://purl.obolibrary.org/obo/PBPKO_00058 |
 | QGut       | amount of chemical in gut lumen                              | mmol   | http://purl.obolibrary.org/obo/PBPKO_00496 |
-| QSkin_u    | amount of chemical in viable epidermis of unexposed skin     | mmol   | *not specified*                            |
-| QSkin_e    | amount of chemical in viable epidermis of exposed skin       | mmol   | *not specified*                            |
-| QSkin_sc_u | amount of chemical in skin stratum corneum of unexposed skin | mmol   | *not specified*                            |
-| QSkin_sc_e | amount of chemical in skin stratum corneum of exposed skin   | mmol   | *not specified*                            |
+| QSkin_u    | amount of chemical in viable epidermis of unexposed skin     | mmol   | http://purl.obolibrary.org/obo/PBPKO_00637 |
+| QSkin_e    | amount of chemical in viable epidermis of exposed skin       | mmol   | http://purl.obolibrary.org/obo/PBPKO_00638 |
+| QSkin_sc_u | amount of chemical in skin stratum corneum of unexposed skin | mmol   | http://purl.obolibrary.org/obo/PBPKO_00639 |
+| QSkin_sc_e | amount of chemical in skin stratum corneum of exposed skin   | mmol   | http://purl.obolibrary.org/obo/PBPKO_00640 |
 | QArt       | amount of chemical in arterial blood                         | mmol   | http://purl.obolibrary.org/obo/PBPKO_00631 |
 | QVen       | amount of chemical in venous blood                           | mmol   | http://purl.obolibrary.org/obo/PBPKO_00632 |
 | QExcret    | amount of chemical excreted in urine (cumulated)             | mmol   | http://purl.obolibrary.org/obo/PBPKO_00274 |
@@ -160,17 +160,17 @@
 | scVRich     | richly perfused tissues volume as fraction of total body weight | L/kg          | http://purl.obolibrary.org/obo/PBPKO_00102 |
 | scVLiver    | liver volume as fraction of total body weight                   | L/kg          | http://purl.obolibrary.org/obo/PBPKO_00078 |
 | scVBlood    | blood volume as fraction of total body weight                   | L/kg          | http://purl.obolibrary.org/obo/PBPKO_00107 |
-| scVArt      | arterial blood volume as fraction of total blood volume         | dimensionless | *not specified*                            |
+| scVArt      | arterial blood volume as fraction of total blood volume         | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00651 |
 | scFBlood    | total blood flow per unit mass                                  | L/kg/h        | http://purl.obolibrary.org/obo/PBPKO_00063 |
 | scFFat      | fraction of blood flow going to adipose tissue                  | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00033 |
 | scFPoor     | fraction total blood flow going to poorly perfused tissue       | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00047 |
 | scFLiver    | fraction total blood flow going to liver                        | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00025 |
 | scFSkin     | fraction total blood flow going to skin                         | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00037 |
 | fSA_exposed | fraction of skin surface area actually exposed                  | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00110 |
-| Height_sc   | thickness stratum corneum                                       | dm            | *not specified*                            |
-| Height_vs   | thickness viable epidermis                                      | dm            | *not specified*                            |
+| Height_sc   | thickness stratum corneum                                       | dm            | http://purl.obolibrary.org/obo/PBPKO_00643 |
+| Height_vs   | thickness viable epidermis                                      | dm            | http://purl.obolibrary.org/obo/PBPKO_00644 |
 | Falv        | alveolar ventilation rate                                       | L/h           | http://purl.obolibrary.org/obo/PBPKO_00114 |
-| PCFat       | partition coefficient fat over blood                            | dimensionless | *not specified*                            |
+| PCFat       | partition coefficient fat over blood                            | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00645 |
 | PCLiver     | partition coefficient liver over blood                          | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00577 |
 | PCRich      | partition coefficient poorly perfused tissue over blood         | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00587 |
 | PCPoor      | partition coefficient richly perfused tissue over blood         | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00584 |
@@ -178,15 +178,15 @@
 | PCSkin      | partition coefficient viable skin over blood                    | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00588 |
 | PCAir       | partition coefficient blood over air                            | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00568 |
 | kGut        | absorption rate constant gut                                    | /h            | http://purl.obolibrary.org/obo/PBPKO_00141 |
-| Kp_sc_vs    | diffusion rate from stratum corneum to viable epidermis         | dm/h          | *not specified*                            |
+| Kp_sc_vs    | diffusion rate from stratum corneum to viable epidermis         | dm/h          | http://purl.obolibrary.org/obo/PBPKO_00648 |
 | Km          | Michaelis-Menten constant liver                                 | mmol          | http://purl.obolibrary.org/obo/PBPKO_00214 |
-| Michaelis   | flag for Michaelis-Menten or linear metabolism                  | dimensionless | *not specified*                            |
+| Michaelis   | flag for Michaelis-Menten or linear metabolism                  | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00650 |
 | Vmax        | maximum rate of metabolism in the liver                         | mmol/L/h      | http://purl.obolibrary.org/obo/PBPKO_00213 |
 | CLH         | hepatic clearance rate                                          | L/h           | http://purl.obolibrary.org/obo/PBPKO_00234 |
 | Ke          | renal excretion rate                                            | L/h           | http://purl.obolibrary.org/obo/PBPKO_00237 |
 | fub         | fraction unbound in blood                                       | dimensionless | http://purl.obolibrary.org/obo/PBPKO_00622 |
-| f_su        | dermal absorption flow through unexposed skin                   | L/h           | *not specified*                            |
-| f_se        | dermal absorption flow through exposed skin                     | L/h           | *not specified*                            |
+| f_su        | dermal absorption flow through unexposed skin                   | L/h           | http://purl.obolibrary.org/obo/PBPKO_00641 |
+| f_se        | dermal absorption flow through exposed skin                     | L/h           | http://purl.obolibrary.org/obo/PBPKO_00642 |
 | FBlood      | blood flow                                                      | L/h           | http://purl.obolibrary.org/obo/PBPKO_00030 |
 | FFat        | blood flow to the fat                                           | L/h           | http://purl.obolibrary.org/obo/PBPKO_00032 |
 | FPoor       | blood flow to poorly perfused tissues                           | L/h           | http://purl.obolibrary.org/obo/PBPKO_00046 |

@@ -150,7 +150,7 @@ digraph {
 			fillcolor=gold,
 			href="#species-QSkin_e",
 			label="QSkin_e
-[-]",
+[PBPKO:00638]",
 			shape=box,
 			style="filled,rounded"];
 	}
@@ -168,7 +168,7 @@ digraph {
 			fillcolor=gold,
 			href="#species-QSkin_u",
 			label="QSkin_u
-[-]",
+[PBPKO:00637]",
 			shape=box,
 			style="filled,rounded"];
 	}
@@ -186,7 +186,7 @@ digraph {
 			fillcolor=gold,
 			href="#species-QSkin_sc_e",
 			label="QSkin_sc_e
-[-]",
+[PBPKO:00640]",
 			shape=box,
 			style="filled,rounded"];
 	}
@@ -204,7 +204,7 @@ digraph {
 			fillcolor=gold,
 			href="#species-QSkin_sc_u",
 			label="QSkin_sc_u
-[-]",
+[PBPKO:00639]",
 			shape=box,
 			style="filled,rounded"];
 	}
