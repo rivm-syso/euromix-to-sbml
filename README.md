@@ -3,7 +3,7 @@
 [![Licence](https://img.shields.io/github/license/rivm-syso/euromix-to-sbml)](https://github.com/rivm-syso/euromix-to-sbml/blob/main/LICENSE)
 [![Validate](https://img.shields.io/github/actions/workflow/status/rivm-syso/euromix-to-sbml/validate.yml?label=validate)](https://github.com/rivm-syso/euromix-to-sbml/actions/workflows/validate.yml)
 
-This repository contains a reimplementation of the [EuroMix PBK model](https://doi.org/10.1016/j.fct.2020.111440) in the [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html) modelling language, which is automatically converted into an annotated Systems Biology Markup Language ([SBML](https://sbml.org/)) file compliant with the [FAIR PBK standard](https://fair-pbk.github.io/fair-pbk-standard/) specification. The aim of this reimplementation is to demonstrate how interoperable PBK models can be created and shared, using the EuroMix PBK model as a practical example.
+This repository contains a reimplementation of the [EuroMix PBK model](https://doi.org/10.1016/j.fct.2020.111440) in the [Antimony](https://tellurium.readthedocs.io/en/latest/antimony.html) modelling language, which is automatically converted into an annotated Systems Biology Markup Language ([SBML](https://sbml.org/)) file compliant with the [FAIR PBK standard](https://fair-pbk.github.io/fair-pbk-standard/) specification. This reimplementation was developed to demonstrate how interoperable PBK models can be created and shared, using the EuroMix PBK model as a practical example.
 
 ## Reimplementation in Antimony
 
@@ -41,4 +41,30 @@ To run the scripts and the Jupyter notebooks, install the required python packag
 
 ```
 pip install -r requirements.txt
+```
+
+### Compile model
+
+To convert the Antimony model implementation to SBML and annotates it using the annotations provided in the CSV file, type:
+
+```
+python ./scripts/compile_model.py
+```
+
+### Run validation scenarios
+
+To run the run [validation scenarios](validation/README.md), type:
+
+```
+python ./scripts/run_validation.py
+```
+
+By default, this script reuses existing outputs from previous runs. To override and recalculate outputs that already exist, use the `-f` option.
+
+### Create model docs
+
+To create the [model documentation page](docs/euromix.report.md), type:
+
+```
+python ./scripts/create_report.py
 ```
