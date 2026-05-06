@@ -1,8 +1,7 @@
-tellurium>=2.2.11.1
-antimony>=3.1.1
+tellurium>=2.2.13
+antimony>=3.1.3
 sbmlutils>=0.9.4
-parameterized>=0.9.0
 python-libsbml>=5.20.5
-sbmlpbkutils @ git+https://github.com/jwkruisselbrink/sbml-pbk-utils.git@v0.43.0
-pandas>=2.2.3
+sbmlpbkutils @ git+https://github.com/jwkruisselbrink/sbml-pbk-utils.git@v0.47.0
+pandas>=3.0.2
 jupyter>=1.1.1
